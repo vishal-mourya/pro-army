@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Programmers Army Official Website: [https://programmersarmy.com/](https://programmersarmy.com/)
 
 ## Getting started
