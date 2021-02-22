@@ -18,5 +18,5 @@ or contact us at : programmersarmy@gmail.com
 
 Would Love to Collaborate with anyone who wishes :)
 
-Thanks & Regards
-Vishal Mourya
+Thanks & Regards <br>
+Programmers Army Dev Team 
