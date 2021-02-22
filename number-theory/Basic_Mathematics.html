@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>AlgoPoint: Algorithms</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- yaha link hai css -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="w3.css">
+
+<!-- yaha tak -->
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+
+.w3-bar .w3-bar-item {
+    padding: 2px 35px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+    margin-top: 10px;
+}
+.w3-button:hover {
+    color: white !important;
+    background-color: #8AAC7B !important;
+}
+.abhi21{
+  padding-top: 25px;
+}
+
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a> -->
+    <a href="index.html" class="w3-bar-item w3-theme-l1">
+    <img src="images/logo.svg" width="200" height="80">  </a>
+
+    <div class = "abhi21">
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">C++</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">JAVA</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">PYTHON</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Data Structures</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Algorithms</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">About Us</a>
+   </div>
+  </div>
+</div>
+<style>
+.w3-sidebar {
+    z-index: 3;
+    width: 200px;
+    top: 94px;
+    bottom: 0;
+    height: inherit;
+}
+.w3-theme {
+    color: #fff !important;
+    background-color: #343A40 !important;
+}
+.w3-theme-l1 {
+    color: #fff !important;
+    background-color:#343A40 !important;
+}
+.w3-container, .w3-panel {
+    padding: 0.01em;
+}
+</style>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Algorithms</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Time Complexity</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Number Theory</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Binary Trees</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Graph Theory</a>
+
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Time Complexity</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Number Theory</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Binary Trees</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Graph Theory</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<br>
+<div class="w3-main" style="margin-left:250px">
+
+
+<main>
+      <div class="wrapper">
+<div class="article-detail">
+  <div class="article">
+    <!-- <img src="  "> -->
+    <br><br><br><br>
+    <center><h2><b>Basic Mathematics for competitive programming<b></h2></center>
+
+
+      <!-- <div class="">
+      <h3>Example</h3> -->
+      <!-- <script src="//onlinegdb.com/embed/js/rkMHhLrbP?theme=dark"></script> -->
+
+
+      <!-- <div class="w3-code notranslate htmlHigh">
+        <span class="commentcolor" style="color:green">&lt;!-- The text field --&gt;</span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>input<span class="attributecolor" style="color:red"> type<span class="attributevaluecolor" style="color:mediumblue">="text"</span> value<span class="attributevaluecolor" style="color:mediumblue">="Hello World"</span> id<span class="attributevaluecolor" style="color:mediumblue">="myInput"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+        <br><span class="commentcolor" style="color:green">&lt;!-- The button used to copy the text --&gt;</span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>button<span class="attributecolor" style="color:red"> onclick<span class="attributevaluecolor" style="color:mediumblue">="myFunction()"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>Copy
+        text<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/button<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+      </div> -->
+
+    <!-- <p></p><p><span style="color:black">What is a bipartite graph?</span></p> -->
+    <br>
+    <div class="abhi23">
+      <!-- <b><P class="p20 ft3"><SPAN class="ft1"></SPAN><SPAN class="ft2"><h3>1. Finding number of digits in a number</h3></SPAN><SPAN class="ft13"></SPAN></P></b> -->
+    <b><P class="p1 ft3"><SPAN class="ft1"></SPAN><SPAN class="ft2"><h3>&nbsp1. Finding number of digits in a number</h3></SPAN></P></b>
+    <b><P class="p2 ft7"><SPAN class="ft4">&nbsp a. </SPAN><SPAN class="ft5">Iterative Solution</SPAN><SPAN class="ft6">:</SPAN></P></b>
+    <!-- <P class="p3 ft8"> &nbsp int countDigit(int n){</P>
+    <P class="p4 ft8">&nbsp int count = 0;</P>
+    <P class="p5 ft8"> &nbsp if( n == 0 ) return 1;</P>
+    <P class="p6 ft8">&nbsp else {</P>
+    <P class="p7 ft8">&nbsp /* Iterating over given number and each time seperating last digit till we reach zero digits */</P>
+    <P class="p8 ft8">&nbsp while( n != 0 ) { n = n / 10; count++;</P>
+    <P class="p9 ft8">&nbsp }</P>
+    <P class="p10 ft8">&nbsp return count;</P>
+    <P class="p11 ft8"><SPAN class="ft8">&nbsp }</SPAN><SPAN class="ft9">&nbsp // end of else block</SPAN></P>
+    <P class="p12 ft8"><SPAN class="ft8">&nbsp }</SPAN><SPAN class="ft9">&nbsp // end of function countDigit</SPAN></P> -->
+
+
+    <div id="div1">
+
+    <!-- <script src="//onlinegdb.com/embed/js/Bkxo8wrWD?theme=dark"></script> -->
+
+  <script src="//onlinegdb.com/embed/js/ry2nqDS-v?theme=dark"></script>
+
+    </div>
+
+    <!-- <div class="">
+    <button onclick="copyDivToClipboard()">
+      <span class="tooltiptext" id="myTooltip">Copy code to clipboard</span>
+      Copy Entire Code
+      </button>
+    </div> -->
+
+
+
+    <!-- <input type="text" value="Hello World" id="myInput" class="w3-input w3-border w3-left w3-margin-right w3-mobile" style="width:auto"> -->
+
+
+
+<script>
+
+function copyDivToClipboard() {
+                    var range = document.createRange();
+                    range.selectNode(document.getElementById("a"));
+                    window.getSelection().removeAllRanges(); // clear current selection
+                    window.getSelection().addRange(range); // to select text
+                    document.execCommand("copy");
+                    window.getSelection().removeAllRanges();// to deselect
+                }
+
+function CopyToClipboard(containerid) {
+  if (document.selection) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById(containerid));
+    range.select().createTextRange();
+    document.execCommand("copy");
+  } else if (window.getSelection) {
+    var range = document.createRange();
+    range.selectNode(document.getElementById(containerid));
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    alert("Text has been copied, now paste in the text-area")
+  }
+}
+
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+
+</script>
+
+    </div>
+    <br>
+    <b><P class="p13 ft10"><SPAN class="ft8">&nbsp b. </SPAN><SPAN class="ft7">&nbsp Logarithmic Solution</SPAN><SPAN class="ft8">:</SPAN></P></b>
+    <!-- <P class="p12 ft8">&nbsp int countDigit(int n)</P>
+    <P class="p14 ft8">&nbsp {</P>
+    <P class="p15 ft8">&nbsp return floor(log10(n) + 1);</P>
+    <P class="p16 ft8">&nbsp }</P> -->
+    <div class="container-fluid">
+    <script src="//onlinegdb.com/embed/js/r1NViPBbv?theme=dark"></script>
+  </div>
+    <b><P class="p17 ft10"><SPAN class="ft11">&nbsp c.</SPAN><SPAN class="ft5">&nbsp String Method</SPAN><SPAN class="ft4">:</SPAN></P></b>
+    <!-- <P class="p3 ft8">&nbsp int countDigit3(int n)</P>
+    <P class="p14 ft8">&nbsp {</P>
+    <P class="p18 ft8"><SPAN class="ft8">&nbsp //</SPAN><SPAN class="ft9">&nbsp convert number to string using to_string in C++ string num = to_string(n);</SPAN></P>
+    <P class="p19 ft8"><SPAN class="ft8">&nbsp //</SPAN><SPAN class="ft9">&nbsp calculate the size of string</SPAN></P>
+    <P class="p15 ft8">&nbsp return num.size();</P>
+    <P class="p16 ft8">&nbsp }</P> -->
+    <div class="container-fluid">
+    <script src="//onlinegdb.com/embed/js/Sk0pjwBZv?theme=dark"></script>
+    </div>
+    </DIV>
+    <DIV id="id1_2">
+    <!-- <P class="p20 ft12">This HTML is created from PDF at <NOBR><A href="https://www.pdfonline.com/convert-pdf-to-html/">https://www.pdfonline.com/convert-pdf-to-html/</A></NOBR></P> -->
+    </DIV>
+    </DIV>
+    <DIV id="page_2">
+
+      <div class="container-fluid">
+      <div class="article-detail">
+        <div class="article">
+    <b><P class="p20 ft3"><SPAN class="ft1"></SPAN><SPAN class="ft2"><h3>2.Arithmetic, Geometric and Harmonic progressions</h3></SPAN><SPAN class="ft13"></SPAN></P><b>
+    <P class="p21 ft14" ><h3>Arithmetic Progression (AP)</h3></P>
+    <P class="p22 ft15">A sequence of numbers is called an arithmetic progression if the difference between any two consecutive terms is always same. In simple terms, it means that next number in the series is calculated by adding a fixed number to the previous number in the series. This fixed number is called the common difference.</P>
+
+<style>
+.bgGray{
+  background-color: aquamarine;
+}
+</style>
+
+<div class="bgGray">
+    <P class="p23 ft8">For example, 1,3,5,7,9 is an AP because difference between any two consecutive terms in the series (common difference) is same (3 – 1 =5 – 3 = 7 – 5 = 9 – 7 = 2).</P>
+    <P class="p24 ft8">If ‘a’ is the first term and ‘d’ is the common difference,</P>
+    <P class="p25 ft8"><SPAN class="ft16">•</SPAN><SPAN class="ft17">nth term of an AP = a + ( n – 1 ) * d</SPAN></P>
+    <P class="p26 ft8"><SPAN class="ft16">•</SPAN><SPAN class="ft17">Arithmetic Mean = Sum of all terms in the AP / Number of terms in the AP</SPAN></P>
+    <P class="p26 ft8"><SPAN class="ft16">•</SPAN><SPAN class="ft17">Sum of ‘n’ terms of an AP = 0.5 n (first term + last term) = 0.5 * n [ 2*a + ( n </SPAN><NOBR>-1</NOBR> ) *d ]</P>
+  </div>
+
+    <P class="p27 ft14"><h3>Geometric Progression (GP)</h3></P>
+    <P class="p28 ft8">A sequence of numbers is called a geometric progression if the ratio of any two consecutive terms is always same. In simple terms, it means that next number in the series is calculated by multiplying a fixed number to the previous number in the series. This fixed number is called the common ratio.</P>
+
+<div class="bgGray">
+    <P class="p29 ft8">For example, 2,4,8,16 is a GP because ratio of any two consecutive terms in the series (common difference) is same (4 / 2 = 8 / 4 = 16 / 8 = 2).</P>
+    <P class="p24 ft8">If ‘a’ is the first term and ‘r’ is the common ratio,</P>
+    <P class="p30 ft8"><SPAN class="ft16">•</SPAN><SPAN class="ft17">nth term of a GP = a </SPAN><NOBR>r<SPAN class="ft18">n-1</SPAN></NOBR></P>
+    <P class="p26 ft8"><SPAN class="ft16">•</SPAN><SPAN class="ft17">Geometric Mean = nth root of product of n terms in the GP</SPAN></P>
+    <P class="p26 ft8"><SPAN class="ft16">•</SPAN><SPAN class="ft17">Sum of ‘n’ terms of a GP (r &lt; 1) = [a * (1 – r</SPAN><SPAN class="ft18">n </SPAN>) ] / [1 – r]</P>
+    <P class="p26 ft15"><SPAN class="ft16">•</SPAN><SPAN class="ft19">Sum of ‘n’ terms of a GP (r &gt; 1) = [a * ( r</SPAN><SPAN class="ft18">n </SPAN>– 1)] / [r – 1]</P>
+    <P class="p26 ft8"><SPAN class="ft16">•</SPAN><SPAN class="ft17">Sum of infinite terms of a GP (r &lt; 1) = (a) / (1 – r)</SPAN></P>
+</div>
+    <P class="p31 ft14"><h3>Harmonic Progression (HP)</h3></P>
+    <P class="p32 ft8">A sequence of numbers is called a harmonic progression if the reciprocal of the terms are in AP. In simple terms, a,b,c,d,e,f are in HP if 1/a, 1/b, 1/c, 1/d, 1/e, 1/f are in AP.</P>
+
+<div class="bgGray">
+    <P class="p24 ft8">For two terms ‘a’ and ‘b’,</P>
+    <P class="p25 ft8"><SPAN class="ft16">•</SPAN><SPAN class="ft17">Harmonic Mean = (2 * a * b) / (a + b)</SPAN></P>
+    <!-- <P class="p33 ft12">This HTML is created from PDF at <NOBR><A href="https://www.pdfonline.com/convert-pdf-to-html/">https://www.pdfonline.com/convert-pdf-to-html/</A></NOBR></P> -->
+    </DIV>
+    <DIV id="page_3">
+
+      <div class="article-detail">
+        <div class="article">
+    <DIV id="id3_1">
+    <P class="p34 ft8">For two numbers, if A, G and H are respectively the arithmetic, geometric and harmonic means, then</P>
+    <P class="p25 ft8"><SPAN class="ft16">•</SPAN><SPAN class="ft17">A ≥ G ≥ H</SPAN></P>
+    <P class="p26 ft8"><SPAN class="ft16">•</SPAN><SPAN class="ft17">A H = G</SPAN><SPAN class="ft18">2</SPAN>, i.e., A, G, H are in GP</P>
+  </div>
+
+    <br>
+    <b><P class="p35 ft3"><SPAN class="ft1"> </SPAN><SPAN class="ft2"><h3>3. Quadratic Equation</h3></SPAN></P></b>
+    <P class="p36 ft8">A Quadratic Equation is usually written a<SPAN class="ft20">x</SPAN><SPAN class="ft21">2 </SPAN>+ b<SPAN class="ft20">x </SPAN>+ c = 0 where a, b, c are real numbers and a <SPAN class="ft22">≠ </SPAN><SPAN class="ft23">0, </SPAN>which have maximum of 2 roots.</P>
+    <P class="p37 ft8">We find roots of a quadratic equation as follows:</P>
+<div class="bgGray">
+    <P class="p12 ft8"><SPAN class="ft8">1.</SPAN><SPAN class="ft24">Discriminant ( D ) = b*b – 4*a*c</SPAN></P>
+    <P class="p38 ft8"><SPAN class="ft8">2.</SPAN><SPAN class="ft24">x = ( - b ± √ D ) / 2*a</SPAN></P>
+    <P class="p12 ft8"><SPAN class="ft8">•</SPAN><SPAN class="ft25">D &lt; 0, roots are imaginary</SPAN></P>
+    <P class="p39 ft8"><SPAN class="ft8">•</SPAN><SPAN class="ft25">D = 0, Two equal roots can be found</SPAN></P>
+    <P class="p39 ft8"><SPAN class="ft8">•</SPAN><SPAN class="ft25">D &gt; 0, Two distinct roots can be found.</SPAN></P>
+</div>
+
+<br>
+    <P class="p40 ft3"><SPAN class="ft1"></SPAN><SPAN class="ft2"><h3>4. Mean and Median</h3></SPAN></P>
+<div class="bgGray">
+    <P class="p41 ft8"><SPAN class="ft10">Mean: </SPAN>The mean is found by adding up all of the given data and dividing with the total number of data entries.</P>
+</div>
+    <P class="p42 ft8">E.g.: The mean of 4, 1 and 7 is given as, ( 4 + 1 + 7 ) / 3 = 4</P>
+<div class="bgGray">
+    <P class="p43 ft8"><SPAN class="ft10">Median: </SPAN>The middle number found by ordering all data points and picking out the one in the middle (or if there are two middle numbers taking the mean of these two numbers).</P>
+</div>
+    <P class="p44 ft8">E.g.: Median of 4, 1, and 7 is 4 because after ordering it we get (1,4,7) and number in middle is 4.</P>
+<br>
+    <P class="p45 ft3"><SPAN class="ft1"></SPAN><SPAN class="ft2"><h3>5. Prime Numbers</h3></SPAN></P>
+<div class="bgGray">
+    <P class="p46 ft8">These are the numbers which are only divisible by 1 and itself.</P>
+  </div>
+    <P class="p47 ft8">So, for example 2, 3, 5, 79, 311 and 1931 are all prime, while 21 is not prime because it is divisible by 3 and 7.</P>
+    </DIV>
+    <DIV id="id3_2">
+    <!-- <P class="p20 ft12">This HTML is created from PDF at <NOBR><A href="https://www.pdfonline.com/convert-pdf-to-html/">https://www.pdfonline.com/convert-pdf-to-html/</A></NOBR></P> -->
+    </DIV>
+    </DIV>
+    <DIV id="page_4">
+
+      <div class="article-detail">
+        <div class="article">
+    <DIV id="id4_1">
+    <b><P class="p26 ft8">Some properties of prime numbers:</P></b>
+    <P class="p48 ft27"><SPAN class="ft4">• </SPAN><SPAN class="ft26">To find if a number n is prime, we could simply check if it divides any numbers below it. We can use the modulus (%) operator to check for divisibility</SPAN></P>
+    <P class="p49 ft27"><SPAN class="ft4">• </SPAN><SPAN class="ft26">Every prime number can be represented in form of 6n+1 or </SPAN><NOBR>6n-1</NOBR> except 2 or 3, where n is natural number.</P>
+    <P class="p39 ft8">E.g.: 5 can be written as 6(1) – 1 i.e. <NOBR>6n-1</NOBR></P>
+    <P class="p20 ft8"><SPAN class="ft4">• </SPAN><SPAN class="ft28">2 and 3 are only two consecutive natural numbers which are prime too.</SPAN></P>
+    <br>
+
+    <P class="p50 ft3"><SPAN class="ft1"></SPAN><SPAN class="ft2"><h3>6. L.C.M & H.C.F</h3></SPAN></P>
+<div class="bgGray">
+    <P class="p51 ft8"><SPAN class="ft10">Factors: </SPAN>All the numbers that divide a number completely, i.e. without leaving any remainder are called factors of number.</P>
+</div>
+    <P class="p52 ft8">E.g. 24 is completely divisible by 1,2,3,4,6,8,12,24.</P>
+    <P class="p53 ft8"><SPAN class="ft10">L.C.M: </SPAN>The least common multiple or LCM of two or more numbers is the smallest number other than 0 that’s a multiple of each number.</P>
+    <P class="p37 ft8">E.g.: LCM of 4 and 6:</P>
+    <P class="p54 ft8">multiples of 4: 4,8,12,16,20,24…</P>
+    <P class="p54 ft8">multiples of 6: 6,12,18,24…</P>
+    <P class="p55 ft8">common multiples: 12,24 hence LCM is 12</P>
+<div class="bgGray">
+    <P class="p56 ft8"><SPAN class="ft10">H.C.F: </SPAN>Highest common factors of two or more given numbers is the highest number which exactly divides all numbers.</P>
+</div>
+    <P class="p37 ft8">E.g.: HCF of 12 and 16</P>
+    <P class="p54 ft8">factors of 12: 1,2,3,4,6,12…</P>
+    <P class="p54 ft8">factors of 16: 1,2,4,8,16…</P>
+    <P class="p55 ft8">common factors: 1,2,4 hence HCF is 4</P>
+    <br>
+    <P class="p57 ft3"><SPAN class="ft1"></SPAN><SPAN class="ft2"><h3>7 .Factorials</h3></SPAN></P>
+<div class="bgGray">
+    <P class="p58 ft8">The factorial of a positive integer ‘n’ is denoted by n! is the product of the positive integers less than or equal to ‘n’.</P>
+</div>
+    <P class="p37 ft8">n! = n * <NOBR>(n-1)</NOBR> * <NOBR>(n-2)</NOBR> * <NOBR>(n-3)</NOBR> ……..1</P>
+    <P class="p52 ft8">E.g. 4! = 4 * <NOBR>(4-1)</NOBR> * <NOBR>(4-2)</NOBR> * <NOBR>(4-3)</NOBR> = 4 * 3 * 2 * 1 = 24</P>
+    </DIV>
+    <DIV id="id4_2">
+    <!-- <P class="p20 ft12">This HTML is created from PDF at <NOBR><A href="https://www.pdfonline.com/convert-pdf-to-html/">https://www.pdfonline.com/convert-pdf-to-html/</A></NOBR></P> -->
+    </DIV>
+    </DIV>
+
+    <div class="article-detail">
+      <div class="article">
+    <DIV id="page_5">
+    <DIV id="p5dimg1">
+    <IMG src="data:image/jpg;base64,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RxycnO5rmhprr6UZJzHFY38d6UC580orbVznjDFWzz938ag1Lw39v8Qxast4YytlJZPGUz8jsrMUORtb5cZwaAN6sA+LrNWI/s3XDg440m4/+IreAAAAGAOgFLQBjWfiS2vbuO3Sx1aNnOA8+mzRoPqzKAK07tJ5LOZLaQRzshWOQjOxiODjvjripqD04oA8+0Ky1LxFp/iJU1y/tbcanNbadKkzO0SRlVZtxOXyyvgMSB29tj4hlk8E3cycywTW80Z77knjYY98itPwxoSeGvDllpCTm4Nuh3zMu0yOzFmbHOMsxPXvVLxbGdSXTdDj5e8vIpJQP4YIXWV2PsSqp9ZBQAuu6cbnxR4WvQpItLqfJHbdbyCuirPvrK9uNS064ttTe2t7d3a4t1iVhcgrgAseVweeOtaFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFVb7T7XUoo47uLzBHIssZDFWR16MrDBB6jg9CR0Jq1RQAUyWJZoXicuFdSpKOUYA+jAgg+4OafRQBBZ2dtp9nFZ2cKQ28KhY40GAoqeiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKQgEEEZB6g0tFAEVtbQ2dtHb26COGMbUQdFHYD0A7DsOKloooAKKKKACiiigAqFbWBLuS6WMefIqo0nUlRnA9hyTj1J9amooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z" id="p5img1"></DIV>
+
+
+    <DIV id="id5_1">
+    <P class="p59 ft8"><SPAN class="ft2"><h3>8. Permutation: </h3><br>
+<div class="bgGray">
+     </SPAN>It is defined as arrangement of ‘r’ things that can be done out of total ‘n’ things. Or A permutation is the choice of ‘r’ things from a set of ‘n’ things without replacement and where the order matters.</P>
+
+    <P class="p52 ft8"><SPAN class="ft18">n</SPAN>P<SPAN class="ft29">r </SPAN>= (n!) <SPAN class="ft20">/ </SPAN><NOBR><SPAN class="ft20">(n-r)!</SPAN></NOBR></P>
+</div>
+    <br>
+    <P class="p60 ft8"><SPAN class="ft2"><h3>9. Combination:</h3> <br>
+<div class="bgGray">
+    </SPAN>It is defined as selection of ‘r’ things that can be done out of total ‘n’ things. Or A combination is the choice of r things from a set of n things without replacement and where order does not matter.</P>
+
+    <p> nCr = n! / ( r! * (n-r)! ) </p>
+    </div>
+    <br>
+
+    <P class="p61 ft8"><SPAN class="ft1"></SPAN><SPAN class="ft30"><h3>10. Modular Arithmetic: </h3> <br> </SPAN>The remainder obtained after the division operation on two operands is modulo operation. Or When one number is divided by another, the modulo operation finds the remainder. It is denoted by the % symbol.</P>
+    <P class="p59 ft8">One point to note here is % is a special operator which when used we can get values only within certain range we want. Suppose we do not want our answer to exceed 20 then we can simply use a % 20, by doing this our answer will never go beyond 20.</P>
+    <P class="p37 ft8">E.g. a % b = c which means when ‘a’ is divided by ‘b’ it gives remainder as ‘c’, 7 % 2 =1.</P>
+
+<div class="bgGray">
+    <P class="p52 ft8">Properties:</P>
+    <P class="p54 ft8"><SPAN class="ft8">1.</SPAN><SPAN class="ft9">(a + b) % c = ( a % c + b % c ) % c</SPAN></P>
+    <P class="p52 ft8"><SPAN class="ft8">2.</SPAN><SPAN class="ft9">(a ? b ) % c = ( (a % c) ? (b % c ) ) % c</SPAN></P>
+    <P class="p55 ft8"><SPAN class="ft8">3.</SPAN><SPAN class="ft9">(a ? b ) % c = ( (a % c) ? ( b % c) + c ) % c</SPAN></P>
+    <P class="p52 ft8"><SPAN class="ft8">4.</SPAN><SPAN class="ft9">(a / b) % c = (( a % c ) ? ( d % c ) ) % c</SPAN></P>
+    <P class="p63 ft8"><SPAN class="ft20">Note: </SPAN>Modular Arithmetic is basically used to avoid integer overflow in coding competitions.</P>
+</div>
+
+    <br>
+    <P class="p64 ft3"><SPAN class="ft4"></SPAN><SPAN class="ft31"> <h3>11. Catalan Numbers</h3> <br></SPAN></P>
+<div class="bgGray">
+    <P class="p65 ft8"><SPAN class="ft8">• </SPAN><SPAN class="ft25">Catalan numbers are a sequence of natural numbers that helps to solve many counting problems. Terms starting with n=0 are : 1, 1, 2, 5, 14, 42, 132, 429, 1430 ….and so on.</SPAN></P>
+</div>
+    <P class="p66 ft8"><SPAN class="ft8">• </SPAN><SPAN class="ft25">Questions based on catalan number may appear in many coding competitions. So it is always a plus point to know in depth about catalan number.</SPAN></P>
+    </DIV>
+    <DIV id="id5_2">
+    <!-- <P class="p20 ft12">This HTML is created from PDF at <NOBR><A href="https://www.pdfonline.com/convert-pdf-to-html/">https://www.pdfonline.com/convert-pdf-to-html/</A></NOBR></P> -->
+        </DIV></DIV></DIV>
+    <DIV id="page_6">
+
+      <div class="article-detail">
+        <div class="article">
+    <DIV id="id6_1">
+    <P class="p66 ft8"><SPAN class="ft8">• </SPAN><SPAN class="ft25">Catalan numbers find extensive applications in forming closed solutions to combinatorics problems. Some of the examples are:</SPAN></P>
+    <P class="p68 ft8"><SPAN class="ft8">1.</SPAN><SPAN class="ft9">The number of binary search trees that can be formed using 'n' nodes is the nth Catalan number.</SPAN></P>
+    <P class="p69 ft8"><SPAN class="ft8">2.</SPAN><SPAN class="ft9">The number of ways that a convex polygon of n+2 sides, can be cut into 2 or more triangles by joining any 2 edges is the nth Catalan number.</SPAN></P>
+    <P class="p70 ft8"><SPAN class="ft8">3.</SPAN><SPAN class="ft9">The closed solution to the number of possible parentheses matching given 'n' pairs is the nth Catalan number.</SPAN></P>
+    <br>
+    <P class="p71 ft3"><SPAN class="ft4"></SPAN><SPAN class="ft32"><h3>12. Pigeonhole Principle</h3></SPAN></P>
+
+    <br>
+    <P class="p72 ft8"><SPAN class="ft8">• </SPAN><SPAN class="ft25">The pigeonhole principle is a powerful tool used in combinatorial maths. But the idea is simple and can be explained by the following peculiar problem.</SPAN></P>
+    <P class="p73 ft8"><SPAN class="ft8">• </SPAN><SPAN class="ft33">Imagine that 3 pigeons need to be placed into 2 pigeonholes. Can it be done? The answer is yes, but there is one catch.</SPAN></P>
+    <P class="p74 ft8"><SPAN class="ft8">• </SPAN><SPAN class="ft33">The catch is that no matter how the pigeons are placed, one of the pigeonholes must contain more than one pigeon.</SPAN></P>
+<div class="bgGray">
+    <P class="p75 ft8"><SPAN class="ft8">• </SPAN><SPAN class="ft25">The logic can be generalized for larger numbers. The pigeonhole principle states that if more than n pigeons are placed into n pigeonholes, some pigeonhole must contain more than one pigeon. While the principle is evident, its implications are astounding.</SPAN></P>
+</div>
+    <P class="p76 ft8"><SPAN class="ft8">• </SPAN><SPAN class="ft25">For example consider this statement “If you pick five numbers from the integers 1 to 8, then two of them must add up to nine.”</SPAN></P>
+    <P class="p71 ft8">Explanation: Every number can be paired with another to sum to nine. In all, there are four</P>
+    <P class="p77 ft8">such pairs: the numbers 1 and 8, 2 and 7, 3 and 6, and lastly 4 and 5.Each of the five numbers belongs to one of those four pairs. By the pigeonhole principle, two of the numbers must be from the same <NOBR>pair–which</NOBR> by construction sums to 9.</P>
+    <br>
+    <P class="p31 ft35"><SPAN class="ft4"></SPAN><SPAN class="ft34"><h3>13. Inclusion Exclusion Principle</h3> <br></SPAN></P>
+    <P class="p78 ft27"><SPAN class="ft8">• </SPAN><SPAN class="ft36">Inclusion Exclusion principle is a very basic theorem of counting and many problems in various programming contests are based on it, a formal explanation of inclusion exclusion principle goes as follows:</SPAN></P>
+<div class="bgGray">
+    <P class="p79 ft27"><SPAN class="ft8">• </SPAN><SPAN class="ft36">Consider A as a collection of objects and |A| as the number of objects in A and similarly for B, then the cardinality of collection of objects of both sets A and B ( when both A and B are disjoint) can be stated as (for 2 finite sets) :</SPAN></P>
+    <P class="p54 ft8">|AUB| = |A| + |B|</P>
+  </div>
+    <P class="p52 ft8">But what if the sets are disjoint?</P>
+    <P class="p80 ft8">Then we need to subtract the common objects counted twice while calculating the cardinality of both A and B and new form will become:</P>
+    <P class="p54 ft8">|AUB| = |A| + |B| – |A ∩ B|</P>
+    </DIV>
+    <DIV id="id6_2">
+    <!-- <P class="p20 ft12">This HTML is created from PDF at <NOBR><A href="https://www.pdfonline.com/convert-pdf-to-html/">https://www.pdfonline.com/convert-pdf-to-html/</A></NOBR></P> -->
+    </DIV>
+    </DIV>
+
+    <div class="article-detail">
+      <div class="article">
+    <DIV id="page_7">
+
+
+    <P class="p20 ft8"><SPAN class="ft8">• </SPAN><SPAN class="ft25">This is the most basic form of </SPAN><NOBR>inclusion-exclusion</NOBR> principle.</P>
+    <P class="p81 ft38"><SPAN class="ft8">• </SPAN><SPAN class="ft37">But what if there are more than 2 sets, let`s say n sets. Then it can be stated as :</SPAN></P>
+    <P class="p82 ft8">(Include=add, exclude=subtract)</P>
+    <div class="bgGray">
+    <P class="p83 ft8">|A1 U A2 U A3 …..U AN| = (Include count of each set, Exclude count of pairwise set, Include count of triplet sets, exclude count of quadruplet sets……till nth tuple is included( if odd) or excluded( if even))</P>
+    <P class="p84 ft8">i. e., |A1 U A2 U A3 …..U AN| = (|A1| + |A2| + |A3| + |A4| … + |AN|) – ( |A1 ∩ A2| + |A1 ∩ A3| + |A1 ∩ A4|.. + all combinations) + (|A1 ∩ A2 ∩ A3| … all combinations)………. and so on.</P>
+</div>
+
+    <br> <br>
+    <P class="p85 ft8"><SPAN class="ft3"><h3>Conclusion: </h3></SPAN>These were some of the basic mathematics which you should be familiar with while doing competitive programming. As this will be our building block for number theory concepts which will be coming further in this series of articles.</P>
+    <P class="p86 ft8"><h3>Happy Coding 😊</h3><SPAN class="ft39"></SPAN></P>
+    <P class="p87 ft20"><SPAN class="ft8"> </SPAN><h3>By AlgoPoint</h3></P>
+    <!-- <P class="p88 ft12">This HTML is created from PDF at <NOBR><A href="https://www.pdfonline.com/convert-pdf-to-html/">https://www.pdfonline.com/convert-pdf-to-html/</A></NOBR></P> -->
+  </div>
+</div>
+
+
+      </div>
+    </main>
+
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
+
+  <!-- <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer> -->
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+
+</script>
+<script src="AlgoShots_files/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+  hm = document.getElementById('ham');
+  hm.addEventListener('change', () => {
+    console.log(hm.checked)
+  })
+</script>
+<script>
+  function copy() {
+    var text = document.getElementsByTagName('code')[0];
+    const el = document.createElement('textarea');
+    el.value = text.innerText;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert('Copied To Clipboard!');
+  }
+</script>
+</body>
+</html>

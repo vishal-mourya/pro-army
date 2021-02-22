@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="../images/header-logo.ico"/>
+<title>Programmers Army</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .contf{
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+    .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+    .active{
+        background-color: #14ba6a;
+    }
+    .fact{
+        padding-right:-15px;margin-right: -1px;margin-left: -10px;
+        font-size: 50px;
+        color:#62f2ad;
+    }
+    @media only screen and (min-width: 1200px)
+    {
+       .fact
+       {
+           display: none;
+       }
+       .container-fluid
+       {
+           padding-left: 15rem;
+           padding-right: 3rem;
+       }
+    }
+    @media only screen and (max-width: 350px)
+    {
+        .navbar-brand{
+            margin-left: 0px;
+        }
+        .fact{
+            font-size: 40px;
+        }
+        .navbar-toggler-icon{
+            width: 20px;
+        }
+    }
+    @media (max-width:1200px){.w3-sidebar.wcollapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+	.mera:hover {
+		background-color: #62F2AD;
+	}
+</style>
+<body>
+  <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-dark">
+      <div class="abc">
+          <i onclick="change(this);w3_open()" class="fa fact fa-arrow-circle-right"></i>
+      </div>
+      <a href="#" class="navbar-brand"><img class="image" src="logo.svg" style="width: 200px;"></a>
+      <button type="button" class="navbar-toggler" style="background-color: #62f2ad;border-color: white;border-width: 3px;" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ml-auto">
+              <li>
+              <a href="../index.html" class="nav-item text-white nav-link mera">Home</a></li>
+              <li class="nav-item dropdown mera">
+                  <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    C++ Programming
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../c-plus-plus/gettingstarted.html">Basic C++</a>
+                    <a class="dropdown-item" href="../STL/intro_stl.html">STL in C++</a>
+
+                  </div>
+                </li>
+              <li class="nav-item dropdown mera">
+                  <a class="nav-link text-white dropdown-toggle active border" href="#" id="navbardrop" data-toggle="dropdown">
+                    Data Structures
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item btn btn-outline-secondary" href="../DS/intro_to_array.html">Basic Data Structures</a>
+                    <a class="dropdown-item" href="#">Trees & Graphs</a>
+
+                  </div>
+                </li>
+                <li class="nav-item dropdown mera">
+                  <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Algorithms
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../searching-and-sorting/search.html">Basic Algorithms</a>
+                    <a class="dropdown-item" href="../algorithms/count-set-bits.html">Intermediate Algorithms</a>
+                    <a class="dropdown-item" href="../algorithms/hull1.html">Advanced Algorithms</a>
+                  </div>
+                </li>
+                <li>
+                <a href="../number-theory/Intro_to_number_theory.html" class="nav-item text-white nav-link mera">Number theory</a></li>
+                <li><a href="../DP/introduction.html" class="nav-item text-white nav-link mera">Dynamic programming</a></li>
+        <li><a href="../aboutus.html" class="nav-item text-white nav-link mera">About Us</a></li>
+        <li><a href="https://programmersarmy.com/contributors/" class="nav-item text-white nav-link mera">Contributors</a></li>
+              </div>
+      </div>
+  </nav>
+  <style>
+  .bgGreen1 {
+    background-color: #14BA6A;
+  }
+  </style>
+  <div class="w3-sidebar sidebar w3-bar-block wcollapse w3-card w3-animate-left sticky-top" style="width:200px;padding-top: 8em;" id="mySidebar">
+    <b> <p align="center"> Trees & Graphs </p> </b> <hr>
+    <a href="intro_to_graph-1.html" class="w3-bar-item w3-button">Introduction To Graph</a>
+    <a href="formation-of-graph.html" class="w3-bar-item w3-button">Formation of Graph</a>
+    <a href="intro-to-tree.html" class="w3-bar-item w3-button">Introduction To Trees</a>
+
+    <a href="dfs-and-application.html" class="w3-bar-item w3-button">Depth First Search & It's Application</a>
+    <a href="#" class="w3-bar-item w3-button bgGreen1">BFS</a>
+    <a href="bfs-application.html" class="w3-bar-item w3-button">Breadth First Search Applications</a>
+
+    <a href="kth-ancestor.html" class="w3-bar-item w3-button">Kth ancestor of a node in a tree</a>
+    <a href="detect-cycles.html" class="w3-bar-item w3-button">Detect cycles in graph</a>
+    <a href="connected-components.html" class="w3-bar-item w3-button">Finding connected components in an undirected graph</a>
+
+    <a href="kruk-algo.html" class="w3-bar-item w3-button">  Kruskal’s Algorithm (Minimum Spanning Tree - MST )</a>
+
+    <a href="0-1-bfs.html" class="w3-bar-item w3-button">0-1 BFS</a>
+    <a href="arti.html" class="w3-bar-item w3-button">Articulation Points</a>
+    <a href="lca.html" class="w3-bar-item w3-button">L.C.A</a>
+    <a href="bip-test.html" class="w3-bar-item w3-button">Bipartite Graph Test</a>
+    <a href="bridges.html" class="w3-bar-item w3-button">Bridges in Graph</a>
+    <a href="topo.html" class="w3-bar-item w3-button">Topological Soting</a>
+
+    <a href="dij.html" class="w3-bar-item w3-button">Dijkstra's Algorithm</a>
+    <a href="dsu.html" class="w3-bar-item w3-button">Disjoint Set Union (DSU)</a>
+
+    <a href="sub-tree.html" class="w3-bar-item w3-button">Sub-Tree</a>
+    <a href="sub-tree-q.html" class="w3-bar-item w3-button">Sub-Tree Queries</a>
+
+    <a href="tarjan.html" class="w3-bar-item w3-button">Tarjan Algorithm</a>
+    <br> <br>
+
+  </div>
+
+      <div class="w3-main" style="margin-left:200px">
+
+      </div>
+      <script>
+      function w3_open()
+      {
+            if(document.getElementById("mySidebar").style.display== "block")
+            {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+      }
+      function change(x) {
+              x.classList.toggle("fa-arrow-circle-down");
+            }
+      </script>
+     <div class="container-fluid contf" style="margin-left: auto;">
+     <p>
+         <div class="article">
+            <!-- <img src="  "> -->
+
+            <style>
+                  ul {
+                                font-size: 18px;
+                            }
+
+                            .abc,h3 {
+                                font-size: 18px;
+                                font-family: Helvetica, Arial, sans-serif;
+                                text-align: justify;
+                                letter-spacing: 0.5px;
+                            }
+
+                            ol {
+                                font-size: 18px;
+                            }
+                            .uni{
+                                line-height:1.8em;
+
+                            }
+
+                            .setuplink {
+                                color:#8ae034;
+                                text-decoration: underline;
+                            }
+
+            </style>
+
+            <h2 align="center"><b><u>BFS (Breadth First Search) on Graph</u></b></h2><br>
+
+            <p>
+
+            </p>
+            <p>
+                BFS (Breadth First Search) is one of the ways that we can do graph
+                traversal on a graph.
+            </p>
+            <p>
+                What do we mean by a Graph Traversal?
+            </p>
+            <p>
+                Graph Traversal is a way of visiting all the nodes of a graph starting from
+                a given node. Here the starting node is called a “source node”.
+            </p>
+
+            <div class="bgcolor">
+            <p>
+                Note: as all trees are graphs we can also do a BFS on the tree. But the
+                catch is, graphs can contain many cycles where trees don't contain any, So
+                in a graph, we can revisit the same node but it's not possible to do so in
+                the tree. So we have to keep a visited list of nodes to prevent visiting
+                the same node twice.
+            </p>
+            </div>
+            <h3>
+                The main idea of BFS is that <b>“it explores all the neighbor nodes at the
+                present​ depth before moving on to the nodes at the next depth level.”​ </b>
+            </h3><br>
+            <p>
+               - Let’s see an example:
+            </p>
+            <p>
+
+            </p>
+            <p>
+                Consider we have an undirected graph with 5 nodes numbered 0, 1, 2, 3, 4,
+                having 6 edges as
+            </p>
+
+            <p>
+                (0 – 1), (0 – 3), (0 – 4), (1 – 2), (1 – 3), (3 – 4)
+            </p>
+            <img src="images/bfs-1.jpg" class="img-fluid" width="400" height="100">
+            <p>
+                And Say the source node is 1
+            </p>
+            <p>
+                1. Now we initially have only one node as the beginner i.e. node 1. So we
+                have visited node 1 (which is of depth 0). We add node 1 to the visited
+                graph.
+            </p>
+            <p>
+                <img src="images/bfs-2.jpg" class="img-fluid" width="80" height="80">
+            </p>
+            <p>
+                2. We traverse one neighbor of the node 1 to our traversal and mark them
+                visited, So we have to traverse say node 0 (now it is of depth 1, as it’s
+                visited after visiting a node of depth 0). So the visited graph is.
+            </p>
+            <p>
+              <img src="images/bfs-3.jpg" class="img-fluid" width="100" height="100">
+            </p>
+            <p>
+                3. Looking at the visited graph nodes we see that now <b>the unvisited nodes of
+                node 0 is node 3 and node 4, whereas the unvisited nodes of node 1 is node
+                2 and node 3.</b> Now here we have to give priority and choose the neighbors of
+                the initial node (i.e. node 1, which is of depth 0), we do so because we
+                are traversing depth by depth, i.e. completing one depth level and then
+                going to the next.
+            </p>
+            <p>
+                If we choose a neighbor of depth 0 (here node 1) we will get a node of
+                depth 1.
+            </p>
+            <p>
+                If we choose a neighbor of depth 1(here node 0) we will get a node of depth
+                2, clearly failing to complete the traversal of depth 1.
+            </p>
+            <p>
+                <b>So, we choose a neighbor of node 1 (depth 0) to traverse next, i.e. we
+                choose node 2 (depth 1). </b>
+            </p>
+            <img src="images/bfs-4.jpg" class="img-fluid" width="150" height="100"> <br> <br>
+            <p>
+                4. Now if we check the neighbors of node 1 (depth 0) then we find that only
+                1 remaining node is present which is node 3, so we traverse to node 3 and
+                add it to our visited graph,
+            </p>
+            <p>
+                <img src="images/bfs-6.jpg" class="img-fluid" width="200" height="100">
+            </p>
+            <p>
+                here node 3 will have a depth of 1 (why?, as it is traversed from a node of
+                depth 0).
+            </p>
+            <p>
+                5. Finally, <b>we see that there are no remaining neighbors of node 1(depth
+                0), now we can choose the neighbors of nodes with depth 1, here node 2,
+                node 0 and node 3 have depth of 1.</b> We can choose any one of the nodes and
+                then go on adding its neighbors. Here let me choose node 2 and see it’s
+                neighbors, we don’t get any, so we add nothing.
+            </p>
+            <p>
+                <img src="images/bfs-6.jpg" class="img-fluid" width="200" height="100">
+            </p>
+            <p>
+                6. Now we have node 0 and node 3 in depth 1, <b>(node 2 is eliminated as it
+                has given all the neighbors that can be given, here 0)</b>. Now we choose a
+                node, say node 0 and choose its neighbor. We see that the only neighbor of
+                node 0 (depth 1) that is unvisited is node 4. <b>So
+                we visit node 4 and add it to the visited graph, and the depth of node 4 is
+                made to depth 2 </b> (why?, as node 4 is visited from a node which has depth 1).
+            </p>
+            <div class="bgcolor">
+            <p>
+                NOTE:
+            </p>
+            <p>
+                ● We only go to the unvisited nodes, If we go to the visited node we can be
+                stuck in a cycle and the algorithm will go into an infinite recursion.
+            </p>
+            </div>
+            <p>
+                <img src="images/bfs-7.jpg" class="img-fluid" width="300" height="100">
+            </p>
+            <p>
+                7. We can see that all the nodes of the original are visited, so we
+                discontinue the process, (note if we continue also no new nodes can be
+                added).
+            </p>
+            <p align="center">
+                <b>Here we have visited all the nodes with BFS starting from node 1. In the
+                order of : </b>
+            </p>
+            <p>
+                ● Node 1 (depth 0)
+            </p>
+            <p>
+                ● Node 0 (depth 1)
+            </p>
+            <p>
+                ● Node 2 (depth 1)
+            </p>
+            <p>
+                ● Node 3 (depth 1)
+            </p>
+            <p>
+                ● Node 4 (depth 2)
+            </p>
+            <p>
+                <b>This order of traversal 1 → 0 → 2 → 3 → 4 is called as BFS TRAVERSAL of the
+                given graph </b>
+            </p>
+            <div class="bgcolor">
+            <p>
+                NOTE:
+            </p>
+            <p>
+                1) The final visited order shown above can be different, i.e. the relative
+                order of nodes having the same depth can be different but the relative
+                order of depth will not change i.e. you can’t visit a node of depth 2 first
+                then go to a node of depth 1.
+            </p>
+            <p>
+                2) The mapping of the nodes and to the depth is always the same, ex. Here
+                in the BFS we see that node 4 has a depth of 2, so any BFS on the same
+                graph having the same source node will have node 4 in depth 2.
+            </p>
+            <p>
+                3) If we see the final visited graph, we see that this is a tree, now this
+                tree which we get is a subset of the original graph having the same number
+                of nodes but having less number of edges (note: the number of edges are
+                minimum to keep the graph connected). And these types of tree that are a
+                subgraph of the original graph, having the same number of vertices as the original graph, and having minimum possible number of edges
+                to keep the​ subgraph connected is called a “Spanning Tree”.
+                So, we can say that the graph-traversal(both BFS and DFS) of a graph gives
+                us a spanning tree.
+            </p>
+            </div>
+            <br>
+            <p>
+                <h3> Now, How Exactly do we write an algorithm which will do a BFS on a graph? <h3>
+            </p>
+
+            <ul>
+              <li>
+            <p>
+                The order that we have to maintain is first visit all the nodes of one
+                depth (say D), then visit all the nodes of the depth (say D + 1,
+                obviously!) . But if we have nodes of depth D then we can know the nodes at
+                level D + 1, by just visiting the unvisited neighbor of the nodes at depth
+                D.
+            </p> </li>
+            <li>
+            <p>
+                (Why? As we are going depth by depth we first visit all the nodes of depth
+                0 then depth 1 … then depth D, so all the nodes which are of depth ≤ D,
+                will be in the visited graph).
+            </p> </li>
+            <li>
+            <p>
+                Now to do it the best Data Structure will be where we can process the nodes
+                of depth D then add all the nodes of the depth D + 1 by processing the
+                initial depth D nodes. Then in the future we will get nodes of depth D+ 2
+                by processing the nodes at depth D + 1. So, in that Data Structure we need
+                the nodes that we process and insert first should be processed first to get
+                further nodes.i.e. We need a data structure that follows FIFO (First In
+                First Out) ordering. So, we can use a Queue.
+            </p> </li>
+            <li>
+            <p>
+                Now, apart from a Queue we want a way to store the visited nodes of the BFS
+                so that we don’t visit that node more than once. We can do it easily by
+                keeping a boolean array, where we will keep the property that a node of
+                number i is visited or not in Arr[i], if Arr[i] = 1 then node i is visited,
+                else if Arr[i] = 0 the node i is not visited.
+            </p> </li> </ul>
+
+            <div class="bgcolor">
+            <p align="left">
+                So we would need a
+            </p>
+            <p>
+                a. Queue
+            </p>
+            <p>
+                b. Boolean Array
+            </p>
+            </div>
+            <p>
+                <b>Note: if your graph does not contain integer nodes but nodes are of T data
+                types, then you can use a hashmap of type T -&gt; boolean. </b>
+            </p>
+            <p>
+                A Pseudo Code :
+            </p>
+            <p>
+              <script src="https://www.onlinegdb.com/embed/js/Sk-lhTtBP?theme=dark"></script> </p>
+
+              <p> <b>Note: </b>
+            Here we know unvisited / visited by the help of boolean array (or Hashmap) </p>
+
+            <h3> C++ code for BFS </h3>
+
+            <p> <script src="https://www.onlinegdb.com/embed/js/SyieT0trv?theme=dark"></script> </p>
+
+            <p>
+              <b> Time Complexity : the time complexity is O ( V + E )
+                     where V is the number of vertexes and E is the number of edges. </b> <br> </p>
+
+
+                     <p> It is highly recommended to solve below problems, they are handpicked by
+                       Programmers Army: </p>
+
+                       <p> 1.<a href="https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/practice-problems/algorithm/monk-and-the-islands/" target="_blank">
+                          https://www.hackerearth.com/practice/algorithms/
+                         graphs/breadth-first-search/practice-problems/algorithm/monk-and-the-islands/ </a> <br>
+
+                         2. <a href="https://www.spoj.com/problems/PPATH/" target="_blank"> https://www.spoj.com/problems/PPATH/ </a>
+            <p> This article is contributed by <a href="#">Mohit Swain</a> </p>
+            <p>
+                So that’s it for this article we will be coming up with our next article on
+                further topics of Graph Theory very soon till then keep learning, keep
+                coding, keep reading and keep improving !!
+            </p>
+            <p>
+                <strong>Happy Coding </strong>
+            </p>
+            <p>
+                <strong>By Programmers Army </strong>
+                <strong>😊</strong>
+                <strong></strong>
+            </p>
+
+
+            </div>
+            </div>
+                  </div>
+                </main>
+
+
+              <!-- Pagination -->
+              <!-- <div class="w3-center w3-padding-32">
+                <div class="w3-bar">
+                  <a class="w3-button w3-black" href="#">1</a>
+                  <a class="w3-button w3-hover-black" href="#">2</a>
+                  <a class="w3-button w3-hover-black" href="#">3</a>
+                  <a class="w3-button w3-hover-black" href="#">4</a>
+                  <a class="w3-button w3-hover-black" href="#">5</a>
+                  <a class="w3-button w3-hover-black" href="#">»</a>
+                </div>
+              </div> -->
+
+              <!-- <footer id="myFooter">
+                <div class="w3-container w3-theme-l2 w3-padding-32">
+                  <h4>Footer</h4>
+                </div>
+
+                <div class="w3-container w3-theme-l1">
+                  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+                </div>
+              </footer> -->
+
+            <!-- END MAIN -->
+            </div>
+
+
+    <style>
+        .home-newsletter{
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+        @media (min-width:1200px){
+            .home-newsletter{
+                margin-left: -2rem;
+            margin-right: -3rem;
+            }
+        }
+    </style>
+<section class="home-newsletter">
+<div class="foo">
+        <footer>
+<style>
+            </style>
+ <br>
+<h6 align="center">
+                   <a> &nbsp;&nbsp;&nbsp;Copyright &copy; Programmers Army </a> All rights reserved 2020
+                </h6>
+                <div style="text-align: center;">
+                <dt>Connect with us:</dt>
+  <a href="https://www.facebook.com/Programmers-Army-105809441239783" target="_blank"><i class="fa fat fa-facebook-official" style="font-size:30px;color:blue"></i></a>
+  <a href="https://twitter.com/ProgrammingArmy" target="_blank"><i class="fa fat fa-twitter-square" style="font-size:30px;color:lightblue"> </i></a>
+
+  <a href="https://www.instagram.com/" target="_blank"><i class="fa fat fa-instagram" style="font-size:30px;color:violet"></i></a>
+  <a href="https://www.youtube.com/channel/UCRJS3O94F8cOj2U0gOUwmBA" target="_blank"><i class="fa fat fa-youtube" style="font-size:30px;color:orangered"></i></a>
+
+   <a href="https://discord.gg/UWSBScw" target="_blank"><i class="fa fat fa-envelope-open" aria-hidden="true" style="font-size:30px;color:orangered"></i></a>
+ &nbsp;&nbsp;&nbsp;
+                </div>
+<style>
+.home-newsletter {
+padding: 10px 0;
+background: wheat;
+}
+.home-newsletter .single {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 0; }
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: black;
+font-weight: bold;
+font-family: sans-serif;
+text-transform: uppercase;
+margin-bottom: 20px; }
+.home-newsletter .single .form-control {
+height: 40px;
+background: rgba(255, 255, 255, 0.6);
+border-color: transparent;
+border-radius: 20px 0 0 20px; }
+.home-newsletter .single .form-control:focus {
+box-shadow: none;
+border-color: #243c4f; }
+.home-newsletter .single .btn {
+min-height: 40px;
+border-radius: 0 20px 20px 0;
+background: #243c4f;
+color: #fff;
+}*/
+</style>
+
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="single">
+<h2>Subscribe Programmers Army For Getting Updates For New Articles</h2>
+<div class="input-group">
+<div>
+</div>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button5 {background-color: #555555;} /* Black */
+
+.button5 {font-size: 15px;
+			border-radius: 25px;
+}
+
+.bichme{
+    padding-left:30%;
+}
+
+
+
+</style>
+
+<form class="form-inline bichme" action="testmail.php" method="post">
+  <div class="abc">
+    <!--<label for="staticEmail2" class="sr-only">Email</label>-->
+    <input type="email" class="form-control" name="userEmail" placeholder="email@example.com">
+    <span class="input-group-btn"> <button class="btn btn-theme" name="submit" type="submit">Submit</button> <br> <br>
+  </span>
+  </div>
+     <style>
+    .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}</style>
+  <!--<button type="submit" class="btn btn-success" name="submit">Subscribe</button>-->
+</form>
+           </div>
+ 	</div>
+ </div>
+ </div>
+ </div>
+ <p align="center">
+ Designed by <a href="index.html"> <b >Websitians</b></a>
+                </p>
+</section>
+
+
+
+            </div>
+        </footer>
+        </div>
+</body>
+</html>

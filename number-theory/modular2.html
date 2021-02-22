@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="../images/header-logo.ico"/>
+<title>Programmers Army</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .contf{
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+    .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+    .active{
+        background-color: #14ba6a;
+    }
+    .fact{
+        padding-right:-15px;margin-right: -1px;margin-left: -10px;
+        font-size: 50px;
+        color:#62f2ad;
+    }
+    @media only screen and (min-width: 1200px)
+    {
+       .fact
+       {
+           display: none;
+       }
+       .container-fluid
+       {
+           padding-left: 15rem;
+           padding-right: 3rem;
+       }
+    }
+    @media only screen and (max-width: 350px)
+    {
+        .navbar-brand{
+            margin-left: 0px;
+        }
+        .fact{
+            font-size: 40px;
+        }
+        .navbar-toggler-icon{
+            width: 20px;
+        }
+    }
+    @media (max-width:1200px){.w3-sidebar.wcollapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+	.mera:hover {
+		background-color: #62F2AD;
+	}
+</style>
+<body>
+    <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-dark">
+        <div class="abc">
+            <i onclick="change(this);w3_open()" class="fa fact fa-arrow-circle-right"></i>
+        </div>
+        <a href="#" class="navbar-brand"><img class="image" src="../images/logo.svg" style="width: 200px;"></a>
+        <button type="button" class="navbar-toggler" style="background-color: #62f2ad;border-color: white;border-width: 3px;" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <li>
+                <a href="../index.html" class="nav-item text-white nav-link mera">Home</a></li>
+                <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      C++ Programming
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="../c-plus-plus/gettingstarted.html">Basic C++</a>
+                      <a class="dropdown-item" href="../STL/intro_stl.html">STL in C++</a>
+
+                    </div>
+                  </li>
+                <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle " href="#" id="navbardrop" data-toggle="dropdown">
+                      Data Structures
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item btn btn-outline-secondary" href="../DS/intro_to_array.html">Basic Data Structures</a>
+                      <a class="dropdown-item" href="../trees-and-graph/intro_to_graph-1.html">Trees & Graphs</a>
+
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Algorithms
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="../searching-and-sorting/search.html">Basic Algorithms</a>
+                      <a class="dropdown-item" href="../algorithms/count-set-bits.html">Intermediate Algorithms</a>
+                      <a class="dropdown-item" href="../algorithms/kmp-algo.html">Advanced Algorithms</a>
+                    </div>
+                  </li>
+                  <li>
+                  <a href="#" class="nav-item text-white nav-link mera active border">Number theory</a></li>
+                  <li><a href="../DP/introduction.html" class="nav-item text-white nav-link mera">Dynamic programming</a></li>
+          <li><a href="../aboutus.html" class="nav-item text-white nav-link mera">About Us</a></li>
+				  <li><a href="https://programmersarmy.com/contributors/" class="nav-item text-white nav-link mera">Contributors</a></li>
+                </div>
+        </div>
+    </nav>
+    <style>
+    .bgGreen1 {
+      background-color: #14BA6A;
+    }
+    </style>
+    <div class="w3-sidebar sidebar w3-bar-block wcollapse w3-card w3-animate-left sticky-top" style="width:200px;padding-top: 8em;" id="mySidebar">
+      <b> <p align="center"> Number Theory </p> </b> <hr>
+      <a href="Intro_to_number_theory.html" class="w3-bar-item w3-button ">Introduction To Number Theory</a>
+      <a href="primality_test.html" class="w3-bar-item w3-button">Primality Test</a>
+      <a href="prime_fact.html" class="w3-bar-item w3-button">Prime Factorization</a>
+
+      <a href="binary_exp.html" class="w3-bar-item w3-button">Binary Exponentiation</a>
+      <a href="matrix_exp.html" class="w3-bar-item w3-button">Matrix Exponentiation</a>
+      <a href="rec_nth.html" class="w3-bar-item w3-button">Calculate ‘Nth’ element of recurrence relation in O(logn)</a>
+
+      <a href="gcd.html" class="w3-bar-item w3-button">G.C.D algorithm</a>
+      <a href="modular1.html" class="w3-bar-item w3-button">Modular Arithmetic – Part 1 </a>
+      <a href="#" class="w3-bar-item w3-button bgGreen1">Modular Arithmetic – Part 2</a>
+
+      <a href="ext_euclid.html" class="w3-bar-item w3-button"> Extended Euclidean Algorithm</a>
+
+      <a href="total_div.html" class="w3-bar-item w3-button">Total Divisors from prime factorization</a>
+      <a href="bin_coeff.html" class="w3-bar-item w3-button">Binomial co-efficient using modulo inverse</a>
+      <a href="../coming-soon-page.html" class="w3-bar-item w3-button">Euler’s Totient Function</a>
+      <a href="../coming-soon-page.html" class="w3-bar-item w3-button">Euler’s Totient function & G.C.D sum </a>
+
+      </div>
+
+      <div class="w3-main" style="margin-left:200px">
+
+      </div>
+      <script>
+      function w3_open()
+      {
+            if(document.getElementById("mySidebar").style.display== "block")
+            {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+      }
+      function change(x) {
+              x.classList.toggle("fa-arrow-circle-down");
+            }
+      </script>
+     <div class="container-fluid contf" style="margin-left: auto;">
+     <p>
+         <div class="article">
+            <!-- <img src="  "> -->
+
+            <style>
+                  ul {
+                                font-size: 18px;
+                            }
+
+                            .abc,h3 {
+                                font-size: 18px;
+                                font-family: Helvetica, Arial, sans-serif;
+                                text-align: justify;
+                                letter-spacing: 0.5px;
+                            }
+
+                            ol {
+                                font-size: 18px;
+                            }
+                            .uni{
+                                line-height:1.8em;
+
+                            }
+
+                            .setuplink {
+                                color:#8ae034;
+                                text-decoration: underline;
+                            }
+
+            </style>
+
+            <style>
+                ul {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+
+                ol {
+                    font-size: 18px;
+                }
+
+                .div1 {
+                    background-color: aquamarine;
+                }
+            </style>
+
+            <h2 align="center"><b><u>Number Theory : Modular Arithmetic – Part 2</u></b></h2><br>
+
+
+            <p>
+                After clearing your basics of Modular Arithmetic in our previous article, it is the best time to learn some new and important concepts in modular arithmetic.
+                <br/>
+                <br/> So, be relaxed and keep reading we will be making it super easy for you to understand and absorb new concepts 😊
+                <br/>
+                <br/><b> Note:</b> If you have not read our previous article on <strong>Modular Arithmetic – Part1</strong>, we highly recommend you to read it by <a href="https://www.Programmers Army.tech">clicking here</a>, as we will be using
+                some concepts of that article here.
+                <br/>
+                <br/> let’s start with our first topic:
+                <br/>
+                <br/>
+                <strong><u><h2 align="center">1. Modular Exponentiation</h2></u></strong><br>
+                <strong></strong>
+            </p>
+            <div class="div1"> <br>
+                <p>
+
+                    It simply says if you have <strong>a ≡ b (mod N)</strong> then <strong>a<sup>k</sup> ≡ b<sup>k</sup> (mod N).</strong>
+                </p>
+                <p>
+                    Let’s understand this with an example: we have<strong>16 ≡ 1 (mod 3)</strong> then according to modular exponentiation <strong>16<sup>2</sup> ≡ 1<sup>2</sup> (mod 3) = 1</strong> (here k = 2) hence we verified this property.
+                    <br/>
+            </div>
+            <p>
+                <br/> Now, you may think how or where is this property useful? So, let’s have a look at below scenario.
+                <br/> Suppose you are given a task to find out <strong>29<sup>10 </sup></strong> <strong>(mod 3)</strong>, you can imagine how big this number is and completing this task is practically impossible without modular exponentiation.
+                <br/>
+                <br/> So, how modular exponentiation solves this problem?
+                <br/> It’s very simple first of all you need to find such a number which gives same remainder as 29 when divided by 3, that number is 2 in our case as,
+                <br/>
+                <strong>
+29 % 3 = 2 % 3 = 2
+<br/>
+<br/>
+</strong> Hence, we can write 29 ≡ 2 (mod 3) great, now we will be applying property of modular exponentiation here, we get
+                <br/>
+                <br/> If <strong>29 ≡ 2 (mod 3) then 29<sup>10</sup> ≡ 2<sup>10 </sup></strong> <strong>(mod 3)</strong> ….by modular exponentiation.
+            </p>
+            <p>
+                <br/> so, now if we calculate 2<sup>10 </sup>(mod 3) = 1024 (mod 3) = 1 is same as what we get by doing 29<sup>10</sup> (mod 3) isn’t that interesting and it made our calculation so easy, that’s why number theory is so much
+                cool and awesome to learn.
+                <strong>
+<br/>
+</strong>
+                <br/> Why don’t you try to get what 2<sup>123456789</sup> (mod 7) ≡ ? will be congruent to..it would be fun and learning do give it a try, if you got stuck google is always here to help you :)
+            </p>
+            <hr>
+            <p>
+                <strong><u><h2 align="center">2. Modulo Multiplicative Inverse</h2></u></strong>
+                <br/>
+                <p>
+                    <br/> Did you remembered from our previous article that modular arithmetic won’t work same for division operation so for make it work for division operators we make use of modulo multiplicative inverse.
+                    <br/>
+                    <br/> Now, let’s understand this concept formally.
+                    <br/>
+                    <br/>
+                    <strong>Definition: </strong> Modulo Multiplicative inverse of a number ‘N’ under modulo ‘P’ is defined to be a number X such that N * X ≡ 1 (mod P).
+                    <br/>
+                    <br/> E.g. Modulo Multiplicative inverse of 5, under modulo 7 is 3, since 5 * 3 ≡ 1 (mod 7)
+                </p>
+                <p>
+                    <strong>
+Note: Modulo inverse of N, under modulo P exist if and only if N &amp;
+P are Co-Prime with each other i.e. GCD( N , P) = 1 i.e. They should
+not have common prime divisors.
+</strong>
+                    <br/>
+                    <br/> So,
+                    <div class="div1"> <br>
+                        <p>
+                            <strong>
+what exactly is modulo multiplicative inverse?
+<br/>
+<br/>
+</strong> In modulo multiplicative inverse we actually find the equivalent multiplication factor for the denominator in division expression and then instead of doing division operation we actually do multiplication
+                            operation to get the same result as we will be getting with division,
+                            <br/>
+                            <br/> So by doing this we have successfully transformed our division into multiplication and now we can apply the modulo multiplicative property on this expression.
+                            <br/>
+                            <br/> let’s take an example to understand it more clearly:
+                            <br/>
+                            <br/> E.g1. suppose we want to do <strong>10 / 5 </strong>(taking small number for better understanding)
+                            <br/>
+                            <br/> so, here instead of dividing 10 by 5 we will find an equivalent multiplication factor for <strong>1 / 5 </strong>that would give us the same result as dividing 10 by 5.
+                            <br/>
+                            <br/> So, equivalent multiplication factor for 1/5 would be 0.2,
+                        </p>
+                        <p>
+                            Hence, we have
+                            <strong>
+10 / 5 = 10 * 0.2 = 2;
+<br/>
+<br/>
+</strong> E.g2. Calculate ( 6 / 2 ) % 5: ….Note here GCD(2,5) = 1
+                            <br/>
+                            <strong> </strong> Let’s suppose multiplicative inverse of ½ is 3, hence our expression becomes.
+                            <br/>
+                            <br/> ( 6 / 2 ) % 5 = ( 6 * (½) ) % 5 = ( 6 * 3 ) % 5 = ( 18 ) % 5 = 3 which is same as ( 6 / 2 ) % 5 = 3 % 5 = 3
+                            <strong>
+<br/>
+<br/>
+</strong> Therefore we can summarize our discussion as below formula.
+                            <br/>
+                            <br/>
+                            <strong>
+( A / B ) % P = ( A * X ) % P = ( ( A % P ) * (X % P) ) % P
+
+</strong>
+                            <br>
+                    </div>
+
+                    </p>
+                    <p>
+                        Now, coming to implementation part or coding part so there are basically 2 ways to calculate modulo inverse efficiently.
+                        <br/>
+                        <br/> 1. Using Fermat’s Little Theorem.
+                        <br/> 2. Using Extended Euclidean Algorithm.
+                        <br/>
+                        <br/> <b>Note:</b> Time Complexity of both the algorithm is almost same.
+                    </p>
+                    <p>
+                        Let’s look at fermat’s little theorem.
+                        <br/>
+                        <br/>
+                        <strong><u><h2 align="center">A. Fermat’s little theorem</h2></u></strong>
+                        <br/>
+                        <p>
+                            <br/> Fermat’s little theorem says that <strong>a<sup>m-1</sup> </strong> <strong>≡ 1 mod m</strong>
+                            <strong>
+….1
+<br/>
+</strong>
+                            <br/> m is Prime Number, a is any integer and GCD(a,m) = 1 i.e. a and m are co-prime i.e. they do not have same or common prime divisors.
+                            <br/>
+                            <br/> therefore, dividing by ‘a’ in equation 1,
+                            <br/>
+                            <div class="div1">
+                                <p>
+                                    <br/> a
+                                    <sup>m-2 </sup>≡ a<sup>-1</sup> mod m, which can be written as below
+                                    <br/>
+                                    <br/>
+                                    <strong>a<sup>-1</sup> ≡ a<sup>m-2</sup> mod m, </strong> this is what we wanted to get i.e. a<sup>-1</sup>
+                                    <br/>
+                            </div>
+                            <p>
+                                <br/> Below is the implementation of above logic:
+
+                                <br/>
+                            </p>
+                            <p>
+                                <strong>Time Complexity: </strong>
+                                <strong>O(Log m) </strong>
+                                <br/>
+
+
+                            </p>
+                            <p>
+                                <script src="//onlinegdb.com/embed/js/S1DZH6Kbw?theme=dark"></script>
+
+                            </p>
+                            <p>
+                                We will be discussing <strong>Extended Euclidean Algorithm </strong>in separate article as it have some great concept associated with it, and we don’t want to mix it with the concepts in this article.
+                                <br/>
+                                <br/>
+                            </p>
+                            <p>
+                                It is always better to solve a question after you learn a new concept as it helps in making concrete concepts.
+                            </p>
+                            <p>
+                                So, below are problems which are handpicked by Programmers Army to make your concept more solid which you learned.
+                            </p>
+                            <div class="div1">
+                                <br>
+                                <p>
+                                    1. <strong>Problem from CodeChef: </strong>
+                                    <a href="https://www.codechef.com/problems/GRIDTOUR">
+https://www.codechef.com/problems
+/GRIDTOUR
+</a>
+                                    <br/>
+
+                                </p>
+                                <p>
+                                    2. <strong>Problem from HackerEarth:</strong>
+                                    <a href="https://www.hackerearth.com/problem/algorithm/modulo-inverse-problem/">
+https://www.hackerearth.com/problem
+/algorithm/modulo-inverse-problem/
+</a>
+                                </p>
+                            </div>
+                            <p>
+                                We highly recommend to solve above problems if you got stuck read editorials for guidance.
+                                <br/>
+                                <br/>
+                                <strong>Conclusion: </strong> We learned Modular Exponentiation and Modulo Multiplicative Inverse in this article and implemented modulo multiplicative inverse with use of fermat’s little theorem.
+                            </p>
+                            <div class="div1">
+
+
+                                <p>
+                                    <br/> Below is short glimpse for quick revision.
+                                    <br/>
+                                    <br/><b> 1. if you have <strong>a ≡ b (mod N)</strong> then
+                                <strong>
+a<sup>k</sup> ≡ b<sup>k</sup> (mod N) … Modular Exponentiation
+<br/>
+<br/>
+</strong> 2.
+                                <strong>
+( A / B ) % P = ( A * X ) % P = ( ( A % P ) * (X % P) ) % P Modulo
+Multiplicative Inverse.
+<br/>
+<br/>
+</strong> 3. <strong>a<sup>-1</sup> ≡ a<sup>m-2</sup> mod m where m is <strong> prime number, it is Fermat’s little Theorem.</strong>
+                            </p>
+                            </div>
+                            <p><br>
+                                So that’s it for this article we will be coming up with our next article on further topics of number theory very soon till then keep learning, keep coding, keep reading and keep improving !!
+                            </p>
+                            <p>
+                                <strong>
+<br/>
+
+<br/>
+</strong>
+                            </p>
+                            <p>
+                                <strong>Happy Coding </strong>
+                            </p>
+                            <p>
+                                <strong>By Programmers Army </strong>
+                                <strong>😊</strong>
+                                <strong></strong>
+                            </p>
+
+      </div>
+            </div>
+                  </div>
+                </main>
+
+              <!-- Pagination -->
+              <!-- <div class="w3-center w3-padding-32">
+                <div class="w3-bar">
+                  <a class="w3-button w3-black" href="#">1</a>
+                  <a class="w3-button w3-hover-black" href="#">2</a>
+                  <a class="w3-button w3-hover-black" href="#">3</a>
+                  <a class="w3-button w3-hover-black" href="#">4</a>
+                  <a class="w3-button w3-hover-black" href="#">5</a>
+                  <a class="w3-button w3-hover-black" href="#">»</a>
+                </div>
+              </div> -->
+
+              <!-- <footer id="myFooter">
+                <div class="w3-container w3-theme-l2 w3-padding-32">
+                  <h4>Footer</h4>
+                </div>
+
+                <div class="w3-container w3-theme-l1">
+                  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+                </div>
+              </footer> -->
+
+            <!-- END MAIN -->
+            </div>
+
+
+    <style>
+        .home-newsletter{
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+        @media (min-width:1200px){
+            .home-newsletter{
+                margin-left: -2rem;
+            margin-right: -3rem;
+            }
+        }
+    </style>
+<section class="home-newsletter">
+<div class="foo">
+        <footer>
+<style>
+            </style>
+ <br>
+<h6 align="center">
+                   <a> &nbsp;&nbsp;&nbsp;Copyright &copy; Programmers Army </a> All rights reserved 2020
+                </h6>
+                <div style="text-align: center;">
+                <dt>Connect with us:</dt>
+  <a href="https://www.facebook.com/Programmers-Army-105809441239783" target="_blank"><i class="fa fat fa-facebook-official" style="font-size:30px;color:blue"></i></a>
+  <a href="https://twitter.com/ProgrammingArmy" target="_blank"><i class="fa fat fa-twitter-square" style="font-size:30px;color:lightblue"> </i></a>
+
+  <a href="https://www.instagram.com/" target="_blank"><i class="fa fat fa-instagram" style="font-size:30px;color:violet"></i></a>
+  <a href="https://www.youtube.com/channel/UCRJS3O94F8cOj2U0gOUwmBA" target="_blank"><i class="fa fat fa-youtube" style="font-size:30px;color:orangered"></i></a>
+
+   <a href="https://discord.gg/UWSBScw" target="_blank"><i class="fa fat fa-envelope-open" aria-hidden="true" style="font-size:30px;color:orangered"></i></a>
+ &nbsp;&nbsp;&nbsp;
+                </div>
+<style>
+.home-newsletter {
+padding: 10px 0;
+background: wheat;
+}
+.home-newsletter .single {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 0; }
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: black;
+font-weight: bold;
+font-family: sans-serif;
+text-transform: uppercase;
+margin-bottom: 20px; }
+.home-newsletter .single .form-control {
+height: 40px;
+background: rgba(255, 255, 255, 0.6);
+border-color: transparent;
+border-radius: 20px 0 0 20px; }
+.home-newsletter .single .form-control:focus {
+box-shadow: none;
+border-color: #243c4f; }
+.home-newsletter .single .btn {
+min-height: 40px;
+border-radius: 0 20px 20px 0;
+background: #243c4f;
+color: #fff;
+}*/
+</style>
+
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="single">
+<h2>Subscribe Programmers Army For Getting Updates For New Articles</h2>
+<div class="input-group">
+<div>
+</div>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button5 {background-color: #555555;} /* Black */
+
+.button5 {font-size: 15px;
+			border-radius: 25px;
+}
+
+.bichme{
+    padding-left:30%;
+}
+
+
+
+</style>
+
+<form class="form-inline bichme" action="testmail.php" method="post">
+  <div class="abc">
+    <!--<label for="staticEmail2" class="sr-only">Email</label>-->
+    <input type="email" class="form-control" name="userEmail" placeholder="email@example.com">
+    <span class="input-group-btn"> <button class="btn btn-theme" name="submit" type="submit">Submit</button> <br> <br>
+  </span>
+  </div>
+     <style>
+    .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}</style>
+  <!--<button type="submit" class="btn btn-success" name="submit">Subscribe</button>-->
+</form>
+           </div>
+ 	</div>
+ </div>
+ </div>
+ </div>
+ <p align="center">
+ Designed by <a href="index.html"> <b >Websitians</b></a>
+                </p>
+</section>
+
+
+
+            </div>
+        </footer>
+        </div>
+</body>
+</html>

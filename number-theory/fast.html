@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="../images/header-logo.ico"/>
+<title>Programmers Army</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .contf{
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+    .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+    .active{
+        background-color: #14ba6a;
+    }
+    .fact{
+        padding-right:-15px;margin-right: -1px;margin-left: -10px;
+        font-size: 50px;
+        color:#62f2ad;
+    }
+    @media only screen and (min-width: 1200px)
+    {
+       .fact
+       {
+           display: none;
+       }
+       .container-fluid
+       {
+           padding-left: 15rem;
+           padding-right: 3rem;
+       }
+    }
+    @media only screen and (max-width: 350px)
+    {
+        .navbar-brand{
+            margin-left: 0px;
+        }
+        .fact{
+            font-size: 40px;
+        }
+        .navbar-toggler-icon{
+            width: 20px;
+        }
+    }
+    @media (max-width:1200px){.w3-sidebar.wcollapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+	.mera:hover {
+		background-color: #62F2AD;
+	}
+</style>
+<body>
+    <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-dark">
+        <div class="abc">
+            <i onclick="change(this);w3_open()" class="fa fact fa-arrow-circle-right"></i>
+        </div>
+        <a href="#" class="navbar-brand"><img class="image" src="../images/logo.svg" style="width: 200px;"></a>
+        <button type="button" class="navbar-toggler" style="background-color: #62f2ad;border-color: white;border-width: 3px;" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <li>
+                <a href="../index.html" class="nav-item text-white nav-link mera">Home</a></li>
+                <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      C++ Programming
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="../c-plus-plus/gettingstarted.html">Basic C++</a>
+                      <a class="dropdown-item" href="../STL/intro_stl.html">STL in C++</a>
+
+                    </div>
+                  </li>
+                <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle " href="#" id="navbardrop" data-toggle="dropdown">
+                      Data Structures
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item btn btn-outline-secondary" href="../DS/intro_to_array.html">Basic Data Structures</a>
+                      <a class="dropdown-item" href="../trees-and-graph/intro_to_graph-1.html">Trees & Graphs</a>
+
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Algorithms
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="../searching-and-sorting/search.html">Basic Algorithms</a>
+                      <a class="dropdown-item" href="../algorithms/count-set-bits.html">Intermediate Algorithms</a>
+                      <a class="dropdown-item" href="../algorithms/kmp-algo.html">Advanced Algorithms</a>
+                    </div>
+                  </li>
+                  <li>
+                  <a href="#" class="nav-item text-white nav-link mera active border">Number theory</a></li>
+                  <li><a href="../DP/introduction.html" class="nav-item text-white nav-link mera">Dynamic programming</a></li>
+          <li><a href="../aboutus.html" class="nav-item text-white nav-link mera">About Us</a></li>
+				  <li><a href="https://programmersarmy.com/contributors/" class="nav-item text-white nav-link mera">Contributors</a></li>
+                </div>
+        </div>
+    </nav>
+    <style>
+    .bgGreen1 {
+      background-color: #14BA6A;
+    }
+    </style>
+    <div class="w3-sidebar sidebar w3-bar-block wcollapse w3-card w3-animate-left sticky-top" style="width:200px;padding-top: 8em;" id="mySidebar">
+      <b> <p align="center"> Number Theory </p> </b> <hr>
+      <a href="Intro_to_number_theory.html" class="w3-bar-item w3-button bgGreen1">Introduction To Number Theory</a>
+      <a href="primality_test.html" class="w3-bar-item w3-button">Primality Test</a>
+      <a href="prime_fact.html" class="w3-bar-item w3-button">Prime Factorization</a>
+
+      <a href="binary_exp.html" class="w3-bar-item w3-button">Binary Exponentiation</a>
+      <a href="matrix_exp.html" class="w3-bar-item w3-button">Matrix Exponentiation</a>
+      <a href="rec_nth.html" class="w3-bar-item w3-button">Calculate ‘Nth’ element of recurrence relation in O(logn)</a>
+
+      <a href="gcd.html" class="w3-bar-item w3-button">G.C.D algorithm</a>
+      <a href="modular1.html" class="w3-bar-item w3-button">Modular Arithmetic – Part 1 </a>
+      <a href="modular2.html" class="w3-bar-item w3-button">Modular Arithmetic – Part 2</a>
+
+      <a href="ext_euclid.html" class="w3-bar-item w3-button"> Extended Euclidean Algorithm</a>
+
+      <a href="total_div.html" class="w3-bar-item w3-button">Total Divisors from prime factorization</a>
+      <a href="bin_coeff.html" class="w3-bar-item w3-button">Binomial co-efficient using modulo inverse</a>
+      <a href="../coming-soon-page.html" class="w3-bar-item w3-button">Euler’s Totient Function</a>
+      <a href="../coming-soon-page.html" class="w3-bar-item w3-button">Euler’s Totient function & G.C.D sum </a>
+
+      </div>
+
+      <div class="w3-main" style="margin-left:200px">
+
+      </div>
+      <script>
+      function w3_open()
+      {
+            if(document.getElementById("mySidebar").style.display== "block")
+            {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+      }
+      function change(x) {
+              x.classList.toggle("fa-arrow-circle-down");
+            }
+      </script>
+     <div class="container-fluid contf" style="margin-left: auto;">
+     <p>
+         <div class="article">
+            <!-- <img src="  "> -->
+
+            <style>
+                  ul {
+                                font-size: 18px;
+                            }
+
+                            .abc,h3 {
+                                font-size: 18px;
+                                font-family: Helvetica, Arial, sans-serif;
+                                text-align: justify;
+                                letter-spacing: 0.5px;
+                            }
+
+                            ol {
+                                font-size: 18px;
+                            }
+                            .uni{
+                                line-height:1.8em;
+
+                            }
+
+                            .setuplink {
+                                color:#8ae034;
+                                text-decoration: underline;
+                            }
+
+            </style>
+
+            <style>
+                ul {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+
+                ol {
+                    font-size: 18px;
+                }
+
+                .div1 {
+                    background-color: aquamarine;
+                }
+            </style>
+
+            <h2 align="center"><b><u>Fast I/O in C++ for Competitive Programming</u></b></h2><br>
+
+        <p>
+                If you are not new to competitive programming then you may have found that,
+                some questions specify that,
+                <br><strong>Warning:
+
+                    Large I/O data, be careful with certain languages (though most should
+                    be OK if the algorithm is well designed)
+                    .</strong>
+                    <br/>
+                    <br/>
+
+                    So, ever wondered why do they write this? Or what are various options
+                    to overcome this warning?.
+                    <br/>
+                    <br/>
+                    Don’t worry Programmers Army is here to help you out and we will make this
+                    content very simple so that you can understand this very easily
+
+                😊
+
+                    <br/>
+                    <br/>
+                    The reason for some of the questions of mentioning such warnings are:
+                    <br/>
+
+
+            </p>
+            <p>
+                · Usually these questions want you to write a solution that reads input
+                from standard input and write output to standard output.
+            </p>
+            <p>
+            · And at the backend these inputs are uploaded as test case files (    <em>mostly .txt</em>).
+                <br/>
+                <br/>
+            </p>
+            <p>
+                · So, if these test case files contain huge number of inputs included, then
+                for just reading that much inputs your program will take much higher time
+                than expected and it would run out of time limit bounds.
+                <br/>
+                <br/>
+            </p>
+            <p>
+                · Hence, the creator of question specifies before hand that this question
+                contains large input/outputs and you have to use fast input/output methods.
+                <br/>
+                <br/>
+            </p>
+            <p>
+                · Indirectly they are saying you, to not use normal input output methods,
+                as they will give unexpected results and time bound error.
+                <br/>
+                <br/>
+                <strong>So, what to use for reading fast inputs?</strong>
+                <br/>
+                <br/>
+                Now, coming to <strong>fast input/output in C++,</strong> you may be
+                wondering what can we use instead of <strong>cin and cout</strong>, for
+                faster input/outputs….
+                <br/>
+                <br/>
+            </p>
+            <p>
+
+            Well, then I would like to bring your attention towards    <strong> scanf() and printf(), </strong>These
+            </p>
+            <p>
+                two magical functions of C language are actually much faster than
+                <strong>
+                    cin and cout.
+                    <br/>
+                    <br/>
+                </strong>
+            </p>
+            <p>
+                <strong>
+
+                </strong>
+                have a look at below comparison:
+                <br/>
+                <br/>
+            </p>
+            <p>
+                This is simple code in C++, which takes array as input and outputs the
+                same.
+            </p>
+            <p>
+                <strong>
+                    Execution time : 0.34s (it may vary depending on your system)
+                </strong>
+            </p>
+            <script src="//onlinegdb.com/embed/js/ryLqJmjWP?theme=dark"></script>
+            <p>
+              <br>  This is same code in C, using scanf(), and printf(), and guess what
+                <strong>
+                    execution time for this code is : 0.01s (it may vary depending on your
+                    system)
+                </strong>
+                isn’t that great?
+            </p>
+            <script src="//onlinegdb.com/embed/js/rkl0yQobP?theme=dark"></script>
+            <p>
+                But wait C++ lovers, we have something great for you which can make cin and
+                cout more faster (or equivalent to) than scanf() and printf().
+                <br/>
+                <br/>
+            </p>
+            <p>
+                Adding below 2 lines in the start of your main function, will make cin and
+                cout, much more faster than before.
+            </p>
+            <script src="//onlinegdb.com/embed/js/HyeGZgQs-w?theme=dark"></script>
+            <p>
+                <br/>
+                <strong>
+                    Why it makes cin and cout faster?
+                    <br/>
+                    <br/>
+                </strong>
+            </p>
+            <script src="//onlinegdb.com/embed/js/rJtMlXoWP?theme=dark"></script>
+            <p>
+
+                Toggle synchronization with cstdio streams [static]
+            </p>
+            <p>
+                Toggles on or off synchronization of all the iostream standard streams with
+                their corresponding standard C streams if it is called before the program
+                performs its first input or output operation.
+                <br/>
+                <br/>
+            If called once an input or output operation has occurred, its effects are    <em>implementation-defined</em>.
+                <br/>
+                <br/>
+                By default, the parameter of above function is true, and we have to make it
+                false, for not toggling.
+                <br/>
+                <br/>
+            </p>
+            <script src="//onlinegdb.com/embed/js/SkxVxXibw?theme=dark"></script>
+            <p>
+
+                <strong>tie()</strong>
+                is a method which simply guarantees the flushing of cout before cin accepts
+                an input.
+                <br/>
+                So, by passing it NULL pointer we are basically limiting tie() method to
+                function, on given inputs which ultimately makes inputs to our code faster.
+                <br/>
+                <br/>
+                So, after adding above 2 line in start of my main function, we achieved to
+                get execution time closer to what we got from scanf() and printf(), Voila
+                !!
+                <br/>
+                <br/>
+
+                1. If you are including separate header files for using various data
+                structure and algorithms that are pre-implemented in Standard Template
+                Library(STL), then we have a gift for you.
+                <br/>
+                <br/>
+
+            </p>
+            <p>
+                you can just include this one header file in your C++ program and you can
+                now use any Data Structure and Algorithm of STL,
+            </p>
+            <script src="//onlinegdb.com/embed/js/Byxjlmobv?theme=dark"></script>
+            <p>
+
+                And, guess what this will also make your code to run faster, think why?
+                yes, just because compilation time will be reduced due to just one header
+                file.
+                <br/>
+                <br/>
+
+                2. You can <strong>use “\n” instead of endl, </strong>it will also make
+                your code faster. Why?
+                <br/>
+
+            </p>
+            <p>
+                Because,”\n” just takes your cursor to new line whereas endl, take cursor
+                to new newline as well as flushes the output stream everytime.
+                <br/>
+                So, this make “\n” , a best option to use it.
+            </p>
+            <p>
+                <br/>
+
+                3. If you want lightning speed, input in your code then read further:
+                <br/>
+
+            </p>
+            <p>
+                Here, we are reading one character each time from input buffer and we will
+                keep on reading until it is in ASCII range i.e. ( from 48 to 57 ).
+                <br/>
+                <br/>
+                If the number is negative we will multiply it with -1.
+                <br/>
+                have a look at below implemetaion.
+                <br/>
+                <br/>
+            </p>
+            <script src="//onlinegdb.com/embed/js/r1axWQiWD?theme=dark"></script>
+            <p>
+                <br/>
+                References:
+                https://www.geeksforgeeks.org/fast-io-for-competitive-programming/
+            </p>
+            <p>
+                <br/>
+                So that’s it for this article we will be coming up with our next article
+                very soon till then keep learning, keep coding, keep reading and keep
+                improving !!
+            </p>
+            <p>
+                <strong>
+                    <br/>
+                    <br/>
+                    <br/>
+                </strong>
+            </p>
+
+            <p>
+                <strong>
+                    <br/>
+
+                </strong>
+                <strong>Happy Coding</strong>
+                <strong></strong>
+            </p>
+            <p>
+                <strong>By Programmers Army </strong>
+                <strong>😊</strong>
+                <strong></strong>
+            </p>
+
+
+
+
+      </div>
+            </div>
+                  </div>
+                </main>
+
+              <!-- Pagination -->
+              <!-- <div class="w3-center w3-padding-32">
+                <div class="w3-bar">
+                  <a class="w3-button w3-black" href="#">1</a>
+                  <a class="w3-button w3-hover-black" href="#">2</a>
+                  <a class="w3-button w3-hover-black" href="#">3</a>
+                  <a class="w3-button w3-hover-black" href="#">4</a>
+                  <a class="w3-button w3-hover-black" href="#">5</a>
+                  <a class="w3-button w3-hover-black" href="#">»</a>
+                </div>
+              </div> -->
+
+              <!-- <footer id="myFooter">
+                <div class="w3-container w3-theme-l2 w3-padding-32">
+                  <h4>Footer</h4>
+                </div>
+
+                <div class="w3-container w3-theme-l1">
+                  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+                </div>
+              </footer> -->
+
+            <!-- END MAIN -->
+            </div>
+
+
+    <style>
+        .home-newsletter{
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+        @media (min-width:1200px){
+            .home-newsletter{
+                margin-left: -2rem;
+            margin-right: -3rem;
+            }
+        }
+    </style>
+<section class="home-newsletter">
+<div class="foo">
+        <footer>
+<style>
+            </style>
+ <br>
+<h6 align="center">
+                   <a> &nbsp;&nbsp;&nbsp;Copyright &copy; Programmers Army </a> All rights reserved 2020
+                </h6>
+                <div style="text-align: center;">
+                <dt>Connect with us:</dt>
+  <a href="https://www.facebook.com/Programmers-Army-105809441239783" target="_blank"><i class="fa fat fa-facebook-official" style="font-size:30px;color:blue"></i></a>
+  <a href="https://twitter.com/ProgrammingArmy" target="_blank"><i class="fa fat fa-twitter-square" style="font-size:30px;color:lightblue"> </i></a>
+
+  <a href="https://www.instagram.com/" target="_blank"><i class="fa fat fa-instagram" style="font-size:30px;color:violet"></i></a>
+  <a href="https://www.youtube.com/channel/UCRJS3O94F8cOj2U0gOUwmBA" target="_blank"><i class="fa fat fa-youtube" style="font-size:30px;color:orangered"></i></a>
+
+   <a href="https://discord.gg/UWSBScw" target="_blank"><i class="fa fat fa-envelope-open" aria-hidden="true" style="font-size:30px;color:orangered"></i></a>
+ &nbsp;&nbsp;&nbsp;
+                </div>
+<style>
+.home-newsletter {
+padding: 10px 0;
+background: wheat;
+}
+.home-newsletter .single {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 0; }
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: black;
+font-weight: bold;
+font-family: sans-serif;
+text-transform: uppercase;
+margin-bottom: 20px; }
+.home-newsletter .single .form-control {
+height: 40px;
+background: rgba(255, 255, 255, 0.6);
+border-color: transparent;
+border-radius: 20px 0 0 20px; }
+.home-newsletter .single .form-control:focus {
+box-shadow: none;
+border-color: #243c4f; }
+.home-newsletter .single .btn {
+min-height: 40px;
+border-radius: 0 20px 20px 0;
+background: #243c4f;
+color: #fff;
+}*/
+</style>
+
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="single">
+<h2>Subscribe Programmers Army For Getting Updates For New Articles</h2>
+<div class="input-group">
+<div>
+</div>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button5 {background-color: #555555;} /* Black */
+
+.button5 {font-size: 15px;
+			border-radius: 25px;
+}
+
+.bichme{
+    padding-left:30%;
+}
+
+
+
+</style>
+
+<form class="form-inline bichme" action="testmail.php" method="post">
+  <div class="abc">
+    <!--<label for="staticEmail2" class="sr-only">Email</label>-->
+    <input type="email" class="form-control" name="userEmail" placeholder="email@example.com">
+    <span class="input-group-btn"> <button class="btn btn-theme" name="submit" type="submit">Submit</button> <br> <br>
+  </span>
+  </div>
+     <style>
+    .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}</style>
+  <!--<button type="submit" class="btn btn-success" name="submit">Subscribe</button>-->
+</form>
+           </div>
+ 	</div>
+ </div>
+ </div>
+ </div>
+ <p align="center">
+ Designed by <a href="index.html"> <b >Websitians</b></a>
+                </p>
+</section>
+
+
+
+            </div>
+        </footer>
+        </div>
+</body>
+</html>

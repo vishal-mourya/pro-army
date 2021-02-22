@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="../images/header-logo.ico"/>
+<title>Programmers Army</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .abc{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .para{
+        font-size: 17px;
+    }
+    .sect{
+        font-size: 20px;
+        font-weight: bold;
+        color: #14ba6a;
+    }
+    .contf{
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+    .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+    .active{
+        background-color: #14ba6a;
+    }
+    .fact{
+        padding-right:-15px;margin-right: -1px;margin-left: -10px;
+        font-size: 50px;
+        color:#62f2ad;
+    }
+    @media only screen and (min-width: 1200px)
+    {
+       .fact
+       {
+           display: none;
+       }
+       .container-fluid
+       {
+           padding-left: 15rem;
+           padding-right: 3rem;
+       }
+    }
+    @media only screen and (max-width: 350px)
+    {
+        .navbar-brand{
+            margin-left: 0px;
+        }
+        .fact{
+            font-size: 40px;
+        }
+        .navbar-toggler-icon{
+            width: 20px;
+        }
+    }
+    @media (max-width:1200px){.w3-sidebar.wcollapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+    .mera:hover {
+		background-color: #62F2AD;
+	}
+</style>
+<body>
+    <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-dark">
+        <div class="abc">
+            <i onclick="change(this);w3_open()" class="fa fact fa-arrow-circle-right"></i>
+        </div>
+        <a href="#" class="navbar-brand"><img class="image" src="logo.svg" style="width: 200px;"></a>
+        <button type="button" class="navbar-toggler" style="background-color: #62f2ad;border-color: white;border-width: 3px;" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <li>
+                  <a href="../index.html" class="nav-item text-white nav-link mera">Home</a></li>
+                  <li class="nav-item dropdown mera">
+                      <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        C++ Programming
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../c-plus-plus/gettingstarted.html">Basic C++</a>
+                        <a class="dropdown-item" href="../STL/intro_stl.html">STL in C++</a>
+
+                      </div>
+                    </li>
+                  <li class="nav-item dropdown mera">
+                      <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Data Structures
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item btn btn-outline-secondary" href="../DS/Intro_to_array.html">Basic Data Structures</a>
+                        <a class="dropdown-item" href="../trees-and-graph/intro_to_graph-1.html">Trees & Graphs</a>
+
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown mera">
+                      <a class="nav-link text-white dropdown-toggle " href="#" id="navbardrop" data-toggle="dropdown">
+                        Algorithms
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../searching-and-sorting/search.html">Basic Algorithms</a>
+                        <a class="dropdown-item" href="../algorithms/count-set-bits.html">Intermediate Algorithms</a>
+                        <a class="dropdown-item" href="../algorithms/kmp-algo.html">Advanced Algorithms</a>
+                      </div>
+                    </li>
+                    <li>
+                    <a href="../number-theory/Intro_to_number_theory.html" class="nav-item text-white nav-link mera">Number theory</a></li>
+                    <li><a href="#" class="nav-item text-white nav-link active border">Dynamic programming</a></li>
+            <li><a href="../aboutus.html" class="nav-item text-white nav-link mera">About Us</a></li>
+            <li><a href="https://programmersarmy.com/contributors/" class="nav-item text-white nav-link mera">Contributors</a></li>
+                </div>
+        </div>
+    </nav>
+    <div class="w3-sidebar sidebar w3-bar-block wcollapse w3-card w3-animate-left sticky-top" style="width:200px;padding-top: 8em;" id="mySidebar">
+        <b> <p align="center"> Dynamic Programming </p> </b>
+        <a href="introduction.html" class="w3-bar-item w3-button">Introduction to DP</a>
+        <a href="RecVsDp.html" class="w3-bar-item w3-button">Recursion vs DP</a>
+        <a href="top-down.html" class="w3-bar-item w3-button ">Top Down and Bottom up Approach</a>
+        <a href="knapsack.html" class="w3-bar-item w3-button">0-1 Knapsack</a>
+        <a href="lcs.html" class="w3-bar-item w3-button">LCS</a>
+        <a href="lps.html" class="w3-bar-item w3-button">LPS</a>
+        <a href="Min-Cost.html" class="w3-bar-item w3-button">Min-Cost path</a>
+
+        <a href="kadane.html" class="w3-bar-item w3-button ">Kadane Algorithm</a>
+        <a href="partition.html" class="w3-bar-item w3-button">Partition Problem</a>
+        <a href="#" class="w3-bar-item w3-button active">Relation Between DP And DAG</a>
+        <a href="tiling.html" class="w3-bar-item w3-button">Tiling Problem</a>
+      </div>
+
+      <div class="w3-main" style="margin-left:200px">
+
+      </div>
+      <script>
+      function w3_open()
+      {
+            if(document.getElementById("mySidebar").style.display== "block")
+            {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+      }
+      function change(x) {
+              x.classList.toggle("fa-arrow-circle-down");
+            }
+      </script>
+
+      <style>
+      p{
+        font-size: 18px;
+      }
+      .mine {
+        background-color: aquamarine;
+        border-radius: 20px;
+        padding: 10px;
+      }
+
+      .bg-grey {
+        background-color: lightgrey;
+        border-radius: 20px;
+        padding: 10px;
+      }
+
+      .rotate90 {
+        -webkit-transform:rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+      </style>
+     <div class="container-fluid contf" style="margin-left: auto;">
+        <div class="abc">
+            <br><br>
+            <h2 style="text-align: center;"><strong><u>Relation between DP and DAG</u></strong></h2> <br>
+
+
+    <p>
+        <strong>DAG (Directed Acyclic Graph) :</strong>
+    </p>
+    <div class="mine">
+    <p>
+    · It is a <strong>directed graph</strong> with    <strong>no directed closed path</strong>.
+    </p>
+    <p>
+        · It consists of vertices and edges, and we cannot reach the same vertex
+        when we start from that vertex and follow a continuous path.
+    </p>
+    <p>
+        · Nodes of a DAG can be <strong>linearized</strong>; that is, we can have a
+        sequence from left to right connecting vertices.
+    </p>
+  </div> <br>
+    <p align="center">
+        <img
+
+            src="images/dag-1.jpg"
+            width="300"
+            height="300"
+            class="img-fluid"
+        />
+    </p>
+    <div class="mine">
+    <p>
+        · Above figure is an example of DAG. Clearly, we can see that nodes are
+        linearized. For example, if I start from node 1 then there are 2 paths from
+        1 to reach 3. 1 -&gt; 2 -&gt; 3 and 1 -&gt; 3 are the two paths.
+    </p>
+    <p>
+        · We can observe that there is some kind of topological ordering of the
+        nodes ,i.e, some kind of ordering from top to bottom.
+    </p>
+    <p>
+        · This observation is used in DP.
+    </p>
+  </div> <br>
+    <p>
+        <strong>Relation between DP and DAG :</strong>
+    </p>
+    <div class="bg-grey">
+    <p>
+        · Dynamic programming is all about finding subproblems and relating those
+        subproblems (or merging them) to obtain the solution to larger problem.
+    </p>
+    <p>
+        · In DP programming we are not given a DAG to solve. It’s hidden.
+    </p>
+    <p>
+        · Its nodes are subproblems and edges are a type of recursive condition by
+        which we connect the vertices. Its root node is the base condition.
+    </p>
+    <p>
+        · In DP, we start from the main problem and then divide it into smaller
+        problems and go to the smaller subproblems using some recursive condition.
+    </p>
+    <p>
+        · Similarly, we can relate it with DAG. We traverse nodes (which are
+        subproblems) and for traversal we have to go through edges (which is a type
+        of recursive condition which we write in DP).
+    </p>
+    <p>
+        · If solving problem B requires the answer of subproblem A, then there is a
+        (conceptual) edge from A to B. By this way, connecting all the vertices we
+        will get a DAG.
+    </p>
+  </div> <br>
+    <strong>
+        <br clear="all"/>
+    </strong>
+    <p>
+        <strong>Example :</strong>
+    </p>
+    <p align="center">
+        <strong>Longest Increasing Subsequence</strong>
+    </p>
+    <p>
+        The Longest Increasing Subsequence (LIS) problem is to find a longest
+        subsequence in which elements are sorted in ascending order.
+    </p>
+    <p>
+        For example, the length of LIS for {5,6,2,8} is 3 and LIS is {5,6,8}.
+    </p>
+    <p align="center">
+        <img
+            src="images/dag-2.jpg"
+            width="288"
+            height="115"
+        />
+    </p>
+    <p align="center">
+        <strong>DAG idea :</strong>
+        <strong></strong>
+    </p>
+    <p align="center">
+        <strong>
+            <img
+                src="images/dag-3.jpg"
+                width="311"
+                height="148"
+            />
+        </strong>
+        <strong></strong>
+    </p>
+    <div class="mine">
+    <p>
+        · In this example, the arrows denotes all the possible paths from a node to
+        another node, i.e., there is a directed edge from lower number to each
+        higher number.
+    </p>
+    <p>
+        · As a whole, it is a DAG.
+    </p>
+    <p>
+        · To find the longest increasing subsequence, we have to find the longest
+        path in the DAG created above.
+    </p>
+    <p>
+        · So, our problem is reduced to find the longest path in DAG.
+    </p>
+    <p>
+        · To find that, its straightforward that from each node we have to find
+        that node which is connected to it and has the longest path among those
+        connected nodes.
+    </p>
+    <p>
+        · Infact we can see that most of the DP problems can be finally resolved
+        into some kind of DAG, in which edges will represent the recursive
+        condition/traversal condition and nodes are the sub-problems.
+    </p>
+  </div> <br>
+    <p>
+        <strong>Practice Problem :</strong>
+    </p>
+    <div class="bg-grey">
+    <ul>
+        <li> <p>
+            <a href="https://atcoder.jp/contests/dp/tasks/dp_a">
+                https://atcoder.jp/contests/dp/tasks/dp_a
+            </a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://atcoder.jp/contests/dp/tasks/dp_b">
+                https://atcoder.jp/contests/dp/tasks/dp_b
+            </a>
+          </p>
+        </li>
+    </ul>
+</div> <br>
+
+<br>
+
+<p>Happy Coding 😊</p><p>By Programmers Army</p>
+
+<p align= "right">Contributed by <a href="https://www.linkedin.com/in/shubham-kumar-3590511a4/" target="_blank"> Shubham Kumar </a></p>
+    <style>
+        .home-newsletter{
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+        @media (min-width:1200px){
+            .home-newsletter{
+                margin-left: -2rem;
+            margin-right: -3rem;
+            }
+        }
+    </style>
+<section class="home-newsletter">
+<div class="foo">
+        <footer>
+<style>
+            </style>
+ <br>
+<h6 align="center">
+                   <a> &nbsp;&nbsp;&nbsp;Copyright &copy; Programmers Army </a> All rights reserved 2020
+                </h6>
+                <div style="text-align: center;">
+                <dt>Connect with us:</dt>
+  <a href="https://www.facebook.com/Programmers-Army-105809441239783" target="_blank"><i class="fa fat fa-facebook-official" style="font-size:30px;color:blue"></i></a>
+  <a href="https://twitter.com/ProgrammingArmy" target="_blank"><i class="fa fat fa-twitter-square" style="font-size:30px;color:lightblue"> </i></a>
+
+  <a href="https://www.instagram.com/" target="_blank"><i class="fa fat fa-instagram" style="font-size:30px;color:violet"></i></a>
+  <a href="https://www.youtube.com/channel/UCRJS3O94F8cOj2U0gOUwmBA" target="_blank"><i class="fa fat fa-youtube" style="font-size:30px;color:orangered"></i></a>
+
+   <a href="https://discord.gg/UWSBScw" target="_blank"><i class="fa fat fa-envelope-open" aria-hidden="true" style="font-size:30px;color:orangered"></i></a>
+ &nbsp;&nbsp;&nbsp;
+                </div>
+<style>
+.home-newsletter {
+padding: 10px 0;
+background: wheat;
+}
+.home-newsletter .single {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 0; }
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: black;
+font-weight: bold;
+font-family: sans-serif;
+text-transform: uppercase;
+margin-bottom: 20px; }
+.home-newsletter .single .form-control {
+height: 40px;
+background: rgba(255, 255, 255, 0.6);
+border-color: transparent;
+border-radius: 20px 0 0 20px; }
+.home-newsletter .single .form-control:focus {
+box-shadow: none;
+border-color: #243c4f; }
+.home-newsletter .single .btn {
+min-height: 40px;
+border-radius: 0 20px 20px 0;
+background: #243c4f;
+color: #fff;
+}*/
+</style>
+
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="single">
+<h2>Subscribe Programmers Army For Getting Updates For New Articles</h2>
+<div class="input-group">
+<div>
+</div>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button5 {background-color: #555555;} /* Black */
+
+.button5 {font-size: 15px;
+			border-radius: 25px;
+}
+
+.bichme{
+    padding-left:30%;
+}
+
+
+
+</style>
+
+<form class="form-inline bichme" action="testmail.php" method="post">
+  <div class="abc">
+    <!--<label for="staticEmail2" class="sr-only">Email</label>-->
+    <input type="email" class="form-control" name="userEmail" placeholder="email@example.com">
+    <span class="input-group-btn"> <button class="btn btn-theme" name="submit" type="submit">Submit</button> <br> <br>
+  </span>
+  </div>
+     <style>
+    .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}</style>
+  <!--<button type="submit" class="btn btn-success" name="submit">Subscribe</button>-->
+</form>
+           </div>
+ 	</div>
+ </div>
+ </div>
+ </div>
+ <p align="center">
+ Designed by <a href="index.html"> <b>Websitians</b></a>
+                </p>
+</section>
+
+
+
+            </div>
+        </footer>
+        </div></div>
+</body>
+</html>

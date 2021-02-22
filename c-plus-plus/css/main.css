@@ -1,0 +1,41 @@
+.navbar{
+    min-height: 80px;
+    max-width: 120%;
+    background-color: #cbcbb3;
+}
+.nav-link{
+    color: black;
+}
+.card-1 {
+  padding: 10px 10px 10px 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.cards{
+    margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+}
+.navbar-nav li{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.card-2{
+    border-top: none;
+    border-right: none;
+}
+/*footer*/
+#wrapper {
+   height:100%;
+    position:relative;
+}
+.text-md-center {
+   position:absolute;
+   bottom:0;
+   width:100%;  /* Height of the footer */
+    height: 60px;
+}

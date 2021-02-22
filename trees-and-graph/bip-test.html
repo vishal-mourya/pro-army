@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="../images/header-logo.ico"/>
+<title>Programmers Army</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+    .contf{
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+    .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+    .active{
+        background-color: #14ba6a;
+    }
+    .fact{
+        padding-right:-15px;margin-right: -1px;margin-left: -10px;
+        font-size: 50px;
+        color:#62f2ad;
+    }
+    @media only screen and (min-width: 1200px)
+    {
+       .fact
+       {
+           display: none;
+       }
+       .container-fluid
+       {
+           padding-left: 15rem;
+           padding-right: 3rem;
+       }
+    }
+    @media only screen and (max-width: 350px)
+    {
+        .navbar-brand{
+            margin-left: 0px;
+        }
+        .fact{
+            font-size: 40px;
+        }
+        .navbar-toggler-icon{
+            width: 20px;
+        }
+    }
+    @media (max-width:1200px){.w3-sidebar.wcollapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+	.mera:hover {
+		background-color: #62F2AD;
+	}
+</style>
+<body>
+  <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-dark">
+      <div class="abc">
+          <i onclick="change(this);w3_open()" class="fa fact fa-arrow-circle-right"></i>
+      </div>
+      <a href="#" class="navbar-brand"><img class="image" src="logo.svg" style="width: 200px;"></a>
+      <button type="button" class="navbar-toggler" style="background-color: #62f2ad;border-color: white;border-width: 3px;" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ml-auto">
+              <li>
+              <a href="../index.html" class="nav-item text-white nav-link mera">Home</a></li>
+              <li class="nav-item dropdown mera">
+                  <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    C++ Programming
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../c-plus-plus/gettingstarted.html">Basic C++</a>
+                    <a class="dropdown-item" href="../STL/intro_stl.html">STL in C++</a>
+
+                  </div>
+                </li>
+              <li class="nav-item dropdown mera">
+                  <a class="nav-link text-white dropdown-toggle active border" href="#" id="navbardrop" data-toggle="dropdown">
+                    Data Structures
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item btn btn-outline-secondary" href="../DS/intro_to_array.html">Basic Data Structures</a>
+                    <a class="dropdown-item" href="#">Trees & Graphs</a>
+
+                  </div>
+                </li>
+                <li class="nav-item dropdown mera">
+                  <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Algorithms
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../searching-and-sorting/search.html">Basic Algorithms</a>
+                    <a class="dropdown-item" href="../algorithms/count-set-bits.html">Intermediate Algorithms</a>
+                    <a class="dropdown-item" href="../algorithms/hull1.html">Advanced Algorithms</a>
+                  </div>
+                </li>
+                <li>
+                <a href="../number-theory/Intro_to_number_theory.html" class="nav-item text-white nav-link mera">Number theory</a></li>
+                <li><a href="../DP/introduction.html" class="nav-item text-white nav-link mera">Dynamic programming</a></li>
+        <li><a href="../aboutus.html" class="nav-item text-white nav-link mera">About Us</a></li>
+        <li><a href="https://programmersarmy.com/contributors/" class="nav-item text-white nav-link mera">Contributors</a></li>
+              </div>
+      </div>
+  </nav>
+  <style>
+  .bgGreen1 {
+    background-color: #14BA6A;
+  }
+  </style>
+  <div class="w3-sidebar sidebar w3-bar-block wcollapse w3-card w3-animate-left sticky-top" style="width:200px;padding-top: 8em;" id="mySidebar">
+    <b> <p align="center"> Trees & Graphs </p> </b> <hr>
+    <a href="intro_to_graph-1.html" class="w3-bar-item w3-button">Introduction To Graph</a>
+    <a href="formation-of-graph.html" class="w3-bar-item w3-button">Formation of Graph</a>
+    <a href="intro-to-tree.html" class="w3-bar-item w3-button">Introduction To Trees</a>
+
+    <a href="dfs-and-application.html" class="w3-bar-item w3-button">Depth First Search & It's Application</a>
+    <a href="bfs.html" class="w3-bar-item w3-button">BFS</a>
+    <a href="bfs-application.html" class="w3-bar-item w3-button">Breadth First Search Applications</a>
+
+    <a href="kth-ancestor.html" class="w3-bar-item w3-button">Kth ancestor of a node in a tree</a>
+    <a href="detect-cycles.html" class="w3-bar-item w3-button">Detect cycles in graph</a>
+    <a href="connected-components.html" class="w3-bar-item w3-button">Finding connected components in an undirected graph</a>
+
+    <a href="kruk-algo.html" class="w3-bar-item w3-button">  Kruskal’s Algorithm (Minimum Spanning Tree - MST )</a>
+
+    <a href="0-1-bfs.html" class="w3-bar-item w3-button">0-1 BFS</a>
+    <a href="arti.html" class="w3-bar-item w3-button">Articulation Points</a>
+    <a href="lca.html" class="w3-bar-item w3-button">L.C.A</a>
+    <a href="#" class="w3-bar-item w3-button bgGreen1">Bipartite Graph Test</a>
+    <a href="bridges.html" class="w3-bar-item w3-button">Bridges in Graph</a>
+    <a href="topo.html" class="w3-bar-item w3-button">Topological Soting</a>
+
+    <a href="dij.html" class="w3-bar-item w3-button">Dijkstra's Algorithm</a>
+    <a href="dsu.html" class="w3-bar-item w3-button">Disjoint Set Union (DSU)</a>
+
+    <a href="sub-tree.html" class="w3-bar-item w3-button">Sub-Tree</a>
+    <a href="sub-tree-q.html" class="w3-bar-item w3-button">Sub-Tree Queries</a>
+
+    <a href="tarjan.html" class="w3-bar-item w3-button">Tarjan Algorithm</a>
+    <br> <br>
+
+  </div>
+      <div class="w3-main" style="margin-left:200px">
+
+      </div>
+      <script>
+      function w3_open()
+      {
+            if(document.getElementById("mySidebar").style.display== "block")
+            {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+      }
+      function change(x) {
+              x.classList.toggle("fa-arrow-circle-down");
+            }
+      </script>
+     <div class="container-fluid contf" style="margin-left: auto;">
+     <p>
+         <div class="article">
+            <!-- <img src="  "> -->
+
+            <style>
+                  ul {
+                                font-size: 18px;
+                            }
+
+                            .abc,h3 {
+                                font-size: 18px;
+                                font-family: Helvetica, Arial, sans-serif;
+                                text-align: justify;
+                                letter-spacing: 0.5px;
+                            }
+
+                            ol {
+                                font-size: 18px;
+                            }
+                            .uni{
+                                line-height:1.8em;
+
+                            }
+
+                            .setuplink {
+                                color:#8ae034;
+                                text-decoration: underline;
+                            }
+
+            </style>
+
+            <main>
+                  <div class="container-fluid">
+            <div class="article-detail">
+              <div class="article">
+                <!-- <img src="  "> -->
+                <br><br><br><br>
+
+            <style>
+            ul{
+              font-size: 18px;
+            }
+            p{
+              font-size: 18px;
+            }
+
+            .div1{
+              background-color: aquamarine;
+            }
+
+            .bgcolor{
+              background-color: lightgrey;
+            }
+            </style>
+
+            <div class="container-fluid contf" style="margin-left: auto;">
+                    <div class="abc para">
+
+                        <h2 style="text-align: center;">&nbsp;<strong><u>Checking whether a graph is Bipartite</u></strong></h2>
+            <br>
+            <p>Given a undirected graph. We have to check whether the graph is a Bipartite graph or not.</p>
+            <p class="sect"><strong><u>Bipartite Graph :-</u></strong></p>
+            <p>&nbsp;</p>
+            <ul>
+            <li>A Bipartite graph is a type of graph in which we can divide all the nodes in two disjoint sets so that all the edges connects nodes from different sets.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>There should not be any edge between two nodes of same sets. (i.e. for any edge (a,b) of the graph node a and node b of the graph should not belong to the same set).</li>
+            </ul>
+            <p>&nbsp;</p>
+            <img src="b1.png" width="80%" height="auto">
+            <ul>
+            <li>The above shown graph is a Bipartite graph.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>The nodes with red colour (1, 2, 3, 4, 5) bolongs to first set and nodes with blue colour (6, 7, 8) belongs to the second colour.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>Here we can see that all the edges of the graph is between nodes of different set.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>There are no edges between the member of same set in the above graph.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>In other words we can say that if we are able to colour the nodes of a graph with two different colours in such a way that the colour of the nodes appers to be alternet (i.e. no two nodes adjacent nodes have same colour), then the graph is Bipartite graph. In this way the nodes with one colour belongs to one set and nodes with other colour belongs to another set.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>For cyclic graph it is only possible to colour the graph in such a way if there are even number of nodes/edges in the cycle.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <img src="b2.png" style="width: 80%;height: auto;">
+            <p>&nbsp;</p>
+            <ul>
+            <li>Now as we can see that the above graph is a cycle with 6 edges and hense we are able to colour its node with two different colours alternately. So this is a Bipartite graph with nodes(1, 3, 5) in first set and nodes (2, 4, 6) in second set.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <img src="b3.png" width="80%" height="auto">
+            <ul>
+            <li>It is not possible to colour the nodes of the above 3-membered cyclic graph with two colours so that no adjacent vertex have same colour beacuse this graph has an odd number of nodes/edges. (In the above graph nodes (1, 3) are of same colour and adjacent to each other).</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p class="sect"><strong><u>Algorithm used:-</u></strong></p>
+            <p>We can check whether a graph is Bipartite or not in two different ways :-</p>
+            <p>&nbsp;</p>
+            <ul>
+            <li>Using DFS</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>Using BFS</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ol>
+            <li class="sect"><strong><u>Checking for Bipartite graph using DFS ( O(M+N) ) :-</u></strong></li>
+            </ol>
+            <p><strong><u>&nbsp;</u></strong></p>
+            <ul>
+            <li>We will be using the same concept of colouring the graph with two different colours using DFS.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>Initially we mark all the nodes of the graph as unvisited (vis[i]=0, 1&lt;=i&lt;=N)</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>Now we iterate over all the nodes and if the node is not visited then we run a DFS on it.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>If everytime we run a DFS we get true till the end, then the graph is a Bipartite graph.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>If any part of the graph on DFS gives false, then the graph is not a Bipartite graph.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li class="sect"><strong><u>Concept of colouring the nodes using DFS:-</u></strong></li>
+            </ul>
+            <ul>
+            <li>During colouring the nodes we are considering 1 and 0 as two different colours.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>Now as we find a unvisited node we assign it with colour 1 and run DFS on it.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>After which we are marking it (let&rsquo;s say node is x) as visited and iterate on it&rsquo;s adjacency list. While iterating if we find an unvisited node (let&rsquo;s say node is i) then assign it the colour other than the colour of node x and calls for a DFS on node i recursively.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>While iterating on adjacency list of node x if we find a node i as visited, then we check whether it&rsquo;s colour is same as that of node x. If the comes out to be similar then we return false else continue.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>In this way if all the nodes are visited and checked then DFS function return true.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p class="sect"><strong><u>Implementation :-</u></strong></p>
+            <p>&nbsp;</p>
+            <div class="conta" style="border-radius: 1rem;border-color: #14ba6a;border-width: 0.5rem;border-style: solid;">
+                <iframe height="400px" width="100%" src="https://www.jdoodle.com/embed/v0/2mhU" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                </div><br><br>
+            <h2 style="text-align: center;">&nbsp;</h2>
+            <p><u>Input :-</u></p>
+            <p>9 10</p>
+            <p>2 9</p>
+            <p>7 1</p>
+            <p>6 5</p>
+            <p>9 4</p>
+            <p>6 2</p>
+            <p>3 8</p>
+            <p>6 3</p>
+            <p>1 6</p>
+            <p>5 7</p>
+            <p>9 5</p>
+            <p>&nbsp;</p>
+            <p><u>Output :-</u></p>
+            <p>Graph is Bipartite</p>
+            <p><u>Input :-</u></p>
+            <p>&nbsp;</p>
+            <p>5 5</p>
+            <p>1 2</p>
+            <p>2 3</p>
+            <p>3 4</p>
+            <p>4 5</p>
+            <p>5 1</p>
+            <p>&nbsp;</p>
+            <p><u>Output :-</u></p>
+            <p>Graph is not Bipartite</p>
+            <p>&nbsp;</p>
+            <img src="b4.png" width="70%" height="auto">
+            <p><strong><u>&nbsp;</u></strong></p>
+            <ol start="2">
+            <li><strong><u>Checking for Bipartite graph using BFS (O(M+N) ):-</u></strong></li>
+            </ol>
+            <p><strong><u>&nbsp;</u></strong></p>
+            <ul>
+            <li>In this algorithm we will we using BFS to check whether the graph is Bipartite or not.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>The concept of this algorithm is adjectly same as that of the previous one.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li>Just the difference is that we do not use recursion in BFS as we are doing in DFS. Here we use a queue and the rest is all same as DFS.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p class="sect"><u>Implementation :-</u></p>
+            <p>&nbsp;</p>
+            <div class="conta" style="border-radius: 1rem;border-color: #14ba6a;border-width: 0.5rem;border-style: solid;">
+                <iframe height="400px" width="100%" src="https://www.jdoodle.com/embed/v0/2mhX" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                </div><br><br><p>&nbsp;</p>
+            <p><u>Input :-</u></p>
+            <p>9 10</p>
+            <p>2 9</p>
+            <p>7 1</p>
+            <p>6 5</p>
+            <p>9 4</p>
+            <p>6 2</p>
+            <p>3 8</p>
+            <p>6 3</p>
+            <p>1 6</p>
+            <p>5 7</p>
+            <p>9 5</p>
+            <p>&nbsp;</p>
+            <p><u>Output :-</u></p>
+            <p>Graph is Bipartite</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><u>Input :</u></p>
+            <p>3 3</p>
+            <p>1 2</p>
+            <p>2 3</p>
+            <p>3 1&nbsp;</p>
+            <p>&nbsp;</p>
+            <h2 style="text-align: center;">&nbsp;</h2>
+            <p><u>Output :-</u></p>
+            <p>Graph is not Bipartite</p>
+            <p>&nbsp;</p>
+            <p class="sect"><strong><u>Practice Problems :-</u></strong></p>
+            <p><strong><u>&nbsp;</u></strong></p>
+            <ul>
+            <li><a href="https://www.spoj.com/problems/BUGLIFE/">BUGLIFE - A Bug&rsquo;s Life</a></li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li><a href="https://codeforces.com/contest/1144/problem/F">Graph Without Long Directed Paths</a></li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li><a href="https://codeforces.com/contest/1296/problem/E1">String Coloring (easy version)</a></li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li><a href="https://cses.fi/problemset/task/1668">Building Teams</a></li>
+            </ul>
+                    </div>
+
+            <p>Happy Coding 😊</p><p>By Programmers Army</p>
+
+              <!-- Pagination -->
+              <!-- <div class="w3-center w3-padding-32">
+                <div class="w3-bar">
+                  <a class="w3-button w3-black" href="#">1</a>
+                  <a class="w3-button w3-hover-black" href="#">2</a>
+                  <a class="w3-button w3-hover-black" href="#">3</a>
+                  <a class="w3-button w3-hover-black" href="#">4</a>
+                  <a class="w3-button w3-hover-black" href="#">5</a>
+                  <a class="w3-button w3-hover-black" href="#">»</a>
+                </div>
+              </div> -->
+
+              <!-- <footer id="myFooter">
+                <div class="w3-container w3-theme-l2 w3-padding-32">
+                  <h4>Footer</h4>
+                </div>
+
+                <div class="w3-container w3-theme-l1">
+                  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+                </div>
+              </footer> -->
+
+            <!-- END MAIN -->
+            </div>
+
+
+    <style>
+        .home-newsletter{
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+        @media (min-width:1200px){
+            .home-newsletter{
+                margin-left: -2rem;
+            margin-right: -3rem;
+            }
+        }
+    </style>
+<section class="home-newsletter">
+<div class="foo">
+        <footer>
+<style>
+            </style>
+ <br>
+<h6 align="center">
+                   <a> &nbsp;&nbsp;&nbsp;Copyright &copy; Programmers Army </a> All rights reserved 2020
+                </h6>
+                <div style="text-align: center;">
+                <dt>Connect with us:</dt>
+  <a href="https://www.facebook.com/Programmers-Army-105809441239783" target="_blank"><i class="fa fat fa-facebook-official" style="font-size:30px;color:blue"></i></a>
+  <a href="https://twitter.com/ProgrammingArmy" target="_blank"><i class="fa fat fa-twitter-square" style="font-size:30px;color:lightblue"> </i></a>
+
+  <a href="https://www.instagram.com/" target="_blank"><i class="fa fat fa-instagram" style="font-size:30px;color:violet"></i></a>
+  <a href="https://www.youtube.com/channel/UCRJS3O94F8cOj2U0gOUwmBA" target="_blank"><i class="fa fat fa-youtube" style="font-size:30px;color:orangered"></i></a>
+
+   <a href="https://discord.gg/UWSBScw" target="_blank"><i class="fa fat fa-envelope-open" aria-hidden="true" style="font-size:30px;color:orangered"></i></a>
+ &nbsp;&nbsp;&nbsp;
+                </div>
+<style>
+.home-newsletter {
+padding: 10px 0;
+background: wheat;
+}
+.home-newsletter .single {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 0; }
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: black;
+font-weight: bold;
+font-family: sans-serif;
+text-transform: uppercase;
+margin-bottom: 20px; }
+.home-newsletter .single .form-control {
+height: 40px;
+background: rgba(255, 255, 255, 0.6);
+border-color: transparent;
+border-radius: 20px 0 0 20px; }
+.home-newsletter .single .form-control:focus {
+box-shadow: none;
+border-color: #243c4f; }
+.home-newsletter .single .btn {
+min-height: 40px;
+border-radius: 0 20px 20px 0;
+background: #243c4f;
+color: #fff;
+}*/
+</style>
+
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="single">
+<h2>Subscribe Programmers Army For Getting Updates For New Articles</h2>
+<div class="input-group">
+<div>
+</div>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button5 {background-color: #555555;} /* Black */
+
+.button5 {font-size: 15px;
+			border-radius: 25px;
+}
+
+.bichme{
+    padding-left:30%;
+}
+
+
+
+</style>
+
+<form class="form-inline bichme" action="testmail.php" method="post">
+  <div class="abc">
+    <!--<label for="staticEmail2" class="sr-only">Email</label>-->
+    <input type="email" class="form-control" name="userEmail" placeholder="email@example.com">
+    <span class="input-group-btn"> <button class="btn btn-theme" name="submit" type="submit">Submit</button> <br> <br>
+  </span>
+  </div>
+     <style>
+    .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}</style>
+  <!--<button type="submit" class="btn btn-success" name="submit">Subscribe</button>-->
+</form>
+           </div>
+ 	</div>
+ </div>
+ </div>
+ </div>
+ <p align="center">
+ Designed by <a href="index.html"> <b >Websitians</b></a>
+                </p>
+</section>
+
+
+
+            </div>
+        </footer>
+        </div>
+</body>
+</html>

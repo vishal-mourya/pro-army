@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="../images/header-logo.ico"/>
+<title>Programmers Army</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .contf{
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+    .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+    .active{
+        background-color: #14ba6a;
+    }
+    .fact{
+        padding-right:-15px;margin-right: -1px;margin-left: -10px;
+        font-size: 50px;
+        color:#62f2ad;
+    }
+    @media only screen and (min-width: 1200px)
+    {
+       .fact
+       {
+           display: none;
+       }
+       .container-fluid
+       {
+           padding-left: 15rem;
+           padding-right: 3rem;
+       }
+    }
+    @media only screen and (max-width: 350px)
+    {
+        .navbar-brand{
+            margin-left: 0px;
+        }
+        .fact{
+            font-size: 40px;
+        }
+        .navbar-toggler-icon{
+            width: 20px;
+        }
+    }
+    @media (max-width:1200px){.w3-sidebar.wcollapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+	.mera:hover {
+		background-color: #62F2AD;
+	}
+</style>
+<body>
+    <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-dark">
+        <div class="abc">
+            <i onclick="change(this);w3_open()" class="fa fact fa-arrow-circle-right"></i>
+        </div>
+        <a href="../index.html" class="navbar-brand"><img class="image" src="logo.svg" style="width: 200px;"></a>
+        <button type="button" class="navbar-toggler" style="background-color: #62f2ad;border-color: white;border-width: 3px;" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <li>
+                <a href="../index.html" class="nav-item text-white nav-link mera">Home</a></li>
+                <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      C++ Programming
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="../c-plus-plus/gettingstarted.html">Basic C++</a>
+                      <a class="dropdown-item" href="../STL/intro_stl.html">STL in C++</a>
+
+                    </div>
+                  </li>
+                <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle active border" href="#" id="navbardrop" data-toggle="dropdown">
+                      Data Structures
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item btn btn-outline-secondary" href="#">Basic Data Structures</a>
+                      <a class="dropdown-item" href="../trees-and-graph/intro_to_graph-1.html">Trees & Graphs</a>
+
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Algorithms
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="../searching-and-sorting/search.html">Basic Algorithms</a>
+                      <a class="dropdown-item" href="../algorithms/count-set-bits.html">Intermediate Algorithms</a>
+                      <a class="dropdown-item" href="../algorithms/kmp-algo.html">Advanced Algorithms</a>
+                    </div>
+                  </li>
+                  <li>
+                  <a href="../number-theory/Intro_to_number_theory.html" class="nav-item text-white nav-link mera">Number theory</a></li>
+                  <li><a href="../DP/Introduction.html" class="nav-item text-white nav-link mera">Dynamic programming</a></li>
+          <li><a href="../aboutus.html" class="nav-item text-white nav-link mera">About Us</a></li>
+				  <li><a href="https://programmersarmy.com/contributors/" class="nav-item text-white nav-link mera">Contributors</a></li>
+                </div>
+        </div>
+    </nav>
+    <style>
+    .bgGreen1 {
+      background-color: #14BA6A;
+    }
+    </style>
+    <div class="w3-sidebar sidebar w3-bar-block wcollapse w3-card w3-animate-left sticky-top" style="width:200px;padding-top: 8em;" id="mySidebar">
+      <b> <p align="center"> DataStructures</p> </b> <hr>
+        <a href="intro_to_array.html" class="w3-bar-item w3-button">Introduction To Array</a>
+        <a href="Dynamicarray.html" class="w3-bar-item w3-button">Dynamic Arrays</a>
+        <a href="singly-linked-list.html" class="w3-bar-item w3-button">Singly Linked List</a>
+        <a href="CircularLinkedList.html" class="w3-bar-item w3-button ">Circular Linked List</a>
+
+        <a href="StackDataStructure.html" class="w3-bar-item w3-button">Stack DataStructure</a>
+        <a href="#" class="w3-bar-item w3-button bgGreen1">Queue DataStructure</a>
+        <a href="DoublyEnQueue.html" class="w3-bar-item w3-button ">Doubly Ended Queue</a>
+
+        <a href="Map.html" class="w3-bar-item w3-button">Map DataStructure</a>
+        <a href="Multimap.html" class="w3-bar-item w3-button">Multimap datastructure</a>
+        <a href="Heap.html" class="w3-bar-item w3-button">Heap DataStructure</a>
+
+
+        <a href="../coming-soon-page.html" class="w3-bar-item w3-button">Min Heap & Max Heap</a>
+        <a href="intro-to-trie.html" class="w3-bar-item w3-button">Introduction to Tries</a>
+
+        <a href="trie-delete.html" class="w3-bar-item w3-button">Trie Delete & Trie Advantages</a>
+        <br> <br> <br>
+      </div>
+
+      <div class="w3-main" style="margin-left:200px">
+
+      </div>
+      <script>
+      function w3_open()
+      {
+            if(document.getElementById("mySidebar").style.display== "block")
+            {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+      }
+      function change(x) {
+              x.classList.toggle("fa-arrow-circle-down");
+            }
+      </script>
+     <div class="container-fluid contf" style="margin-left: auto;">
+     <p>
+         <div class="article">
+            <!-- <img src="  "> -->
+
+            <style>
+                  ul {
+                                font-size: 18px;
+                            }
+
+                            .abc,h3 {
+                                font-size: 18px;
+                                font-family: Helvetica, Arial, sans-serif;
+                                text-align: justify;
+                                letter-spacing: 0.5px;
+                            }
+
+                            ol {
+                                font-size: 18px;
+                            }
+                            .uni{
+                                line-height:1.8em;
+
+                            }
+
+                            .setuplink {
+                                color:#8ae034;
+                                text-decoration: underline;
+                            }
+
+            </style>
+
+            <h2 align="center"><b><u>INTRODUCTION TO QUEUE DATA STRUCTURE</u></b></h2><br>
+
+            <div class="abc">
+
+
+                Queue data structure works on FIFO (<strong>F</strong>irst    <strong>I</strong>n<strong>F</strong>irst <strong>O</strong>ut)
+                    principle,it means that the element that goes in first comes out first.
+                </p>
+                <p>
+                    There are mainly two operations in queue
+                </p>
+                <p>
+                    <b style="color: crimson;">1. Enqueue</b>
+                </p>
+                <p>
+                    <b style="color: crimson;">2. Dequeue</b>
+                </p>
+                <p >
+
+                    <img
+                        src="images/Queue.png"
+                        name="Picture 1"
+                        width="350"
+                        height="250"
+                        border="0"
+                        align="bottom"
+                    />
+
+            </p>
+                <p>
+
+                    For better understanding,
+                <br>
+                    Suppose we perform following operations on a queue ,predict the items in
+                    the queue.
+                </p>
+                <p>
+                    Let q be a queue // elements in queue
+                </p>
+                <i><p>
+                    q.enqueue(10)          // 10<br>
+                    q.enqueue(20)         // 10 20 <br>
+                    q.enqueue(15)        // 10 20 15<br>
+                    q.dequeue()           // 20 15<br>
+                    q.dequeue()           // 15<br>
+                    q.enqueue(5)        // 15 5<br>
+
+                </p>
+            </i>
+                <p>
+                    Queues are used in a lot of applications, few of them are:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Queue is used to implement many algorithms like Breadth First
+                            Search (BFS), etc.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            It can be also used by an operating system when it has to schedule
+                            jobs with equal priority
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Customers calling a call center are kept in queues when they wait
+                            for someone to pick up the calls
+                        </p>
+                    </li>
+                </ul>
+
+                <p >
+
+                        <img
+                            src="images/Queue1.jpg"
+                            name="Picture 2"
+                            width="350"
+                            height="250"
+                            border="0"
+                            align="bottom"
+                            class="img-fluid"
+                        />
+
+                </p>
+                <p>
+                    <strong>Queue using Arrays</strong>
+                </p>
+                <ol>
+                    <li>
+                        <p>
+                            we can’t change the size of an array, so we will make an array of
+                            fixed length first (this will be the maximum length of our queue)
+                            and then implement the queue on it.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We will use three pointers to implement the queue using an array,
+                            ‘size’, ‘front’ and ‘rear’. ‘front’ and ‘rear’ will simply store
+                            the indices of the front and rear elements respectively. We will
+                            use ‘size’ to store the current size of the queue.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We have made the values of ‘front’, ‘rear’ and ‘size’ -1 because
+                            the queue is not yet initialized. We will change these values
+                            according to our need after the initialization of the queue.
+                        </p>
+                    </li>
+                </ol>
+                <h3>
+                    <b style="text-decoration: underline;color: crimson;"> Enqueue</b>
+                </h3>
+                <p>
+                    We just need to add an element at the index ‘rear+1’ and increase the value
+                    of the ‘rear’ and size by 1 for the enqueue operation.
+                </p>
+                <h3>
+                    <b style="text-decoration: underline;color: crimson;"> Dequeue</b>
+                </h3>
+                <p>
+                    The ‘dequeue’ operation is very simple using the array. We just need to
+                    decrease the ‘size’ by 1 and increase the ‘front’ by 1. That’s it.
+                </p>
+                <p>
+                    <div class="setuplink"> Implementation of Queue using array:
+                    </div>
+
+                </p>
+                <p>
+                    <script src="https://www.onlinegdb.com/embed/js/BkJ3ExnSw?theme=dark"></script>
+                </p>
+                    <p>
+                        <b>Output:</b>
+                        80<br>
+                        90 <br>
+                        100 <br>
+                        150<br>
+                    </p>
+                <p>
+                    <br/>
+                    <div class="setuplink">IMPLEMENTATION OF QUEUE USING LINKED LIST</div>
+                </p>
+                <script src="https://www.onlinegdb.com/embed/js/SJTS8e2SD?theme=dark"></script>
+                <p>
+                    <b>Output: Value</b>
+                </p>
+                <p>
+                    <strong>Explanation</strong>
+                </p>
+                <p>
+                    <b style="text-decoration: underline;color: crimson;"> Deletion</b>
+                </p>
+                <p>
+                    1.For deletion purpose, it is first checked whether front is NULL, if it is
+                    NULL, we display the message “empty”.
+                </p>
+                <p>
+                2.In case the queue is not empty, deletion is done in such a way that temp    <strong> </strong>pointer points to front and front pointer points to its
+                    next node.
+                </p>
+                <p>
+                    3.After displaying data for the node to be deleted, node is deleted by
+                    delete<strong> </strong>function.
+                </p>
+                <p>
+                    <b style="text-decoration: underline;color: crimson;"> Insertion</b>
+                </p>
+                <p>
+                    1.In the insertion operation, temp points to the new node.
+                </p>
+                <p>
+                    2.If this is first node to be inserted then front will be NULL and now both
+                    front and rear points to this new node.
+                </p>
+                <p>
+                    3.If front is not NULL then insertion is similar to adding the node at the
+                    end of linked list. The next pointer of rear points to temp and rear
+                    becomes temp.
+                </p>
+                <p>
+                    <strong>Practice questions</strong>
+                </p>
+                <ol>
+                    <li>
+                        <p>
+                            <a
+                                href="https://www.hackerearth.com/practice/data-structures/queues/basics-of-queues/practice-problems/algorithm/disk-tower-b7cc7a50/" style="color: blue;"
+                            >
+                                <u>Disk towers</u>
+                            </a>
+                            ( HackerEarth )
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a
+                                href="https://www.hackerearth.com/practice/data-structures/queues/basics-of-queues/practice-problems/algorithm/weird-planet-2000a170/"
+                                style="color: blue;"
+                            >
+                                <u>Eerie planet</u>
+                            </a>
+                            ( HackerEarth )
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a
+                                href="https://www.hackerearth.com/practice/data-structures/queues/basics-of-queues/practice-problems/algorithm/monk-and-chamber-of-secrets/"
+                                style="color: blue;"
+                            >
+                                <u>Monk and chamber of secrets</u>
+                            </a>
+                            ( HackerEarth )
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a
+                                href="https://www.hackerrank.com/challenges/queue-using-two-stacks/problem"
+                                style="color: blue;"
+                            >
+                                <u>Queue using two stacks </u>
+                            </a>
+                            ( Hackerrank )
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="https://www.hackerrank.com/challenges/truck-tour/problem" style="color: blue;">
+                                <u>Truck tour</u>
+                            </a>
+                            ( Hackerrank )
+                        </p>
+                    </li>
+                </ol>
+
+
+                <br>
+                <p>
+                    Happy Coding 😊
+
+            </p>
+                <p>
+                     By Programmers Army
+                </p>
+                <p align="right">
+                        Contributed by:
+                        <b>Parakh Pratap Singh</b>
+            </p>
+            </div>
+
+
+        </div>
+    </p>
+    </div>
+
+
+
+    <style>
+        .home-newsletter{
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+        @media (min-width:1200px){
+            .home-newsletter{
+                margin-left: -2rem;
+            margin-right: -3rem;
+            }
+        }
+    </style>
+<section class="home-newsletter">
+<div class="foo">
+        <footer>
+<style>
+            </style>
+ <br>
+<h6 align="center">
+                   <a> &nbsp;&nbsp;&nbsp;Copyright &copy; Programmers Army </a> All rights reserved 2020
+                </h6>
+                <div style="text-align: center;">
+                <dt>Connect with us:</dt>
+  <a href="https://www.facebook.com/Programmers-Army-105809441239783" target="_blank"><i class="fa fat fa-facebook-official" style="font-size:30px;color:blue"></i></a>
+  <a href="https://twitter.com/ProgrammingArmy" target="_blank"><i class="fa fat fa-twitter-square" style="font-size:30px;color:lightblue"> </i></a>
+
+  <a href="https://www.instagram.com/" target="_blank"><i class="fa fat fa-instagram" style="font-size:30px;color:violet"></i></a>
+  <a href="https://www.youtube.com/channel/UCRJS3O94F8cOj2U0gOUwmBA" target="_blank"><i class="fa fat fa-youtube" style="font-size:30px;color:orangered"></i></a>
+
+   <a href="https://discord.gg/UWSBScw" target="_blank"><i class="fa fat fa-envelope-open" aria-hidden="true" style="font-size:30px;color:orangered"></i></a>
+ &nbsp;&nbsp;&nbsp;
+                </div>
+<style>
+.home-newsletter {
+padding: 10px 0;
+background: wheat;
+}
+.home-newsletter .single {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 0; }
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: black;
+font-weight: bold;
+font-family: sans-serif;
+text-transform: uppercase;
+margin-bottom: 20px; }
+.home-newsletter .single .form-control {
+height: 40px;
+background: rgba(255, 255, 255, 0.6);
+border-color: transparent;
+border-radius: 20px 0 0 20px; }
+.home-newsletter .single .form-control:focus {
+box-shadow: none;
+border-color: #243c4f; }
+.home-newsletter .single .btn {
+min-height: 40px;
+border-radius: 0 20px 20px 0;
+background: #243c4f;
+color: #fff;
+}*/
+</style>
+
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="single">
+<h2>Subscribe Programmers Army For Getting Updates For New Articles</h2>
+<div class="input-group">
+<div>
+</div>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button5 {background-color: #555555;} /* Black */
+
+.button5 {font-size: 15px;
+			border-radius: 25px;
+}
+
+.bichme{
+    padding-left:30%;
+}
+
+
+
+</style>
+
+<form class="form-inline bichme" action="testmail.php" method="post">
+  <div class="abc">
+    <!--<label for="staticEmail2" class="sr-only">Email</label>-->
+    <input type="email" class="form-control" name="userEmail" placeholder="email@example.com">
+    <span class="input-group-btn"> <button class="btn btn-theme" name="submit" type="submit">Submit</button> <br> <br>
+  </span>
+  </div>
+     <style>
+    .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}</style>
+  <!--<button type="submit" class="btn btn-success" name="submit">Subscribe</button>-->
+</form>
+           </div>
+ 	</div>
+ </div>
+ </div>
+ </div>
+ <p align="center">
+ Designed by <a href="index.html"> <b >Websitians</b></a>
+                </p>
+</section>
+
+
+
+            </div>
+        </footer>
+        </div>
+</body>
+</html>

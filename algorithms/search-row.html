@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="../images/header-logo.ico"/>
+<title>Programmers Army</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana", sans-serif;}
+    .contf{
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+    .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+    .active{
+        background-color: #14ba6a;
+    }
+    .fact{
+        padding-right:-15px;margin-right: -1px;margin-left: -10px;
+        font-size: 50px;
+        color:#62f2ad;
+    }
+    @media only screen and (min-width: 1200px)
+    {
+       .fact
+       {
+           display: none;
+       }
+       .container-fluid
+       {
+           padding-left: 15rem;
+           padding-right: 3rem;
+       }
+    }
+    @media only screen and (max-width: 350px)
+    {
+        .navbar-brand{
+            margin-left: 0px;
+        }
+        .fact{
+            font-size: 40px;
+        }
+        .navbar-toggler-icon{
+            width: 20px;
+        }
+    }
+    @media (max-width:1200px){.w3-sidebar.wcollapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+	.mera:hover {
+		background-color: #62F2AD;
+	}
+</style>
+<body>
+
+
+  <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-dark">
+      <div class="abc">
+          <i onclick="change(this);w3_open()" class="fa fact fa-arrow-circle-right"></i>
+      </div>
+      <a href="#" class="navbar-brand"><img class="image" src="logo.svg" style="width: 200px;"></a>
+      <button type="button" class="navbar-toggler" style="background-color: #62f2ad;border-color: white;border-width: 3px;" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ml-auto">
+              <li>
+              <a href="../index.html" class="nav-item text-white nav-link mera">Home</a></li>
+              <li class="nav-item dropdown mera">
+                  <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    C++ Programming
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../c-plus-plus/C++overview.html">Basic C++</a>
+                    <a class="dropdown-item" href="../STL/intro_stl.html">STL in C++</a>
+
+                  </div>
+                </li>
+              <li class="nav-item dropdown mera">
+                  <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Data Structures
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item btn btn-outline-secondary" href="../DS/Intro_to_array.html">Basic Data Structures</a>
+                    <a class="dropdown-item" href="../trees-and-graph/intro_to_graph-1.html">Trees & Graphs</a>
+
+                  </div>
+                </li>
+                <li class="nav-item dropdown mera">
+                  <a  href="#" class="nav-link text-white dropdown-toggle active border" id="navbardrop" data-toggle="dropdown">
+                    Algorithms
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../searching-and-sorting/search.html">Basic Algorithms</a>
+                    <a class="dropdown-item" href="count-set-bits.html">Intermediate Algorithms</a>
+                    <a class="dropdown-item" href="hull1.html">Advanced Algorithms</a>
+                  </div>
+                </li>
+                <li>
+                <a href="../number-theory/Intro_to_number_theory.html" class="nav-item text-white nav-link mera">Number theory</a></li>
+                <li><a href="../DP/Introduction.html" class="nav-item text-white nav-link mera">Dynamic programming</a></li>
+        <li><a href="../aboutus.html" class="nav-item text-white nav-link mera">About Us</a></li>
+        <li><a href="https://programmersarmy.com/contributors/" class="nav-item text-white nav-link mera">Contributors</a></li>
+              </div>
+      </div>
+  </nav>
+
+<style>
+.bgGreen1 {
+  background-color: #14BA6A;
+}
+</style>
+    <div class="w3-sidebar sidebar w3-bar-block wcollapse w3-card w3-animate-left sticky-top" style="width:200px;padding-top: 8em;" id="mySidebar">
+        <b> <p align="center"> Algorithms </p> </b> <hr>
+        <a href="kadane.html" class="w3-bar-item w3-button">Kadane Algorithm</a>
+        <a href="moos.html" class="w3-bar-item w3-button">Mo's Algorithm</a>
+        <a href="kmp-algo.html" class="w3-bar-item w3-button ">KMP Algorithm</a>
+
+        <a href="robin-karp.html" class="w3-bar-item w3-button">Robin Karp Algorithm</a>
+        <a href="two-pointer.html" class="w3-bar-item w3-button ">two-pointer Technique</a>
+        <a href="sliding-window.html" class="w3-bar-item w3-button ">Sliding Window Approach</a>
+        <a href="k-sorted-array.html" class="w3-bar-item w3-button ">Sort a K sorted array</a>
+        <a href="count-set-bits.html" class="w3-bar-item w3-button ">Count Set Bits in a number</a>
+        <a href="1-n-setbits.html" class="w3-bar-item w3-button ">count total set bits in all numbers from 1 to n</a>
+        <a href="moore-algo.html" class="w3-bar-item w3-button ">Moore's voting Algorithm</a>
+
+        <a href="2-non-repeat.html" class="w3-bar-item w3-button ">Find two non repeating elements in an array of repeating elements</a>
+        <a href="median-2-array.html" class="w3-bar-item w3-button ">Median of two sorted arrays of different sizes</a>
+
+        <a href="rotate-90.html" class="w3-bar-item w3-button ">Rotate square matrix by 90 degrees</a>
+        <a href="merge-k-sorted.html" class="w3-bar-item w3-button ">Merge 'k' sorted</a>
+        <a href="next-greater.html" class="w3-bar-item w3-button">Next greater element</a>
+        <a href="maze-destination.html" class="w3-bar-item w3-button">Number of ways to reach destination in a Maze</a>
+        <a href="#" class="w3-bar-item w3-button bgGreen1">Search in a row-wise and column-wise sorted Matrix</a>
+        <a href="stable.html" class="w3-bar-item w3-button">Stable Marriage Problem</a>
+
+
+        <a href="segment.html" class="w3-bar-item w3-button">Segment Trees</a>
+
+        <a href="hull1.html" class="w3-bar-item w3-button">Convex Hull Part 1 - Graham Scan</a>
+        <a href="hull2.html" class="w3-bar-item w3-button">Convex Hull Part 2 – Jarvis algorithm</a>
+<br> <br>
+
+      </div>
+
+      <div class="w3-main" style="margin-left:200px">
+
+      </div>
+      <script>
+      function w3_open()
+      {
+            if(document.getElementById("mySidebar").style.display== "block")
+            {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+      }
+      function change(x) {
+              x.classList.toggle("fa-arrow-circle-down");
+            }
+      </script>
+     <div class="container-fluid contf" style="margin-left: auto;">
+     <p>
+         <div class="article">
+            <!-- <img src="  "> -->
+
+            <style>
+                ul ,p{
+                    font-size: 18px;
+                }
+
+                .abc,h3 {
+
+                    font-size: 18px;
+                    font-family: Helvetica, Arial, sans-serif;
+                    text-align: justify;
+                    letter-spacing: 1px;
+                }
+
+                ol {
+                    font-size: 18px;
+                }
+
+                /* a {
+                    color:blue;
+                } */
+                .mine {
+                  background-color: aquamarine;
+                  border-radius: 20px;
+                  padding: 10px;
+                }
+
+                .bg-grey {
+                  background-color: lightgrey;
+                  border-radius: 20px;
+                  padding: 10px;
+                }
+            </style>
+<div style="margin-left:20px">
+            <p align="center">
+
+              <h2 align="center"><b><u>Search in a row-wise and column-wise sorted matrix</u></b></h2><br>
+              <div class="mine">
+              <p>
+                  Aim - Given a row-wise and column-wise sorted array with N rows and M
+                  columns and an integer x return the row and column index such that
+                  matrix[row][col] = x, if x not found return {-1,-1} .
+              </p>
+              <p>
+                  Ex- matrix = -3 1 31 40
+              </p>
+              <p>
+                  10 33 40 660
+              </p>
+              <p>
+                  22 43 161 702
+              </p>
+              <p>
+                  x=22
+              </p>
+              <p>
+                  Ans will be {2,0} i.e. row - 2 and col - 0 (0 based indexing).
+              </p>
+            </div> <br>
+              <h1>
+                  Naive’s Approach-
+              </h1>
+              <p>
+                  <strong> </strong>
+              </p>
+              <div class="bg-grey">
+              <p>
+                  Method- Simply check every element of the array and if it matches with x
+                  return row and column.
+              </p>
+
+              <img src="images/search-row-1.jpg",
+              class="img-fluid">
+
+              <p>
+                  <b> Time complexity- O(n*m) </b> - As we are simply iterating over each element of
+                  n*m array.
+              </p>
+            </div> <br>
+              <p>
+                  <strong>Can We do better? </strong>
+              </p>
+              <p>
+                  We have not used a condition which is given to us that is every row and
+                  columns are sorted. Let’s utilize this to improve our time complexity to
+                  O(m+n).
+              </p>
+              <h1>
+                  Efficient Solution-
+              </h1>
+            <div class="mine">
+              <p>
+                  <strong>Approach:​</strong>
+                  The simple idea is to remove a row or column in each comparison until we
+                  find the required result. Start searching from the top-right corner of the
+                  array as towards left, numbers will decrease and toward down, numbers will
+                  increase.
+              </p>
+            </div> <br>
+              <p>
+                  Ex- ​-3 1 31 40
+              </p>
+              <p>
+                  10 33 40 660
+              </p>
+              <p>
+                  22 43 161 702
+              </p>
+              <p>
+                  28 44 164 800
+              </p>
+              <p>
+                  Starting from 40, its left contains(same row) all smaller number whereas
+                  it’s down(same column) contain all larger number so if the required value
+                  is greater than 40 we ignore row for further search and if require value is
+                  less than 40 we ignore column and if it is 40 than we simply return its x,y
+                  coordinates. So in each comparison, we are able to reduce our search space
+                  by 1 row or 1 column. So in the worst case, we can have O(m+n) comparisons.
+                  Let’s write a blueprint of our approach-
+              </p>
+              <p>
+                  There are 3 cases at each point -
+              </p>
+              <div class="bg-grey">
+              <p>
+              1. ​    <strong>The required number is greater than the current number: ​</strong>
+                  We can ignore that column means can shift from {x,y}-&gt;{x,y-1}.
+              </p>
+              <p>
+              2. ​    <strong>The required number is smaller than the current number: ​</strong>
+                  We can ignore that row means can shift from {x,y}-&gt;{x+1,y}.
+              </p>
+              <p>
+                  3.​<strong>The required number is equal to the current number: ​</strong>
+                  Simply return this pair of {x,y}.
+              </p>
+              <p>
+                  If at any moment x=-1 or y=-1 then we can see that no solution exists and
+                  our answer is
+              </p>
+              <p>
+                  {-1,-1}
+                </div> <br>
+              </p>
+              <h1>
+                  Implementation :
+              </h1>
+              <p>
+                <script src="https://www.onlinegdb.com/embed/js/ryOr5EGPP?theme=dark"></script>
+              </p>
+              <p>
+                  <b> Finally achieved O(m+n) time complexity, Auxiliary Space- O(1) </b>
+              </p>
+              <div class="mine">
+              <p>
+                  Practice Problem -
+                  <a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank">
+                      https://leetcode.com/problems/search-a-2d-matrix/
+                  </a>
+              </p>
+            </div>
+              <br/>
+
+              <p> This article is contributed by <a href="https://www.linkedin.com/in/adarsh-agrawal-620ab6148/" target="_blank">Adarsh Agrawal</a> </p>
+              <p>
+                  So that’s it for this article we will be coming up with our next article on
+                  further topics of Algorithms very soon till then keep learning, keep
+                  coding, keep reading and keep improving !!
+              </p>
+              <p>
+                  <strong>Happy Coding </strong>
+              </p>
+              <p>
+                  <strong>By Programmers Army </strong>
+                  <strong>😊</strong>
+                  <strong></strong>
+              </p>
+
+
+
+        </div>
+        </div>
+    </p>
+    </div>
+    <style>
+        .home-newsletter{
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+        @media (min-width:1200px){
+            .home-newsletter{
+                margin-left: -2rem;
+            margin-right: -3rem;
+            }
+        }
+    </style>
+<section class="home-newsletter">
+<div class="foo">
+        <footer>
+<style>
+            </style>
+ <br>
+<h6 align="center">
+                   <a> &nbsp;&nbsp;&nbsp;Copyright &copy; Programmers Army </a> All rights reserved 2020
+                </h6>
+                <div style="text-align: center;">
+                <dt>Connect with us:</dt>
+  <a href="https://www.facebook.com/Programmers-Army-105809441239783" target="_blank"><i class="fa fat fa-facebook-official" style="font-size:30px;color:blue"></i></a>
+  <a href="https://twitter.com/ProgrammingArmy" target="_blank"><i class="fa fat fa-twitter-square" style="font-size:30px;color:lightblue"> </i></a>
+
+  <a href="https://www.instagram.com/" target="_blank"><i class="fa fat fa-instagram" style="font-size:30px;color:violet"></i></a>
+  <a href="https://www.youtube.com/channel/UCRJS3O94F8cOj2U0gOUwmBA" target="_blank"><i class="fa fat fa-youtube" style="font-size:30px;color:orangered"></i></a>
+
+   <a href="https://discord.gg/UWSBScw" target="_blank"><i class="fa fat fa-envelope-open" aria-hidden="true" style="font-size:30px;color:orangered"></i></a>
+ &nbsp;&nbsp;&nbsp;
+                </div>
+<style>
+.home-newsletter {
+padding: 10px 0;
+background: wheat;
+}
+.home-newsletter .single {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 0; }
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: black;
+font-weight: bold;
+font-family: sans-serif;
+text-transform: uppercase;
+margin-bottom: 20px; }
+.home-newsletter .single .form-control {
+height: 40px;
+background: rgba(255, 255, 255, 0.6);
+border-color: transparent;
+border-radius: 20px 0 0 20px; }
+.home-newsletter .single .form-control:focus {
+box-shadow: none;
+border-color: #243c4f; }
+.home-newsletter .single .btn {
+min-height: 40px;
+border-radius: 0 20px 20px 0;
+background: #243c4f;
+color: #fff;
+}*/
+</style>
+
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="single">
+<h2>Subscribe Programmers Army For Getting Updates For New Articles</h2>
+<div class="input-group">
+<div>
+</div>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button5 {background-color: #555555;} /* Black */
+
+.button5 {font-size: 15px;
+			border-radius: 25px;
+}
+
+.bichme{
+    padding-left:30%;
+}
+
+
+
+</style>
+
+<form class="form-inline bichme" action="testmail.php" method="post">
+  <div class="abc">
+    <!--<label for="staticEmail2" class="sr-only">Email</label>-->
+    <input type="email" class="form-control" name="userEmail" placeholder="email@example.com">
+    <span class="input-group-btn"> <button class="btn btn-theme" name="submit" type="submit">Submit</button> <br> <br>
+  </span>
+  </div>
+     <style>
+    .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}</style>
+  <!--<button type="submit" class="btn btn-success" name="submit">Subscribe</button>-->
+</form>
+           </div>
+ 	</div>
+ </div>
+ </div>
+ </div>
+ <p align="center">
+ Designed by <a href="index.html"> <b >Websitians</b></a>
+                </p>
+</section>
+
+
+
+            </div>
+        </footer>
+        </div>
+</body>
+</html>

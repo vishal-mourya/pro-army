@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="../images/header-logo.ico"/>
+<title>Programmers Army</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana", sans-serif;}
+    .contf{
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+    .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+    .active{
+        background-color: #14ba6a;
+    }
+    .fact{
+        padding-right:-15px;margin-right: -1px;margin-left: -10px;
+        font-size: 50px;
+        color:#62f2ad;
+    }
+    @media only screen and (min-width: 1200px)
+    {
+       .fact
+       {
+           display: none;
+       }
+       .container-fluid
+       {
+           padding-left: 15rem;
+           padding-right: 3rem;
+       }
+    }
+    @media only screen and (max-width: 350px)
+    {
+        .navbar-brand{
+            margin-left: 0px;
+        }
+        .fact{
+            font-size: 40px;
+        }
+        .navbar-toggler-icon{
+            width: 20px;
+        }
+    }
+    @media (max-width:1200px){.w3-sidebar.wcollapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+	.mera:hover {
+		background-color: #62F2AD;
+	}
+</style>
+<body>
+
+
+  <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-dark">
+      <div class="abc">
+          <i onclick="change(this);w3_open()" class="fa fact fa-arrow-circle-right"></i>
+      </div>
+      <a href="#" class="navbar-brand"><img class="image" src="logo.svg" style="width: 200px;"></a>
+      <button type="button" class="navbar-toggler" style="background-color: #62f2ad;border-color: white;border-width: 3px;" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ml-auto">
+              <li>
+              <a href="../index.html" class="nav-item text-white nav-link mera">Home</a></li>
+              <li class="nav-item dropdown mera">
+                  <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    C++ Programming
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../c-plus-plus/C++overview.html">Basic C++</a>
+                    <a class="dropdown-item" href="../STL/intro_stl.html">STL in C++</a>
+
+                  </div>
+                </li>
+              <li class="nav-item dropdown mera">
+                  <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Data Structures
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item btn btn-outline-secondary" href="../DS/Intro_to_array.html">Basic Data Structures</a>
+                    <a class="dropdown-item" href="../trees-and-graph/intro_to_graph-1.html">Trees & Graphs</a>
+
+                  </div>
+                </li>
+                <li class="nav-item dropdown mera">
+                  <a  href="#" class="nav-link text-white dropdown-toggle active border" id="navbardrop" data-toggle="dropdown">
+                    Algorithms
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../searching-and-sorting/search.html">Basic Algorithms</a>
+                    <a class="dropdown-item" href="count-set-bits.html">Intermediate Algorithms</a>
+                    <a class="dropdown-item" href="hull1.html">Advanced Algorithms</a>
+                  </div>
+                </li>
+                <li>
+                <a href="../number-theory/Intro_to_number_theory.html" class="nav-item text-white nav-link mera">Number theory</a></li>
+                <li><a href="../DP/Introduction.html" class="nav-item text-white nav-link mera">Dynamic programming</a></li>
+        <li><a href="../aboutus.html" class="nav-item text-white nav-link mera">About Us</a></li>
+        <li><a href="https://programmersarmy.com/contributors/" class="nav-item text-white nav-link mera">Contributors</a></li>
+              </div>
+      </div>
+  </nav>
+
+<style>
+.bgGreen1 {
+  background-color: #14BA6A;
+}
+</style>
+    <div class="w3-sidebar sidebar w3-bar-block wcollapse w3-card w3-animate-left sticky-top" style="width:200px;padding-top: 8em;" id="mySidebar">
+        <b> <p align="center"> Algorithms </p> </b> <hr>
+        <a href="kadane.html" class="w3-bar-item w3-button">Kadane Algorithm</a>
+        <a href="moos.html" class="w3-bar-item w3-button">Mo's Algorithm</a>
+        <a href="kmp-algo.html" class="w3-bar-item w3-button ">KMP Algorithm</a>
+
+        <a href="robin-karp.html" class="w3-bar-item w3-button">Robin Karp Algorithm</a>
+        <a href="two-pointer.html" class="w3-bar-item w3-button ">two-pointer Technique</a>
+        <a href="sliding-window.html" class="w3-bar-item w3-button ">Sliding Window Approach</a>
+        <a href="k-sorted-array.html" class="w3-bar-item w3-button ">Sort a K sorted array</a>
+        <a href="#" class="w3-bar-item w3-button bgGreen1">Count Set Bits in a number</a>
+        <a href="1-n-setbits.html" class="w3-bar-item w3-button">count total set bits in all numbers from 1 to n</a>
+        <a href="moore-algo.html" class="w3-bar-item w3-button">Moore's voting Algorithm</a>
+
+        <a href="2-non-repeat.html" class="w3-bar-item w3-button mycolor">Find two non repeating elements in an array of repeating elements</a>
+        <a href="median-2-array.html" class="w3-bar-item w3-button">Median of two sorted arrays of different sizes</a>
+
+        <a href="rotate-90.html" class="w3-bar-item w3-button">Rotate square matrix by 90 degrees</a>
+        <a href="merge-k-sorted.html" class="w3-bar-item w3-button">Merge 'k' sorted</a>
+        <a href="next-greater.html" class="w3-bar-item w3-button">Next greater element</a>
+        <a href="maze-destination.html" class="w3-bar-item w3-button">Number of ways to reach destination in a Maze</a>
+        <a href="search-row.html" class="w3-bar-item w3-button">Search in a row-wise and column-wise sorted Matrix</a>
+        <a href="stable.html" class="w3-bar-item w3-button">Stable Marriage Problem</a>
+
+        <a href="segment.html" class="w3-bar-item w3-button">Segment Trees</a>
+
+        <a href="hull1.html" class="w3-bar-item w3-button">Convex Hull Part 1 - Graham Scan</a>
+        <a href="hull2.html" class="w3-bar-item w3-button">Convex Hull Part 2 – Jarvis algorithm</a>
+<br> <br>
+
+      </div>
+
+      <div class="w3-main" style="margin-left:200px">
+
+      </div>
+      <script>
+      function w3_open()
+      {
+            if(document.getElementById("mySidebar").style.display== "block")
+            {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+      }
+      function change(x) {
+              x.classList.toggle("fa-arrow-circle-down");
+            }
+      </script>
+     <div class="container-fluid contf" style="margin-left: auto;">
+     <p>
+         <div class="article">
+            <!-- <img src="  "> -->
+
+            <style>
+                ul ,p{
+                    font-size: 18px;
+                }
+
+                .abc,h3 {
+
+                    font-size: 18px;
+                    font-family: Helvetica, Arial, sans-serif;
+                    text-align: justify;
+                    letter-spacing: 1px;
+                }
+
+                ol {
+                    font-size: 18px;
+                }
+
+                /* a {
+                    color:blue;
+                } */
+                .mine {
+                  background-color: aquamarine;
+                  border-radius: 20px;
+                  padding: 10px;
+                }
+
+                .bg-grey {
+                  background-color: lightgrey;
+                  border-radius: 20px;
+                  padding: 10px;
+                }
+            </style>
+<div style="margin-left:20px" >
+            <p align="center">
+
+              <h2 align="center"><b><u>Count Set Bits in a given Number</u></b></h2><br>
+              <div class="mine">
+              <p>
+                  Aim -&gt; Given a non-negative integer N count number of set bits(1s) in
+                  the binary representation of N.
+              </p>
+              <p>
+                  Prerequisite-&gt; Knowledge of Binary number System and bitwise AND and
+                  left shift operator.
+              </p>
+
+            </div>
+              <p>
+                  <u><h2><strong>Method-1 Brute Force : </strong> </h2> </u>
+              </p>
+              <div class="bg-grey">
+              <p>
+                  Approach - Very basic approach or we can say the first approach which comes
+                  to our mind is just check the rightmost bit of the number(By N%2) then
+                  shift all bits one position right(equivalent to dividing it by 2) till the
+                  number is non zero.
+              </p>
+              </div>
+              <p>
+                  Code in C++
+              </p>
+              <p>
+                  <img
+                      src="images/set-bits-1.png"
+                      width="624"
+                      height="292"
+                      class="img-fluid"
+                  />
+              </p>
+              <p>
+                  <strong>Analysis-&gt;</strong>
+              </p>
+              <div class="bg-grey">
+              <p>
+                  1. <strong>Time Complexity</strong>-&gt; In step 1 we are declaring a
+                  variable count and assigning it 0 and in step 3 we are returning it. Time
+                  for these steps are not dependent on the value of N. So, Step-1 and step 3
+                  are constant-time operations(O(1)). In step-2 We are doing again some
+                  constant operations inside while loop but we have to analyze how many times
+                  our while loop runs.
+              </p>
+              <p>
+                  So basically Given a number N we can possibly have 1+log(N) steps at
+                  max(from basic logarithmic knowledge). We can ignore 1 in our analysis so
+                  while loop runs log(N) times.
+              </p>
+              <div class="bgcolor">
+              <p>
+              <b>    Time complexity- O(log(N)). </b>
+              </p>
+              </div>
+              <p>
+                  2. <strong>Space Complexity</strong>-&gt;Our memory usage is independent of
+                  N which means by varying the value of N our memory usage will not change as
+                  we are always declaring only one variable count So,
+              </p>
+              <div class="bgcolor">
+              <p>
+                  <b>Space Complexity-&gt; O(1).</b>
+              </p>
+              </div>
+            </div>
+              <p> <br>
+                  <u><h2><strong>Method-2 Brian Kernighan’s Algorithm</strong> </h2> </u>
+              </p>
+              <p>
+                  <strong> </strong>
+              </p>
+              <p>
+                  Here come a better approach and this algorithm has a name Brian Kernighan’s
+                  Algorithm it does the counting in
+              </p>
+              <p>
+              <b>    O(log(Number of Set bits)) </b>.
+              </p>
+              <div class="mine">
+              <p>
+                  Idea- So it uses a simple fact that when we apply bitwise AND between the N
+                  and (N-1) the result is a new number similar to N with its rightmost set
+                  bit flipped.
+              </p>
+
+              <p>
+                  <strong><em> For e.g.</em></strong>
+                  Let’s say N=52
+              </p>
+              <p>
+                  Binary Representation of N - 110100
+              </p>
+              <p>
+                  Binary Representation of (N-1) - 110011
+              </p>
+              <p>
+                  Bitwise And (N &amp;(N-1)). - 110000
+              </p>
+              </div>
+              <p>
+                  So as we can observe clearly N-1 flips all the bits starting from the
+                  rightmost set bits and since the bits are flipped from the rightmost set
+                  bit the and operation will result in 0 for them. Therefore the resultant
+                  operation is the flip of the rightmost set bit.
+              </p>
+              <p>
+                  Now using this fact we no longer have to use our while loop for O(log(N))
+                  times.
+              </p>
+              <p>
+                  Code in C++
+              </p>
+              <p>
+                  <img
+                      src="images/set-bits-2.png"
+                      width="624"
+                      height="301"
+                      class="img-fluid"
+                  />
+              </p>
+              <p>
+                  <strong>Analysis-&gt;</strong>
+              </p>
+              <div class="bg-grey">
+              <p>
+                  This is similar to our previous analysis -&gt;
+              </p>
+              <p>
+                  Just now our while loop will run for O(no. of set bits).
+              </p>
+              <div class="bgcolor">
+              <p>
+                  1.<strong>Time Complexity-&gt; O(log(No. Of set Bits))</strong>
+              </p>
+              <p>
+                  2.<strong>Space Complexity-&gt;O(1).</strong>
+              </p>
+              </div>
+            </div>
+              <br>
+              <p>
+                  <u> <h2> <strong>Method-3 Preprocessing for O(1) solution.</strong> </h2> </u>
+              </p>
+              <div class="mine">
+              <p>
+                  <b>Idea </b> - If we have to find number of set bits for many different numbers we
+                  can do some preprocessing so that we can answer each of the queries in O(1)
+                  time. Let’s see how it goes.
+              </p>
+              </div>
+              <br>
+              <p>
+                  For every combination of 8 bits(256 combinations from 0-255 ), we
+                  precompute their total set bits. Now, we divide each query integer(32 bits)
+                  into 4 parts(8 bits each) and now we can directly add up the values of 4
+                  parts by looking in memo array. Hence making it a constant time operation.
+                  Have a look at the code.
+              </p>
+              <p>
+                  <strong>
+                      Please note here that 255 is 00000000 00000000 00000000 11111111
+                  </strong>
+              </p>
+              <p>
+                  Code in C++
+              </p>
+              <p>
+                  <img
+                      src="images/set-bits-3.png"
+                      width="706"
+                      height="464"
+                      class="img-fluid"
+                  />
+              </p>
+              <p>
+                <b>  Explanation of the code- </b>
+              </p>
+              <p>
+                  1. First, we declare a memo array of 256 size(all combinations of 8 bits).
+              </p>
+              <p>
+                  2. Then we fill this array using our initialize() function which goes as
+                  follows- memo[0] is 0 initialized than for subsequent ones, the last bit is
+                  checked and added to the previous result of(i/2) as memo[i/2] gives total
+                  number of set bits neglecting the rightmost one. And in this way, the memo
+                  array is filled.
+              </p>
+              <p>
+                  3. Now in countSetBits() function, we are dividing integer into 4 parts as
+                  discussed previously and using the precomputed result on it and adding them
+                  to return the final result.
+              </p>
+              <p>
+                  a) n&amp; 255 -&gt; equivalent to making all first 24 bits 0. So that we
+                  get information about only 8 bits from 25-32.
+              </p>
+              <p>
+                  b) (n&gt;&gt;8)&amp;255 -&gt; first shifting n, 8 bits right and doing step
+                  as in a) so that now we get information of bits from 17-24.
+              </p>
+              <p>
+                  c) (n&gt;&gt;16)&amp;255 -&gt; Similarly getting information of bits 9-16.
+              </p>
+              <p>
+                  d) (n&gt;&gt;24) -&gt; No AND operation here because anyways the first 24
+                  bits will become 0. so that now we get information of bits from 1-8.
+              </p>
+              <div class="bg-grey">
+              <p>
+                <b>  Analysis -&gt; </b>
+              </p>
+              <p>
+                  1. <strong>Time Complexity</strong>- We are spending constant time in
+                  precomputation but our Queries can be answered in O(1).
+              </p>
+              <p>
+                  2. <strong>Space Complexity</strong>-&gt;We are taking 256 size array
+                  whereas it is independent of N so O(1).
+              </p>
+              </div>
+              <p>
+                  <strong> </strong>
+              </p>
+              <p>
+                  <strong>Note </strong>
+                  -&gt;
+              </p>
+              <p>
+                  1. You can also develop your own method if you understand Method-3 well For
+                  eg. you can divide integer into 4 bits each(8 parts) and precompute for it.
+                  Hence the constant space needed will decrease and the constant time needed
+                  will increase but will be O(1) only.
+              </p>
+              <p>
+                  2. Also, this is not limited to 32 bits number you can also use it for any
+                  other datatype eg. long long integer just the parts will increase rest of
+                  the things remains the same.
+              </p>
+
+
+              <br>
+              <p> It is highly recommended to solve below problems, they are handpicked by
+                Programmers Army: </p>
+              <p>
+                  <strong><u>Practice Problems :-</u></strong>
+              </p>
+              <p>
+                  • <a href="https://www.hackerrank.com/contests/dstest-1/challenges/set-bits" target="_blank">https://www.hackerrank.com/contests/dstest-1/challenges/set-bits</a>
+              </p>
+              <p>
+                  •
+                  <a href="https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/count-the-bits/" target="_blank">
+                      https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/count-the-bits/
+                  </a>
+              </p>
+              <p>
+                  •
+                  <a href="https://leetcode.com/problems/counting-bits/">
+                      https://leetcode.com/problems/counting-bits/
+                  </a>
+              </p>
+
+
+              <br/>
+
+              <p> This article is contributed by <a href="https://www.linkedin.com/in/adarsh-agrawal-620ab6148/" target="_blank">Adarsh Agrawal</a> </p>
+              <p>
+                  So that’s it for this article we will be coming up with our next article on
+                  further topics of Algorithms very soon till then keep learning, keep
+                  coding, keep reading and keep improving !!
+              </p>
+              <p>
+                  <strong>Happy Coding </strong>
+              </p>
+              <p>
+                  <strong>By Programmers Army </strong>
+                  <strong>😊</strong>
+                  <strong></strong>
+              </p>
+
+
+        </div>
+        </div>
+    </p>
+    </div>
+    <style>
+        .home-newsletter{
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+        @media (min-width:1200px){
+            .home-newsletter{
+                margin-left: -2rem;
+            margin-right: -3rem;
+            }
+        }
+    </style>
+<section class="home-newsletter">
+<div class="foo">
+        <footer>
+<style>
+            </style>
+ <br>
+<h6 align="center">
+                   <a> &nbsp;&nbsp;&nbsp;Copyright &copy; Programmers Army </a> All rights reserved 2020
+                </h6>
+                <div style="text-align: center;">
+                <dt>Connect with us:</dt>
+  <a href="https://www.facebook.com/Programmers-Army-105809441239783" target="_blank"><i class="fa fat fa-facebook-official" style="font-size:30px;color:blue"></i></a>
+  <a href="https://twitter.com/ProgrammingArmy" target="_blank"><i class="fa fat fa-twitter-square" style="font-size:30px;color:lightblue"> </i></a>
+
+  <a href="https://www.instagram.com/" target="_blank"><i class="fa fat fa-instagram" style="font-size:30px;color:violet"></i></a>
+  <a href="https://www.youtube.com/channel/UCRJS3O94F8cOj2U0gOUwmBA" target="_blank"><i class="fa fat fa-youtube" style="font-size:30px;color:orangered"></i></a>
+
+   <a href="https://discord.gg/UWSBScw" target="_blank"><i class="fa fat fa-envelope-open" aria-hidden="true" style="font-size:30px;color:orangered"></i></a>
+ &nbsp;&nbsp;&nbsp;
+                </div>
+<style>
+.home-newsletter {
+padding: 10px 0;
+background: wheat;
+}
+.home-newsletter .single {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 0; }
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: black;
+font-weight: bold;
+font-family: sans-serif;
+text-transform: uppercase;
+margin-bottom: 20px; }
+.home-newsletter .single .form-control {
+height: 40px;
+background: rgba(255, 255, 255, 0.6);
+border-color: transparent;
+border-radius: 20px 0 0 20px; }
+.home-newsletter .single .form-control:focus {
+box-shadow: none;
+border-color: #243c4f; }
+.home-newsletter .single .btn {
+min-height: 40px;
+border-radius: 0 20px 20px 0;
+background: #243c4f;
+color: #fff;
+}*/
+</style>
+
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="single">
+<h2>Subscribe Programmers Army For Getting Updates For New Articles</h2>
+<div class="input-group">
+<div>
+</div>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button5 {background-color: #555555;} /* Black */
+
+.button5 {font-size: 15px;
+			border-radius: 25px;
+}
+
+.bichme{
+    padding-left:30%;
+}
+
+
+
+</style>
+
+<form class="form-inline bichme" action="testmail.php" method="post">
+  <div class="abc">
+    <!--<label for="staticEmail2" class="sr-only">Email</label>-->
+    <input type="email" class="form-control" name="userEmail" placeholder="email@example.com">
+    <span class="input-group-btn"> <button class="btn btn-theme" name="submit" type="submit">Submit</button> <br> <br>
+  </span>
+  </div>
+     <style>
+    .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}</style>
+  <!--<button type="submit" class="btn btn-success" name="submit">Subscribe</button>-->
+</form>
+           </div>
+ 	</div>
+ </div>
+ </div>
+ </div>
+ <p align="center">
+ Designed by <a href="index.html"> <b >Websitians</b></a>
+                </p>
+</section>
+
+
+
+            </div>
+        </footer>
+        </div>
+</body>
+</html>

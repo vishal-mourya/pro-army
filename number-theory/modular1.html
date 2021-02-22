@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="../images/header-logo.ico"/>
+<title>Programmers Army</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .contf{
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+    .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+    .active{
+        background-color: #14ba6a;
+    }
+    .fact{
+        padding-right:-15px;margin-right: -1px;margin-left: -10px;
+        font-size: 50px;
+        color:#62f2ad;
+    }
+    @media only screen and (min-width: 1200px)
+    {
+       .fact
+       {
+           display: none;
+       }
+       .container-fluid
+       {
+           padding-left: 15rem;
+           padding-right: 3rem;
+       }
+    }
+    @media only screen and (max-width: 350px)
+    {
+        .navbar-brand{
+            margin-left: 0px;
+        }
+        .fact{
+            font-size: 40px;
+        }
+        .navbar-toggler-icon{
+            width: 20px;
+        }
+    }
+    @media (max-width:1200px){.w3-sidebar.wcollapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+	.mera:hover {
+		background-color: #62F2AD;
+	}
+</style>
+<body>
+    <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-dark">
+        <div class="abc">
+            <i onclick="change(this);w3_open()" class="fa fact fa-arrow-circle-right"></i>
+        </div>
+        <a href="#" class="navbar-brand"><img class="image" src="../images/logo.svg" style="width: 200px;"></a>
+        <button type="button" class="navbar-toggler" style="background-color: #62f2ad;border-color: white;border-width: 3px;" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <li>
+                <a href="../index.html" class="nav-item text-white nav-link mera">Home</a></li>
+                <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      C++ Programming
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="../c-plus-plus/gettingstarted.html">Basic C++</a>
+                      <a class="dropdown-item" href="../STL/intro_stl.html">STL in C++</a>
+
+                    </div>
+                  </li>
+                <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle " href="#" id="navbardrop" data-toggle="dropdown">
+                      Data Structures
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item btn btn-outline-secondary" href="../DS/intro_to_array.html">Basic Data Structures</a>
+                      <a class="dropdown-item" href="../trees-and-graph/intro_to_graph-1.html">Trees & Graphs</a>
+
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown mera">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Algorithms
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="../searching-and-sorting/search.html">Basic Algorithms</a>
+                      <a class="dropdown-item" href="../algorithms/count-set-bits.html">Intermediate Algorithms</a>
+                      <a class="dropdown-item" href="../algorithms/kmp-algo.html">Advanced Algorithms</a>
+                    </div>
+                  </li>
+                  <li>
+                  <a href="#" class="nav-item text-white nav-link mera active border">Number theory</a></li>
+                  <li><a href="../DP/introduction.html" class="nav-item text-white nav-link mera">Dynamic programming</a></li>
+          <li><a href="../aboutus.html" class="nav-item text-white nav-link mera">About Us</a></li>
+				  <li><a href="https://programmersarmy.com/contributors/" class="nav-item text-white nav-link mera">Contributors</a></li>
+                </div>
+        </div>
+    </nav>
+    <style>
+    .bgGreen1 {
+      background-color: #14BA6A;
+    }
+    </style>
+    <div class="w3-sidebar sidebar w3-bar-block wcollapse w3-card w3-animate-left sticky-top" style="width:200px;padding-top: 8em;" id="mySidebar">
+      <b> <p align="center"> Number Theory </p> </b> <hr>
+      <a href="Intro_to_number_theory.html" class="w3-bar-item w3-button ">Introduction To Number Theory</a>
+      <a href="primality_test.html" class="w3-bar-item w3-button">Primality Test</a>
+      <a href="prime_fact.html" class="w3-bar-item w3-button">Prime Factorization</a>
+
+      <a href="binary_exp.html" class="w3-bar-item w3-button">Binary Exponentiation</a>
+      <a href="matrix_exp.html" class="w3-bar-item w3-button">Matrix Exponentiation</a>
+      <a href="rec_nth.html" class="w3-bar-item w3-button">Calculate ‘Nth’ element of recurrence relation in O(logn)</a>
+
+      <a href="gcd.html" class="w3-bar-item w3-button">G.C.D algorithm</a>
+      <a href="#" class="w3-bar-item w3-button bgGreen1">Modular Arithmetic – Part 1 </a>
+      <a href="modular2.html" class="w3-bar-item w3-button">Modular Arithmetic – Part 2</a>
+
+      <a href="ext_euclid.html" class="w3-bar-item w3-button"> Extended Euclidean Algorithm</a>
+
+      <a href="total_div.html" class="w3-bar-item w3-button">Total Divisors from prime factorization</a>
+      <a href="bin_coeff.html" class="w3-bar-item w3-button">Binomial co-efficient using modulo inverse</a>
+      <a href="../coming-soon-page.html" class="w3-bar-item w3-button">Euler’s Totient Function</a>
+      <a href="../coming-soon-page.html" class="w3-bar-item w3-button">Euler’s Totient function & G.C.D sum </a>
+
+      </div>
+
+      <div class="w3-main" style="margin-left:200px">
+
+      </div>
+      <script>
+      function w3_open()
+      {
+            if(document.getElementById("mySidebar").style.display== "block")
+            {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+      }
+      function change(x) {
+              x.classList.toggle("fa-arrow-circle-down");
+            }
+      </script>
+     <div class="container-fluid contf" style="margin-left: auto;">
+     <p>
+         <div class="article">
+            <!-- <img src="  "> -->
+
+            <style>
+                  ul {
+                                font-size: 18px;
+                            }
+
+                            .abc,h3 {
+                                font-size: 18px;
+                                font-family: Helvetica, Arial, sans-serif;
+                                text-align: justify;
+                                letter-spacing: 0.5px;
+                            }
+
+                            ol {
+                                font-size: 18px;
+                            }
+                            .uni{
+                                line-height:1.8em;
+
+                            }
+
+                            .setuplink {
+                                color:#8ae034;
+                                text-decoration: underline;
+                            }
+
+            </style>
+
+            <style>
+            ul{
+              font-size: 18px;
+            }
+            p{
+              font-size: 18px;
+            }
+            ol{
+              font-size: 18px;
+            }
+
+            .div1{
+              background-color: aquamarine;
+            }
+            </style>
+
+            <h2 align="center"><b><u>Number Theory : Modular Arithmetic – Part 1</u></b></h2><br>
+
+            <p>
+                After reading our previous article on GCD Algorithms, we welcome you to our
+                brand-new article and appreciate your efforts to learn new things till now.
+                So, in this article we will be looking into some basics of modular
+                arithmetic.
+                <br/>
+                <br/>
+                Let’s start with the formal definition of modular arithmetic.
+                <br/>
+                <div class="div1"><p>
+                <br/>
+                <strong>Definition from Wikipedia:</strong>
+                <strong> </strong>
+                In
+                <a href="https://en.wikipedia.org/wiki/Mathematics" title="Mathematics">
+                    mathematics
+                </a>
+                , <strong>modular arithmetic</strong> is a system of
+                <a href="https://en.wikipedia.org/wiki/Arithmetic" title="Arithmetic">
+                    arithmetic
+                </a>
+                for
+                <a href="https://en.wikipedia.org/wiki/Integer" title="Integer">
+                    integers
+                </a>
+                , where numbers "wrap around" when reaching a certain value, called the
+                <strong>
+                    modulus.
+                    <br/>
+                    <br/>
+                </strong>
+                In simple words modular arithmetic is dealing with modulus operator
+                (denoted as ‘%’) and making calculations with big numbers easy.
+                <br/>
+              </div>
+              <p>
+
+                Suppose you want to multiply two numbers (lets say ‘a’ and ‘b’) and then
+                divide it by some number (lets say ‘p’) to give out final remainder, easy
+                task right? But what if ‘a’ and ‘b’ are much bigger number (i.e. as large
+                as 10<sup>12</sup> )
+                <br/>
+                <br/>
+                then if you first multiply ‘a’ and ‘b’ you will be getting some number
+                around 10<sup>24 </sup>which cannot be stored in standard integer datatype
+                and hence we will be getting wrong answer on doing division with ‘p’.
+                <br/>
+                <br/>
+                But, same thing can be done in modular arithmetic very easily, isn’t that
+                sounds great?.... So, be relaxed and keep reading this article to get
+                answer to your questions 😊
+                <br/>
+                <br/>
+                let’s first understand
+                <strong>
+                    what does modulus operator gives?
+                    <br/>
+                    <br/>
+                </strong>
+                E.g. you are asked to divide 27 by 5 (i.e. 27 / 5 = ?)
+                <br/>
+                We will do integer division of 27 by 5, to see the magic !!
+                <br/>
+            </p>
+            <p>
+                <img
+                    src="images/mod-1.png"
+                    width="258"
+                    height="175"
+                    border="0"
+                    class="img-fluid"
+                />
+                <br/>
+                <br/>
+                <p>
+                So, here we get 27 / 5 = 5(quotient) as shown above, and the remainder i.e.
+                2 is what modulus operator gives. Hence 27 % 5 = 2(remainder)
+            </p>
+            <p>
+            So, after gaining knowledge of modulus operator let’s dive deep into some cool properties of modular arithmetic.
+            <h2 align="center">
+            <br>
+            <strong><u>Property 1 - Quotient – Remainder Theorem:</u></strong><strong><u><br/> </h2>
+              <p>
+            <br/>
+            </u></strong><strong><br/>
+            </strong>     For, two positive integers A and B, there exist integer ‘q’ and ‘r’ such that<br/>
+            <div class="div1">
+              <p>
+            <br/>
+                                                      <strong>A = B * q + r         where 0 &lt;= r &lt; B<br/>
+             </strong>    here B is Divisor, r is remainder, q is quotient<br/>
+            <br/>
+                 hope you remembered this interesting property sounded as<br/>
+                <br/>
+            <strong>     Dividend = Divisor * quotient + remainder<br/>
+            </div>
+            <p>
+            <br/>
+            </strong>hence, we can write 27 / 5 in above form as:<br/>
+            <strong>27(dividend) = 5(divisor) * 5(quotient) + 2(remainder)<br/>
+            <br/>
+            </strong><strong>proof of this property:</strong><br/>
+            <br/>
+            This property can be easily proved, by reverse processing. <br/>
+            <br/>
+            1. In simple words if your Divisor (i.e. 5 in our case) is greater than Dividend (i.e. 27 in our case) we can divide our Dividend (i.e. 27) into equal parts till we reach a number smaller than Divisor (i.e. 5) and the left over number is our remainder as discussed above.<br/>
+            <br/>
+            2. So, finally if we multiply our Quotient ( i.e. 5 in our case) with Divisor ( i.e. 5) we are actually multiplying our Divisor (i.e. 5) with number of equal parts we obtained (i.e. 5) and then finally adding the remainder to answer as we were not able to divide our remainder.<br/>
+            <br/>
+             <strong>
+                                            </strong>
+                                            <h2 align="center"><strong><u>Property 2 – Addition Property:</u></strong><strong><u><br/> </h2>
+            </u></strong><strong><br/>
+            <br/>
+            <p>
+            </strong>According to this property, If <strong>a + b = c</strong><strong>, then a (modN) + b (modN) ≡ c (modN).<br/>
+
+            <div class="div1">
+              <p>
+            <br/>
+            </strong>In simple words <strong>(a + b) mod m = ((a mod m) + (b mod m)) mod m<br/>
+            <br/>
+            </strong>Lets, take an example to understand this property clearly<br/>
+            <br/>
+            E.g.     (10 + 12) % 7
+            <p>
+                = ((10 % 7) + (12 % 7)) % 7
+            </p>
+            <p>
+                = (3 + 5) % 7
+            </p>
+            <p>
+                = 8 % 7
+            </p>
+            <p>
+                = 1
+                <br/>
+                <br/>
+                as (10 + 12) % 7 = (22) % 7 = 1 hence we can see that this property is
+                verified.
+            </p>
+            </div>
+            <p>
+                <strong> </strong>
+            </p>
+            <p>
+                <strong><u>Proof of this property:</u></strong>
+                <strong> </strong>
+                <strong>(a + b) % m = ((a % m) + (b % m)) % m</strong>
+                <strong>
+                    <u>
+                        <br/>
+                        <br/>
+                    </u>
+                </strong>
+                Consider a = m * q1 + r1
+                <br/>
+                <strong> </strong>
+                b = m * q2 + r2 … writing ‘a’ and ‘b’ in property 1 form ( i.e.
+                <strong>
+                    Dividend = Divisor * quotient + remainder )
+                    <br/>
+                    <br/>
+                    Note: here r1 = ( a % m) and r2 = ( b % m) and q1, q2 are quotient.
+                </strong>
+                <br/>
+                <strong>
+                    <u>
+                        <br/>
+                    </u>
+                </strong>
+                Now, <strong>( a + b ) % m = ( m * q1 + r1 + m * q2 + r2 ) % m</strong>
+                ….(substituting values of ‘a’ and ‘b’ )
+                <br/>
+                <br/>
+                = ( ( (m * q1) % m ) + (r1 % m) +( (m * q2) % m ) + (r2 % m) ) % m
+                <br/>
+                <br/>
+            since, (m * q1) % m = (m * q2) % m = 0,    <strong>E.g. ( 7 * 5 ) % 7 = 0</strong>
+            </p>
+            <p>
+                Hence, we have our expression as,
+                <br/>
+                <br/>
+                = ( (r1 % m) + (r2 % m) ) % m = ( r1 + r2 ) % m
+                <br/>
+                therefore from our Note, above we can rewrite above expression as below:
+                <br/>
+                = ( ( a % m ) + ( b % m ) ) % m
+                <br/>
+                <br/>
+                Hence, we proved that
+            </p>
+            <strong>( a + b ) % m = ( ( a % m ) + ( b % m ) ) % m</strong><strong><br/>
+            <br/>
+            </strong>
+
+            <p><strong><br/>
+            </strong><strong>
+            <h2 align="center"></strong><strong><u>Property 3 – Subtraction Property:<br/> </h2>
+            </u></strong><strong><br/>
+            <br/>
+
+            <div class="div1"> <br> <p>
+            </strong><strong>(a - b) mod m = ((a mod m) - (b mod m)) mod m<br/>
+            <br/>
+            </strong>Lets, take an example to understand this property clearly<br/>
+            <br/>
+            E.g.     (20 - 12) % 7</p>
+            <p>
+                = ((20 % 7) - (12 % 7)) % 7
+            </p>
+            <p>
+                = (6 - 5) % 7
+            </p>
+            <p>
+                = 1 % 7
+            </p>
+            <p>
+                = 1
+                <br/>
+                <br/>
+                as (20 - 12) % 7 = (8) % 7 = 1 hence we can see that this property is
+                verified.
+            </p>
+            </div>
+            <p>
+                <strong> </strong>
+            </p>
+            <p>
+                <strong><u>Proof of this property:</u></strong>
+                <strong> </strong>
+                <strong>(a - b) % m = ((a % m) - (b % m)) % m</strong>
+                <strong>
+                    <u>
+                        <br/>
+                        <br/>
+                    </u>
+                </strong>
+                Consider a = m * q1 + r1
+                <br/>
+                <strong> </strong>
+                b = m * q2 + r2 … writing ‘a’ and ‘b’ in property 1 form ( i.e.
+                <strong>
+                    Dividend = Divisor * quotient + remainder )
+                    <br/>
+                    <br/>
+                    Note: here r1 = ( a % m) and r2 = ( b % m)
+                </strong>
+                <br/>
+                <strong>
+                    <u>
+                        <br/>
+                    </u>
+                </strong>
+                Now, <strong>( a - b ) % m = ( m * q1 + r1 - m * q2 - r2 ) % m</strong>
+                ….(substituting values of ‘a’ and ‘b’ )
+                <br/>
+                <br/>
+                = ( ( (m * q1) % m ) + (r1 % m) - ( (m * q2) % m ) - (r2 % m) ) % m
+                <br/>
+                <br/>
+                since, (m * q1) % m = (m * q2) % m = 0, E.g. ( 7 * 5 ) % 7 = 0
+            </p>
+            <p>
+                Hence, we have our expression as,
+                <br/>
+                <br/>
+                = ( (r1 % m) - (r2 % m) ) % m = ( r1 - r2 ) % m
+                <br/>
+                therefore from our Note, above we can rewrite above expression as below:
+                <br/>
+                = ( ( a % m ) - ( b % m ) ) % m
+                <br/>
+                <br/>
+                Hence, proved that
+            </p>
+            <p>
+                <strong>( a - b ) % m = ( ( a % m ) - ( b % m ) ) % m</strong>
+                <strong>
+                    <br/>
+                    <br/>
+                    <br/>
+                </strong>
+            </p>
+            <p><strong>
+               <h2 align="center"></strong><strong><u>Property 4 – Multiplication Property:</u></strong><strong><u><br/> </h2>
+            <br/>
+            <div class="div1">
+            <br/>
+            <p>
+            </u></strong><strong>(a * b) mod m = ((a mod m) * (b mod m)) mod m<br/>
+            <br/>
+            </strong>Lets, take an example to understand this property clearly<br/>
+            <br/>
+            E.g.     (10 * 12) % 7</p>
+            <p>
+                = ((10 % 7) * (12 % 7)) % 7
+            </p>
+            <p>
+                = (3 * 5) % 7
+            </p>
+            <p>
+                = 15 % 7
+            </p>
+            <p>
+                = 1
+                <br/>
+                <br/>
+                as (10 * 12) % 7 = (120) % 7 = 1 hence we can see that this property is
+                verified.
+            </p>
+            </div>
+            <p>
+                <strong> </strong>
+            </p>
+            <p>
+                <strong><u>Proof of this property:</u></strong>
+                <strong> </strong>
+                <strong>(a * b) % m = ((a % m) * (b % m)) % m</strong>
+                <strong>
+                    <u>
+                        <br/>
+                        <br/>
+                    </u>
+                </strong>
+                Consider a = m * q1 + r1
+                <br/>
+                <strong> </strong>
+                b = m * q2 + r2 … writing ‘a’ and ‘b’ in property 1 form ( i.e.
+                <strong>
+                    Dividend = Divisor * quotient + remainder )
+                    <br/>
+                    <br/>
+                    Note: here r1 = ( a % m) and r2 = ( b % m)
+                </strong>
+                <br/>
+                <strong>
+                    <u>
+                        <br/>
+                    </u>
+                </strong>
+                Now, <strong>( a * b ) % m = ( (m * q1 + r1 ) * (m * q2 + r2 ) % m</strong>
+                ….(substituting values of ‘a’ and ‘b’ )
+                <br/>
+                <br/>
+                = ( (m * q1) * (m * q2) + (r1 * m * q2) + (r2 * m * q1) + (r1 * r2) ) % m
+                <br/>
+                <br/>
+            since, (m * q1) % m = (m * q2) % m = 0,    <strong>E.g. ( 7 * 5 ) % 7 = 0 </strong>
+            </p>
+            <p>
+                Hence, we have our expression as,
+                <br/>
+                <br/>
+                = ( r1 * r2 ) % m
+                <br/>
+                therefore from our Note, above we can rewrite above expression as below:
+                <br/>
+                = ( ( a % m ) * ( b % m ) ) % m
+                <br/>
+                <br/>
+                Hence, proved that
+            </p>
+            <p><strong>( a * b ) % m = ( ( a % m ) * ( b % m ) ) % m</strong><strong><br/>
+            <div class="div1"> <p>
+            <br/>
+
+            </strong>After reading above properties you may make a conclusion that we can do same modular magic with division operator, say <br/>
+            <br/>
+            <strong>( a  / b ) % m = ( ( a % m ) / ( b % m ) ) % m</strong><strong><br/>
+            <br/>
+            </strong>Lets, take an example to understand this property clearly<br/>
+            <br/>
+            E.g.     (30 / 10) % 7</p>
+            <p>
+                = ((30 % 7) / (10 % 7)) % 7
+            </p>
+            <p>
+                = (2 / 3) % 7
+            </p>
+            <p>
+                = 0.67 % 7
+            </p>
+            <p>
+                = Not a number, and according to mathematics we cannot find remainder of
+                floating-point numbers
+                <br/>
+                <br/>
+            </p>
+            <p>
+                as (30 / 10) % 7 = (3) % 7 = 3 hence we can see that this property is not
+                working fine for division.
+            </p>
+            </div>
+            <p>
+                <br/>
+                Hence, note here that this property does not work for division operator,
+                for make it work we would have to use modular inverse which we will be
+                covering in our upcoming articles.
+                <strong>
+                    <br/>
+                </strong>
+                <strong>
+                    <u>
+                        <br/>
+                    </u>
+                </strong>
+
+              <h2 align="center"><strong>
+                    <u>
+                        Property 5 – Congruence Property:
+                        <br/>
+                    </u>
+                  </h2>
+                </strong>
+                <strong>
+                    <u>
+                        <br/>
+                    </u>
+                </strong>
+                <p>
+                ‘<strong>a</strong>’ and ‘<strong>b</strong>’ are said to be congruent to
+                each other under modulo ‘<strong>N</strong>’, if they leave same remainder
+                when divided by ‘N’. i.e. <strong>a </strong><strong>≡ b ( mod N)</strong>
+                <strong>
+                    <u>
+                        <br/>
+
+                    </u>
+                </strong>
+                <strong></strong>
+            </p>
+            <p>
+                Let’s take an example to understand it clearly.
+                <br/>
+                E.g. <strong>13 </strong><strong>≡ 41 (mod 7) </strong> here a = 13, b = 41
+                and N = 7
+                <br/>
+                <br/>
+                Now, since we have 13 % 7 = 6 which is same as 41 % 7 = 6 hence we can
+                write above expression since they give same remainder when divided by 7.
+                <br/>
+                <br/>
+                One important point to note here is if we add same integers on both side of
+                our original equation we still have the same result i.e. they do not loose
+                their congruency.
+                <br/>
+                <br/>
+                E.g. ( 13 + 35 + 5 ) % 7 = 53 % 7 = 4
+                <br/>
+                <br/>
+                ( 41 + 35 + 5 ) % 7 = 81 % 7 = 4
+                <br/>
+                <br/>
+                i.e. they still are congruent and obey this property.
+            </p>
+            <div class="div1">
+              <br>
+            <p>
+                <strong>
+                    <u>
+                        Important observations:
+                        <br/>
+                    </u>
+                </strong>
+                <strong>
+                    <u>
+                        <br/>
+                    </u>
+                </strong>
+                1. If a ≡ b (mod N)
+                <br/>
+                then
+                <br/>
+                <strong>a – b ≡ 0 (mod N)</strong>
+                i.e. absolute( a – b ) is divisible by N
+                <br/>
+
+            </p>
+            <p>
+                E.g. 13 ≡ 41 ( mod 7) à absolute(13 – 41) = 28 (mod 7) = 0 (mod 7)
+            </p>
+            <p>
+
+                <br/>
+                2. If a ≡ b (mod N)
+                <br/>
+            then there exist an integer ‘k’ such that a – b = N * (±k) i.e.    <strong>a = N * (</strong>±<strong>k) + b</strong>
+                <br/>
+                <br/>
+                E.g. 13 ≡ 41 (mod 7) then we have k = ±4;
+                <br/>
+                <br/>
+                <strong>13 = 7 * (-4) + 41 and 41 = 7 * 4 + 13</strong>
+                <br/>
+                <br/>
+            </p>
+            <p>
+                <br/>
+                3. If a ≡ b (mod N) and c ≡ d (mod N)
+                <br/>
+                then
+                <br/>
+                <strong> ( a * c ) % N ≡ ( b * d ) % N</strong>
+                <br/>
+                <br/>
+                E.g. 13 ≡ 3 (mod 5) and 9 ≡ 4 (mod 5)
+                <br/>
+                <br/>
+                (13 * 9) % 5 ≡ ( 3 * 4) % 5
+                <br/>
+                <br/>
+            </p>
+            <p>
+                ( 117 ) % 5 ≡ (12 ) % 5
+                <br/>
+                <br/>
+            </p>
+            <p>
+                <strong> 2 % 5 ≡ 2 % 5 </strong>
+                Hence, the property is totally verified.
+                <br/>
+              </div>
+                <br/> <p>
+                Below, is summary of this article to revise what we have learned in this
+                article quickly.
+                <br/>
+                <div class="div1"> <p>
+                <br/>
+                <strong>Summary: </strong <br>
+                1. <strong>Dividend = Divisor * quotient + remainder</strong>
+                <strong>
+                    <br/>
+                    <br/>
+                </strong>
+                <strong> </strong>
+                2. <strong>( a + b ) % m = ( ( a % m ) + ( b % m ) ) % m</strong>
+                <strong>
+                    <br/>
+                    <br/>
+                </strong>
+                3.
+                <strong>
+                    ( a - b ) % m = ( ( a % m ) - ( b % m ) ) % m
+                    <br/>
+                    <br/>
+                </strong>
+                4. <strong>( a * b ) % m = ( ( a % m ) * ( b % m ) ) % m</strong>
+            </p>
+
+            <p>
+                5. <strong>a </strong><strong>≡ b ( mod N)</strong>
+                <strong>
+                    <br/>
+            </div>
+            <p> <br>
+                    Conclusion:
+                </strong>
+                This was some basic concepts of Modular Arithmetic which you should be
+                familiar with while doing competitive programming. And in our upcoming
+                articles we will be covering some intermediate concepts of Modular
+                Arithmetic along with cool explanation by Programmers Army.
+                <br/>
+                <br/>
+            </p>
+            <p>
+                <br/>
+                So that’s it for this article we will be coming up with our next article on
+                further topics of number theory very soon till then keep learning, keep
+                coding, keep reading and keep improving !!
+            </p>
+            <p>
+                <br/>
+                Happy Coding 😊
+            </p>
+            <p>
+                By <strong>Programmers Army</strong>
+            </p>
+
+
+
+      </div>
+            </div>
+                  </div>
+                </main>
+
+              <!-- Pagination -->
+              <!-- <div class="w3-center w3-padding-32">
+                <div class="w3-bar">
+                  <a class="w3-button w3-black" href="#">1</a>
+                  <a class="w3-button w3-hover-black" href="#">2</a>
+                  <a class="w3-button w3-hover-black" href="#">3</a>
+                  <a class="w3-button w3-hover-black" href="#">4</a>
+                  <a class="w3-button w3-hover-black" href="#">5</a>
+                  <a class="w3-button w3-hover-black" href="#">»</a>
+                </div>
+              </div> -->
+
+              <!-- <footer id="myFooter">
+                <div class="w3-container w3-theme-l2 w3-padding-32">
+                  <h4>Footer</h4>
+                </div>
+
+                <div class="w3-container w3-theme-l1">
+                  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+                </div>
+              </footer> -->
+
+            <!-- END MAIN -->
+            </div>
+
+
+    <style>
+        .home-newsletter{
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+        @media (min-width:1200px){
+            .home-newsletter{
+                margin-left: -2rem;
+            margin-right: -3rem;
+            }
+        }
+    </style>
+<section class="home-newsletter">
+<div class="foo">
+        <footer>
+<style>
+            </style>
+ <br>
+<h6 align="center">
+                   <a> &nbsp;&nbsp;&nbsp;Copyright &copy; Programmers Army </a> All rights reserved 2020
+                </h6>
+                <div style="text-align: center;">
+                <dt>Connect with us:</dt>
+  <a href="https://www.facebook.com/Programmers-Army-105809441239783" target="_blank"><i class="fa fat fa-facebook-official" style="font-size:30px;color:blue"></i></a>
+  <a href="https://twitter.com/ProgrammingArmy" target="_blank"><i class="fa fat fa-twitter-square" style="font-size:30px;color:lightblue"> </i></a>
+
+  <a href="https://www.instagram.com/" target="_blank"><i class="fa fat fa-instagram" style="font-size:30px;color:violet"></i></a>
+  <a href="https://www.youtube.com/channel/UCRJS3O94F8cOj2U0gOUwmBA" target="_blank"><i class="fa fat fa-youtube" style="font-size:30px;color:orangered"></i></a>
+
+   <a href="https://discord.gg/UWSBScw" target="_blank"><i class="fa fat fa-envelope-open" aria-hidden="true" style="font-size:30px;color:orangered"></i></a>
+ &nbsp;&nbsp;&nbsp;
+                </div>
+<style>
+.home-newsletter {
+padding: 10px 0;
+background: wheat;
+}
+.home-newsletter .single {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 0; }
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: black;
+font-weight: bold;
+font-family: sans-serif;
+text-transform: uppercase;
+margin-bottom: 20px; }
+.home-newsletter .single .form-control {
+height: 40px;
+background: rgba(255, 255, 255, 0.6);
+border-color: transparent;
+border-radius: 20px 0 0 20px; }
+.home-newsletter .single .form-control:focus {
+box-shadow: none;
+border-color: #243c4f; }
+.home-newsletter .single .btn {
+min-height: 40px;
+border-radius: 0 20px 20px 0;
+background: #243c4f;
+color: #fff;
+}*/
+</style>
+
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="single">
+<h2>Subscribe Programmers Army For Getting Updates For New Articles</h2>
+<div class="input-group">
+<div>
+</div>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button5 {background-color: #555555;} /* Black */
+
+.button5 {font-size: 15px;
+			border-radius: 25px;
+}
+
+.bichme{
+    padding-left:30%;
+}
+
+
+
+</style>
+
+<form class="form-inline bichme" action="testmail.php" method="post">
+  <div class="abc">
+    <!--<label for="staticEmail2" class="sr-only">Email</label>-->
+    <input type="email" class="form-control" name="userEmail" placeholder="email@example.com">
+    <span class="input-group-btn"> <button class="btn btn-theme" name="submit" type="submit">Submit</button> <br> <br>
+  </span>
+  </div>
+     <style>
+    .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}</style>
+  <!--<button type="submit" class="btn btn-success" name="submit">Subscribe</button>-->
+</form>
+           </div>
+ 	</div>
+ </div>
+ </div>
+ </div>
+ <p align="center">
+ Designed by <a href="index.html"> <b >Websitians</b></a>
+                </p>
+</section>
+
+
+
+            </div>
+        </footer>
+        </div>
+</body>
+</html>
