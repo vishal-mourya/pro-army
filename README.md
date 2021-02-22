@@ -13,11 +13,15 @@
 
 ## Have a Glance
 
-![s1](https://github.com/vishal-mourya/pro-army/blob/main/pics/s1.png?raw=true) <br>
-![s2](https://github.com/vishal-mourya/pro-army/blob/main/pics/s2.png?raw=true) <br>
-![s3](https://github.com/vishal-mourya/pro-army/blob/main/pics/s3.png?raw=true) <br>
-![s4](https://github.com/vishal-mourya/pro-army/blob/main/pics/s4.png?raw=true) <br>
-![s5](https://github.com/vishal-mourya/pro-army/blob/main/pics/s5.png?raw=true) <br>
+![s1](https://github.com/vishal-mourya/pro-army/blob/main/pics/s1.png?raw=true) <br> <br>
+
+![s2](https://github.com/vishal-mourya/pro-army/blob/main/pics/s2.png?raw=true) <br> <br>
+
+![s3](https://github.com/vishal-mourya/pro-army/blob/main/pics/s3.png?raw=true) <br> <br>
+
+![s4](https://github.com/vishal-mourya/pro-army/blob/main/pics/s4.png?raw=true) <br> <br>
+
+![s5](https://github.com/vishal-mourya/pro-army/blob/main/pics/s5.png?raw=true) <br> <br>
 
 
 ## Improving This Project
